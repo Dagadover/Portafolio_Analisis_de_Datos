@@ -38,7 +38,7 @@ Portafolio_Analisis_de_Datos/
 Abre una terminal y ejecuta:
 
 ```bash
-cd "/Users/daniela./Documents/Triple Ten/Portafolio_Analisis_de_Datos"
+cd "Ruta/Al/Repositorio/Portafolio_Analisis_de_Datos"
 python setup_env.py
 ```
 
@@ -56,13 +56,13 @@ Cada vez que quieras trabajar en tus proyectos:
 
 ### En macOS / Linux
 ```bash
-cd "/Users/daniela./Documents/Triple Ten/Portafolio_Analisis_de_Datos"
+cd "Ruta/al/repositorio/Portafolio_Analisis_de_Datos"
 source .venv/bin/activate
 ```
 
 ### En Windows PowerShell
 ```bash
-cd "C:\Users\daniela.\Documents\Triple Ten\Portafolio_Analisis_de_Datos"
+cd "Ruta\al\repositorio\Portafolio_Analisis_de_Datos"
 .venv\Scripts\activate
 ```
 
