@@ -1,0 +1,10 @@
+ipykernel
+jupyterlab
+matplotlib
+numpy
+pandas
+scipy
+seaborn
+
+# Revisión manual (módulos no mapeados a paquete PyPI):
+# warnings
