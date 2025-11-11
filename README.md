@@ -1,5 +1,5 @@
 # 🧠 Portafolio de Análisis de Datos  
-**Autor:** Daniel Aguiñaga  
+**Autor:** Daniel Juan de Dios Aguiñaga Gómez
 
 ---
 
@@ -14,10 +14,10 @@ Además, se proporciona un entorno virtual configurado para garantizar la reprod
 ### 📁 Estructura esperada del repositorio
 ```
 Portafolio_Analisis_de_Datos/
+├─ README.md
 ├─ setup_env.py
-├─ requirements.txt o requirements_generated.txt
-├─ requirements.lock.txt  ← (se genera automáticamente)
-├─ data/                  ← (datasets compartidos)
+├─ requirements.txt
+├─ requirements.lock.txt 
 ├─ Proyecto_Sprint_1_Daniel_Aguinaga.ipynb
 ├─ Proyecto_Sprint_2_Daniel_Aguinaga.ipynb
 ├─ Proyecto_Sprint_3_Daniel_Aguinaga.ipynb
