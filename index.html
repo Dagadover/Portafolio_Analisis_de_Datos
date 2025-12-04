@@ -231,9 +231,16 @@
     /* Projects */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1.3rem;
     }
+
+    @media (max-width: 900px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .project-card {
       background: white;
       padding: 1rem;
@@ -273,6 +280,7 @@
       margin-top: .7rem;
       display: flex;
       gap: .5rem;
+      flex-wrap: wrap;
     }
     .btn-xs {
       padding: .3rem .8rem;
@@ -283,6 +291,64 @@
       background: white;
       border: 1px solid #e5e7eb;
       color: var(--text-muted);
+    }
+
+    /* Featured end-to-end card */
+    .project-card--featured {
+      grid-column: 1 / -1;
+      padding: 1.4rem 1.4rem 1.2rem;
+    }
+
+    .featured-label {
+      display: inline-block;
+      font-size: .75rem;
+      padding: .2rem .6rem;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      border: 1px solid var(--primary-border);
+      color: var(--primary);
+      margin-bottom: .4rem;
+    }
+
+    .featured-content {
+      margin-top: .6rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.7fr);
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .featured-text p {
+      font-size: .86rem;
+      color: var(--text-muted);
+      margin-top: .4rem;
+    }
+
+    .featured-text p + p {
+      margin-top: .3rem;
+    }
+
+    .featured-notebook {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+      background: white;
+      height: 430px;
+    }
+
+    .featured-notebook iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    @media (max-width: 900px) {
+      .featured-content {
+        grid-template-columns: 1fr;
+      }
+      .featured-notebook {
+        height: 380px;
+      }
     }
 
     /* Contact */
@@ -340,13 +406,15 @@
       </div>
       <h1 class="hero-title">Hola, soy <span>Daniel Juan de dios Aguiñaga Gómez</span></h1>
       <div class="hero-role">Cientifico/Analista de datos</div>
-      <div class="hero-role">con una Maestría en Ciencia de Datos. 
-        Construyo experiencia a través de proyectos prácticos.</div>
+      <div class="hero-role">
+        con una Maestría en Ciencia de Datos. 
+        Construyo experiencia a través de proyectos prácticos.
+      </div>
 
       <p class="hero-subtitle">
         Bienvenid@ a mi portafolio de proyectos aplicando <strong>Python, estadística,
         visualización y machine learning básico</strong>. Estos notebooks son el resultado de mi
-        proceso de formación y son representativas de mis habilidades trabajando con datos.
+        proceso de formación y son representativos de mis habilidades trabajando con datos.
       </p>
 
       <div class="hero-actions">
@@ -394,10 +462,63 @@
   <section id="projects">
     <div class="section-header">
       <h2 class="section-title">Proyectos destacados</h2>
-      <p class="section-subtitle">Cada proyecto representa una habilidad concreta.</p>
+      <p class="section-subtitle">
+        Comienzo con un proyecto end-to-end que integra todo el flujo analítico, seguido de proyectos
+        enfocados en habilidades específicas como NLP, EDA, estadística y machine learning.
+      </p>
     </div>
 
     <div class="projects-grid">
+
+      <!-- INTEGRADOR DESTACADO -->
+      <article class="project-card project-card--featured">
+        <span class="featured-label">Proyecto end-to-end</span>
+        <h3 class="project-title">Proyecto Analítico End-to-End: Exploración, Modelado y Generación de Insights</h3>
+
+        <div class="project-tags">
+          <span class="tag">End-to-end</span>
+          <span class="tag">Análisis completo</span>
+          <span class="tag">Modelado</span>
+          <span class="tag">Storytelling</span>
+        </div>
+
+        <div class="featured-content">
+          <div class="featured-text">
+            <p><strong>Problemática abordada:</strong>  
+            Este proyecto integra todo el flujo de trabajo de un analista de datos para resolver una problemática de negocio de principio a fin: 
+            partir de una base de datos cruda, entender el contexto, formular preguntas, depurar y transformar los datos, explorar patrones clave 
+            y, finalmente, construir modelos sencillos que ayuden a apoyar decisiones.</p>
+
+            <p><strong>¿Qué hago en este proyecto?</strong><br>
+            - Limpieza y preparación de los datos para que sean analizables y consistentes.<br>
+            - Análisis exploratorio (EDA) para entender el comportamiento de las variables y detectar patrones relevantes.<br>
+            - Construcción y evaluación de modelos predictivos básicos para responder preguntas concretas.<br>
+            - Síntesis de hallazgos y redacción de conclusiones en lenguaje claro.</p>
+
+            <p><strong>Valor agregado del análisis:</strong><br>
+            El valor de este proyecto no está solo en el código, sino en cómo conecto los resultados con decisiones prácticas: 
+            priorizo qué indicadores son realmente útiles, comparo escenarios, interpreto las salidas de los modelos y señalo 
+            posibles siguientes pasos. Este trabajo muestra mi capacidad para llevar un problema desde la definición hasta 
+            recomendaciones accionables, tal como se esperaría en un entorno real de análisis de datos.</p>
+
+            <div class="project-actions">
+              <a class="btn btn-ghost btn-xs"
+                 href="notebooks/Proyecto_sprint_9_Daniel_Aguinaga.html"
+                 target="_blank">
+                Ver en pestaña nueva
+              </a>
+            </div>
+          </div>
+
+          <div class="featured-notebook">
+            <!-- Notebook HTML incrustado directamente -->
+            <iframe
+              src="notebooks/Proyecto_sprint_9_Daniel_Aguinaga.html"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </article>
 
       <!-- NLP -->
       <article class="project-card">
@@ -487,25 +608,6 @@
         <div class="project-actions">
           <a class="btn btn-ghost btn-xs" href="notebooks/Proyecto_Sprint_8_Daniel_Aguinaga.html" target="_blank">Ver notebook</a>
           <a class="btn btn-primary btn-xs" href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_Sprint_8_Daniel_Aguinaga.ipynb" target="_blank">Ejecutar</a>
-        </div>
-      </article>
-
-      <!-- INTEGRADOR -->
-      <article class="project-card">
-        <h3 class="project-title">Proyecto Analítico End-to-End: Exploración, Modelado y Generación de Insights</h3>
-        <p class="project-description">
-          Proyecto integral donde aplico exploración, limpieza, análisis, 
-          modelado predictivo y presentación de insights. 
-          Resume las habilidades clave desarrolladas durante mi formación.
-        </p>
-
-        <div class="project-tags">
-          <span class="tag">End-to-end</span> <span class="tag">Análisis completo</span>
-        </div>
-
-        <div class="project-actions">
-          <a class="btn btn-ghost btn-xs" href="notebooks/Proyecto_sprint_9_Daniel_Aguinaga.html" target="_blank">Ver notebook</a>
-          <a class="btn btn-primary btn-xs" href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_sprint_9_Daniel_Aguinaga.ipynb" target="_blank">Ejecutar</a>
         </div>
       </article>
 
