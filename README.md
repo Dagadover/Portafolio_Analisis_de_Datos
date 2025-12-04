@@ -1,128 +1,109 @@
-# 🧠 Portafolio de Análisis de Datos  
-**Autor:** Daniel Juan de Dios Aguiñaga Gómez
+# 📊 Portafolio de Análisis de Datos — Daniel Juan de Dios Aguiñaga Gómez
+
+Bienvenido a mi portafolio profesional de análisis de datos.  
+Este repositorio reúne los proyectos más importantes que he desarrollado a lo largo de mi formación y práctica como analista de datos.
+
+El sitio web del portafolio (publicado con GitHub Pages) está disponible en:
+
+👉 **https://dagadover.github.io/Portafolio_Analisis_de_Datos/**
 
 ---
 
-## 📌 Descripción
-Este repositorio contiene los proyectos desarrollados durante el programa **TripleTen - Análisis de Datos**.  
-Cada carpeta incluye un **Jupyter Notebook (`.ipynb`)** con el desarrollo completo de cada sprint y los **datasets (`.csv`)** correspondientes.  
-Además, se proporciona un entorno virtual configurado para garantizar la reproducibilidad de los resultados.
+## 🧠 Sobre mí
 
+Soy **Daniel Juan de Dios Aguiñaga Gómez**, analista de datos con experiencia en:
 
-## ⚙️ 1. Preparación del entorno
+- Análisis exploratorio (EDA)
+- Procesamiento y limpieza de datos
+- Estadística aplicada y pruebas de hipótesis
+- Cohortes, retención y LTV
+- Machine learning supervisado
+- Procesamiento de lenguaje natural (NLP)
+- Visualización de datos (matplotlib, seaborn)
+- Automatización con Python
+- SQL para análisis y extracción de datos
 
-### 📁 Estructura esperada del repositorio
-```
-Portafolio_Analisis_de_Datos/
-├─ README.md
-├─ setup_env.py
-├─ requirements.txt
-├─ requirements.lock.txt 
-├─ Proyecto_Sprint_1_Daniel_Aguinaga.ipynb
-├─ Proyecto_Sprint_2_Daniel_Aguinaga.ipynb
-├─ Proyecto_Sprint_3_Daniel_Aguinaga.ipynb
-├─ Proyecto_Sprint_4_Daniel_Aguinaga.ipynb
-├─ Proyecto_Sprint_5_Daniel_Aguinaga.ipynb
-└─ Proyecto_Sprint_6_Daniel_Aguinaga.ipynb
-```
+Mi objetivo es transformar datos en información clara, útil y accionable para la toma de decisiones.
 
 ---
 
-## 🧩 2. Configuración automática del entorno
+## 🌐 Portafolio publicado
 
-> 🟢 Este paso debe hacerse **una sola vez**.  
-> Configura el entorno virtual `.venv`, instala todas las librerías necesarias y registra el kernel de Jupyter.
+Puedes ver mi portafolio web completo aquí:
 
-### ▶️ Ejecución del script de instalación
+🔗 **https://dagadover.github.io/Portafolio_Analisis_de_Datos/**
 
-Abre una terminal y ejecuta:
+El sitio incluye:
 
-```bash
-cd "Ruta/Al/Repositorio/Portafolio_Analisis_de_Datos"
-python setup_env.py
-```
-
-El script realiza automáticamente:
-1. Creación de un entorno virtual `.venv`
-2. Instalación de dependencias desde `requirements.txt` o `requirements_generated.txt`
-3. Registro del kernel de Jupyter llamado **`portafolio`**
-4. Creación del archivo `requirements.lock.txt` con las versiones exactas
+- Vista general de mis habilidades  
+- Proyectos destacados con descripción profesional  
+- Acceso a notebooks convertidos a HTML  
+- Enlaces para ejecutar cada proyecto en **Binder**  
+- Información de contacto  
 
 ---
 
-## 🧠 3. Activar el entorno virtual
+## 🚀 Proyectos destacados incluidos en el portafolio
 
-Cada vez que quieras trabajar en tus proyectos:
+### 🔹 Clasificación de reseñas de Amazon (NLP)
+- Limpieza y preprocesamiento de texto  
+- Vectorización (TF-IDF)  
+- Modelos de clasificación supervisada  
+- Evaluación de desempeño  
 
-### En macOS / Linux
-```bash
-cd "Ruta/al/repositorio/Portafolio_Analisis_de_Datos"
-source .venv/bin/activate
-```
+### 🔹 Cohortes, retención y LTV
+- Análisis del comportamiento de usuarios  
+- Cálculo de LTV por cohorte  
+- Evaluación de rentabilidad por canal  
+- Recomendaciones de inversión en marketing  
 
-### En Windows PowerShell
-```bash
-cd "Ruta\al\repositorio\Portafolio_Analisis_de_Datos"
-.venv\Scripts\activate
-```
+### 🔹 Producto analítico y storytelling
+- Selección de métricas clave  
+- Análisis exploratorio profundo  
+- Comunicación efectiva de insights  
+- Visualización para ejecutivos  
 
----
+### 🔹 Experimentación A/B y pruebas de hipótesis
+- Formulación estadística  
+- Pruebas t, U de Mann-Whitney, etc.  
+- Análisis de significancia  
+- Interpretación orientada a negocio  
 
-## 💻 4. Ejecutar los notebooks
+### 🔹 Modelado predictivo (Machine Learning)
+- Preparación de datos  
+- Entrenamiento de modelos supervisados  
+- Selección de características  
+- Métricas de evaluación  
 
-Una vez activado el entorno:
-
-```bash
-jupyter lab
-```
-
-1. Abre cualquiera de los notebooks del repositorio:
-   - `Proyecto_Sprint_1_Daniel_Aguinaga.ipynb`
-   - `Proyecto_Sprint_2_Daniel_Aguinaga.ipynb`
-   - `...`  
-2. Selecciona el kernel **`portafolio`** si Jupyter lo solicita.
-3. Ejecuta las celdas secuencialmente (Shift + Enter).
-
----
-
-## 📦 5. Añadir nuevas librerías (opcional)
-
-Si instalas nuevas dependencias, actualiza el archivo de bloqueo con:
-
-```bash
-pip install nombre_libreria
-pip freeze > requirements.lock.txt
-```
-
-Así, todos los usuarios tendrán el mismo entorno cuando ejecuten `setup_env.py`.
+### 🔹 Proyecto integrador end-to-end
+- Pipeline completo de análisis  
+- Limpieza, transformación, modelado  
+- Presentación ejecutiva de resultados  
 
 ---
 
-## 🧪 6. Solución de problemas comunes
+## 🔧 Tecnologías utilizadas
 
-| Problema | Solución |
-|-----------|-----------|
-| `ModuleNotFoundError` | Activa el entorno `.venv` antes de ejecutar Jupyter. |
-| `Kernel not found` | Ejecuta `python -m ipykernel install --user --name portafolio` |
-| `Permission denied` (macOS) | Usa `python3 setup_env.py` en lugar de `python setup_env.py` |
-| Error de CSV o ruta | Usa rutas relativas (`./data/archivo.csv`) en los notebooks. |
-
----
-
-## 📈 7. Reproducibilidad garantizada
-
-Este repositorio incluye:
-- `requirements_generated.txt` → dependencias generales.  
-- `requirements.lock.txt` → versiones exactas del entorno instalado.  
-- `setup_env.py` → script universal de configuración.
-
-Cualquier usuario podrá replicar el entorno con un solo comando:
-```bash
-python setup_env.py
-```
+- **Python 3**  
+- **pandas**, **numpy**  
+- **matplotlib**, **seaborn**  
+- **scikit-learn**  
+- **SciPy**  
+- **Jupyter Notebook**  
+- **SQL**  
+- **GitHub Pages**  
+- **Binder**  
 
 ---
 
-## 🧾 8. Créditos y Licencia
-**Autor:** Daniel Aguiñaga  
-**Última actualización:** 2025-11-10
+## 📬 Contacto
+
+- **Email:** danielgg670@gmail.com  
+- **GitHub:** https://github.com/Dagadover  
+- **LinkedIn:** _(pendiente de agregar)_  
+
+Si deseas colaborar en un proyecto, necesitas un análisis o quieres revisar mi portafolio más a detalle, estoy disponible.
+
+---
+
+
