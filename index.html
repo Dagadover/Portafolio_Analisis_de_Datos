@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portafolio | Analista de Datos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fuentes de Google (opcional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --bg: #0f172a;
+      --bg-light: #111827;
+      --card-bg: #020617;
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --accent: #22c55e;
+      --border: #1f2937;
+      --radius: 18px;
+      --shadow-soft: 0 20px 40px rgba(15, 23, 42, 0.8);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top left, #1e293b 0, #020617 45%, #000 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.7), transparent);
+      border-bottom: 1px solid rgba(31, 41, 55, 0.6);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+    }
+
+    .nav-logo {
+      font-weight: 600;
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      position: relative;
+      padding-bottom: 0.2rem;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 2px;
+      background: linear-gradient(to right, var(--primary), var(--accent));
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      padding: 5rem 0 3rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.3fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      border: 1px solid rgba(55, 65, 81, 0.8);
+      background: rgba(15, 23, 42, 0.7);
+      color: var(--text-muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 10px rgba(34, 197, 94, 0.8);
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 4vw, 3.3rem);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-title span {
+      background: linear-gradient(to right, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 37rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      border-radius: 999px;
+      padding: 0.6rem 1.3rem;
+      font-size: 0.9rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      box-shadow: 0 18px 35px rgba(37, 99, 235, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 22px 40px rgba(37, 99, 235, 0.55);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border-color: rgba(75, 85, 99, 0.9);
+      color: var(--text-muted);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary);
+      background: rgba(15, 23, 42, 0.8);
+      transform: translateY(-1px);
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top left, rgba(37,99,235,0.13), transparent 50%),
+                  radial-gradient(circle at bottom right, rgba(34,197,94,0.12), transparent 55%),
+                  var(--bg-light);
+      border-radius: 1.7rem;
+      padding: 1.6rem 1.4rem;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .hero-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .stack-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .chip {
+      border-radius: 999px;
+      padding: 0.25rem 0.7rem;
+      font-size: 0.75rem;
+      border: 1px solid rgba(75, 85, 99, 0.9);
+      background: rgba(15, 23, 42, 0.85);
+    }
+
+    .status-pill {
+      font-size: 0.75rem;
+      border-radius: 999px;
+      padding: 0.2rem 0.55rem;
+      background: rgba(34, 197, 94, 0.1);
+      border: 1px solid rgba(34, 197, 94, 0.7);
+      color: var(--accent);
+    }
+
+    section {
+      padding: 2.5rem 0;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1.3rem;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+
+    .skill-pill {
+      padding: 0.3rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      font-size: 0.8rem;
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text-muted);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.4rem;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 1.1rem 1.1rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.22), transparent 55%);
+      opacity: 0;
+      transition: opacity 0.18s ease;
+      pointer-events: none;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.9);
+      border-color: rgba(37, 99, 235, 0.7);
+    }
+
+    .project-card:hover::before {
+      opacity: 1;
+    }
+
+    .project-title {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .project-description {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .project-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+    }
+
+    .tag {
+      border-radius: 999px;
+      padding: 0.15rem 0.6rem;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .project-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.3rem;
+    }
+
+    .btn-xs {
+      padding: 0.35rem 0.85rem;
+      font-size: 0.8rem;
+    }
+
+    .btn-ghost {
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      color: var(--text-muted);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--primary);
+      color: #e5e7eb;
+      transform: translateY(-1px);
+    }
+
+    .contact-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      box-shadow: 0 18px 35px rgba(15, 23, 42, 0.8);
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      max-width: 550px;
+    }
+
+    .contact-row {
+      display: flex;
+      gap: 0.35rem;
+      font-size: 0.9rem;
+      align-items: center;
+    }
+
+    .contact-label {
+      color: var(--text-muted);
+      min-width: 70px;
+      font-size: 0.8rem;
+    }
+
+    .contact-link {
+      color: var(--text-main);
+      text-decoration: underline dotted;
+      text-underline-offset: 3px;
+    }
+
+    footer {
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      padding: 1.2rem 0 1.5rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 4rem;
+      }
+
+      .hero-card {
+        order: -1;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+      }
+      .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* Estilos para iframe de notebooks */
+    .notebook-embed {
+      margin-top: 1rem;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      height: 420px;
+    }
+
+    .notebook-embed iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <div class="nav-logo">DATA PORTFOLIO</div>
+        <div class="nav-links">
+          <a href="#about">Sobre mí</a>
+          <a href="#projects">Proyectos</a>
+          <a href="#contact">Contacto</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main class="container">
+    <section class="hero" id="about">
+      <div>
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Disponible para proyectos de análisis de datos
+        </div>
+        <h1 class="hero-title">
+          Hola, soy <span>Daniel Juan de Dios Aguiñaga Gómez</span><br />
+          Analista de datos
+        </h1>
+        <p class="hero-subtitle">
+          Me especializo en transformar datos en decisiones accionables para
+          negocio. Trabajo con Python, SQL, R y herramientas de visualización
+          para descubrir patrones, medir impacto y optimizar procesos.
+        </p>
+
+        <div class="hero-actions">
+          <!-- Cambia el href a tu CV (por ahora vacío) -->
+          <a class="btn btn-primary" href="#" target="_blank" rel="noopener">
+            Descargar CV
+          </a>
+          <!-- GitHub real -->
+          <a class="btn btn-outline" href="https://github.com/Dagadover" target="_blank" rel="noopener">
+            Ver repositorios en GitHub
+          </a>
+        </div>
+
+        <div class="hero-meta">
+          <span>+X proyectos analíticos</span>
+          <span>Experiencia en datos, negocio y docencia</span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-card-header">
+          <span>Stack principal</span>
+          <span class="status-pill">Jupyter · Python · SQL</span>
+        </div>
+        <div class="stack-chips">
+          <span class="chip">Python (pandas, numpy, matplotlib)</span>
+          <span class="chip">Jupyter Notebook / JupyterLab</span>
+          <span class="chip">SQL (PostgreSQL / MySQL)</span>
+          <span class="chip">R · ggplot2 · dplyr</span>
+          <span class="chip">Tableau / Power BI</span>
+          <span class="chip">Estadística inferencial</span>
+          <span class="chip">Machine Learning básico</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+      <div class="section-header">
+        <h2 class="section-title">Habilidades clave</h2>
+        <p class="section-subtitle">
+          De la extracción de datos al insight accionable.
+        </p>
+      </div>
+      <div class="skills-grid">
+        <span class="skill-pill">Limpieza y preparación de datos</span>
+        <span class="skill-pill">Análisis exploratorio (EDA)</span>
+        <span class="skill-pill">Visualización de datos</span>
+        <span class="skill-pill">Pruebas de hipótesis</span>
+        <span class="skill-pill">Segmentación de clientes</span>
+        <span class="skill-pill">Cohortes · Retención · LTV</span>
+        <span class="skill-pill">Automatización en Python</span>
+        <span class="skill-pill">Reporting ejecutivo</span>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-header">
+        <h2 class="section-title">Proyectos destacados</h2>
+        <p class="section-subtitle">
+          Cada proyecto incluye acceso al notebook y, cuando es posible, una versión ejecutable.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- PROYECTO 1 -->
+        <article class="project-card">
+          <h3 class="project-title">Análisis de comportamiento de clientes y LTV</h3>
+          <p class="project-description">
+            Análisis de cohortes, retención y valor del tiempo de vida (LTV) para una tienda online.
+            Incluye segmentación por canal de adquisición, frecuencia de compra y ticket promedio.
+          </p>
+          <div class="project-meta">
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">pandas</span>
+              <span class="tag">Cohortes & LTV</span>
+            </div>
+            <span>2025</span>
+          </div>
+          <div class="project-actions">
+            <!-- HTML del notebook (cuando lo generes) -->
+            <a class="btn btn-ghost btn-xs" href="notebooks/proyecto_ltv.html" target="_blank" rel="noopener">
+              Ver notebook
+            </a>
+            <!-- Binder con tu repo -->
+            <a class="btn btn-primary btn-xs"
+               href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/proyecto_ltv.ipynb"
+               target="_blank" rel="noopener">
+              Ejecutar en Binder
+            </a>
+          </div>
+
+          <!-- EJEMPLO de notebook embebido (opcional) -->
+          <!--
+          <div class="notebook-embed">
+            <iframe src="notebooks/proyecto_ltv.html"></iframe>
+          </div>
+          -->
+        </article>
+
+        <!-- PROYECTO 2 -->
+        <article class="project-card">
+          <h3 class="project-title">Impacto del clima en la duración de viajes</h3>
+          <p class="project-description">
+            Estudio basado en datos de taxis en Chicago para evaluar si la duración media de los viajes
+            cambia bajo diferentes condiciones climáticas usando pruebas de hipótesis.
+          </p>
+          <div class="project-meta">
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">SciPy</span>
+              <span class="tag">Estadística</span>
+            </div>
+            <span>2025</span>
+          </div>
+          <div class="project-actions">
+            <a class="btn btn-ghost btn-xs"
+               href="https://nbviewer.org/github/Dagadover/Portafolio_Analisis_de_Datos/blob/main/notebooks/proyecto_clima_viajes.ipynb"
+               target="_blank" rel="noopener">
+              Ver notebook (nbviewer)
+            </a>
+            <a class="btn btn-primary btn-xs"
+               href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/proyecto_clima_viajes.ipynb"
+               target="_blank" rel="noopener">
+              Ejecutar en Binder
+            </a>
+          </div>
+        </article>
+
+        <!-- PROYECTO 3 -->
+        <article class="project-card">
+          <h3 class="project-title">Dashboard de ventas interactivo</h3>
+          <p class="project-description">
+            Construcción de un dashboard interactivo para ventas usando notebooks con Plotly y despliegue
+            en la web. Permite explorar ingresos, margen y comportamiento por segmento.
+          </p>
+          <div class="project-meta">
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Plotly</span>
+              <span class="tag">Visualización</span>
+            </div>
+            <span>2025</span>
+          </div>
+          <div class="project-actions">
+            <a class="btn btn-ghost btn-xs"
+               href="notebooks/dashboard_ventas.html"
+               target="_blank"
+               rel="noopener">
+              Ver demo
+            </a>
+            <a class="btn btn-primary btn-xs"
+               href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/dashboard_ventas.ipynb"
+               target="_blank"
+               rel="noopener">
+              Ejecutar en Binder
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-header">
+        <h2 class="section-title">Contacto</h2>
+        <p class="section-subtitle">
+          Si quieres colaborar en un proyecto o revisar mi trabajo con más detalle, escríbeme.
+        </p>
+      </div>
+      <div class="contact-card">
+        <p>
+          Estoy abierto a proyectos de análisis de datos, visualización, automatización de reportes
+          y desarrollo de soluciones analíticas para negocio.
+        </p>
+        <div class="contact-row">
+          <span class="contact-label">Email</span>
+          <a class="contact-link" href="mailto:danielgg670@gmail.com">danielgg670@gmail.com</a>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">LinkedIn</span>
+          <!-- Pon aquí tu URL real cuando la tengas -->
+          <a class="contact-link" href="#" target="_blank" rel="noopener">
+            (agrega aquí tu perfil de LinkedIn)
+          </a>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">GitHub</span>
+          <a class="contact-link" href="https://github.com/Dagadover" target="_blank" rel="noopener">
+            github.com/Dagadover
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Daniel Juan de Dios Aguiñaga Gómez · Analista de datos
+  </footer>
+
+  <script>
+    // año automático en el footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
