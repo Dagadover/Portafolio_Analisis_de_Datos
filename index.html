@@ -467,6 +467,24 @@
       margin-top: 1.5rem;
     }
 
+    /* NOTEBOOK EMBED */
+
+    .notebook-embed {
+      margin-top: 0.8rem;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+      height: 500px; /* ajusta la altura si quieres */
+      background: #ffffff;
+    }
+
+    .notebook-embed iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: #ffffff;
+    }
+
     /* RESPONSIVE */
 
     @media (max-width: 900px) {
@@ -607,9 +625,9 @@
         <article class="project-card">
           <h3 class="project-title">Clasificación de reseñas de Amazon</h3>
           <p class="project-description">
-            Proyecto de procesamiento de lenguaje natural donde trabajo con reseñas de productos de Amazon
-            para clasificarlas en varias categorías. Incluye limpieza de texto, vectorización, entrenamiento
-            de modelos supervisados y evaluación con métricas como precisión y recall.
+            Proyecto de procesamiento de lenguaje natural donde trabajo con reseñas de productos
+            para practicar todo el flujo: cargar datos, limpiar texto, explorar ejemplos,
+            construir un modelo de clasificación y revisar sus resultados dentro de un notebook.
           </p>
           <div class="project-meta">
             <div class="project-tags">
@@ -624,7 +642,7 @@
             <a class="btn btn-ghost btn-xs"
                href="notebooks/Amazon_Reviews_Multiclase.html"
                target="_blank" rel="noopener">
-              Ver notebook
+              Ver notebook (pestaña nueva)
             </a>
             <a class="btn btn-primary btn-xs"
                href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Amazon_Reviews_Multiclase.ipynb"
@@ -632,15 +650,24 @@
               Ejecutar en Binder
             </a>
           </div>
+
+          <!-- Notebook incrustado en la página -->
+          <div class="notebook-embed">
+            <iframe
+              src="notebooks/Amazon_Reviews_Multiclase.html"
+              loading="lazy"
+            ></iframe>
+          </div>
         </article>
 
         <!-- LTV / COHORTES -->
         <article class="project-card">
           <h3 class="project-title">Análisis de cohortes, retención y LTV</h3>
           <p class="project-description">
-            En este proyecto analizo el comportamiento de usuarios a lo largo del tiempo: agrupo en cohortes,
-            calculo su retención y estimo el valor de tiempo de vida (LTV). A partir de los resultados,
-            planteo conclusiones sobre qué canales parecen más rentables y cómo podría optimizarse la inversión.
+            Notebook donde practico análisis temporal de usuarios: agrupar por cohortes,
+            calcular cómo cambian en el tiempo y estimar su valor. El objetivo principal
+            es entender mejor cómo organizar datos por periodos y resumir su comportamiento
+            con tablas y visualizaciones.
           </p>
           <div class="project-meta">
             <div class="project-tags">
@@ -667,15 +694,16 @@
 
         <!-- STORYTELLING / PRODUCTO ANALÍTICO -->
         <article class="project-card">
-          <h3 class="project-title">Producto analítico y análisis de negocio</h3>
+          <h3 class="project-title">Análisis de datos con enfoque de negocio</h3>
           <p class="project-description">
-            Proyecto en el que estructuro un análisis completo alrededor de preguntas de negocio específicas.
-            Además de hacer el análisis con Python, trabajo en la narrativa: cómo presentar hallazgos,
-            qué gráficos usar y cómo pasar de los números a recomendaciones sencillas de entender.
+            En este proyecto recorro un análisis de datos de principio a fin:
+            cargar y limpiar la información, explorarla con gráficos y tablas,
+            y terminar con conclusiones escritas que responden preguntas concretas.
+            El énfasis está en practicar cómo pasar de los datos brutos a ideas claras.
           </p>
           <div class="project-meta">
             <div class="project-tags">
-              <span class="tag">Storytelling</span>
+              <span class="tag">EDA</span>
               <span class="tag">Análisis de negocio</span>
               <span class="tag">Visualización</span>
               <span class="tag">Python</span>
@@ -698,15 +726,15 @@
 
         <!-- A/B TESTING -->
         <article class="project-card">
-          <h3 class="project-title">Análisis experimental y pruebas de hipótesis</h3>
+          <h3 class="project-title">Pruebas de hipótesis y comparación de grupos</h3>
           <p class="project-description">
-            Aquí practico el diseño y análisis de experimentos A/B: formulo hipótesis, elijo pruebas estadísticas,
-            calculo p-values y reflexiono sobre cuándo una diferencia es estadísticamente significativa
-            y qué significa eso en términos prácticos.
+            Notebook centrado en practicar estadística básica: comparar promedios entre grupos,
+            formular hipótesis nula y alternativa, usar pruebas estadísticas y decidir si una
+            diferencia puede considerarse significativa o no en función del nivel de significancia.
           </p>
           <div class="project-meta">
             <div class="project-tags">
-              <span class="tag">A/B testing</span>
+              <span class="tag">Pruebas de hipótesis</span>
               <span class="tag">Estadística</span>
               <span class="tag">SciPy</span>
               <span class="tag">Python</span>
@@ -729,11 +757,12 @@
 
         <!-- MACHINE LEARNING -->
         <article class="project-card">
-          <h3 class="project-title">Modelado predictivo y machine learning</h3>
+          <h3 class="project-title">Introducción al modelado predictivo</h3>
           <p class="project-description">
-            Proyecto donde aplico modelos supervisados para intentar predecir una variable objetivo
-            (por ejemplo, probabilidad de abandono o una métrica de interés), practicando la división
-            en train/test, el manejo de métricas y la interpretación de resultados.
+            Proyecto donde doy mis primeros pasos con modelos supervisados:
+            dividir datos en entrenamiento y prueba, ajustar un modelo, revisar sus
+            métricas básicas y reflexionar sobre qué tan bien está funcionando
+            (y qué se podría mejorar en futuras iteraciones).
           </p>
           <div class="project-meta">
             <div class="project-tags">
@@ -761,9 +790,10 @@
         <article class="project-card">
           <h3 class="project-title">Proyecto integrador end-to-end</h3>
           <p class="project-description">
-            Proyecto que recorre todas las etapas típicas de un trabajo de análisis de datos:
-            entender el problema, preparar los datos, analizarlos, probar algunas ideas de modelado
-            y resumir los hallazgos en conclusiones generales.
+            Proyecto que resume varias habilidades vistas a lo largo del bootcamp:
+            desde entender el contexto del problema y preparar los datos,
+            hasta realizar análisis, probar algunas ideas de modelado y redactar
+            conclusiones generales en un solo notebook.
           </p>
           <div class="project-meta">
             <div class="project-tags">
