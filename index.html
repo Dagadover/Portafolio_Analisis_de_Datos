@@ -26,22 +26,11 @@
       --shadow-soft: 0 10px 25px rgba(15, 23, 42, 0.06);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 0;
+      font-family: "Poppins", sans-serif;
       background: var(--bg);
       color: var(--text-main);
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
     }
 
     .container {
@@ -51,32 +40,29 @@
       padding: 0 1.5rem;
     }
 
-    /* NAVBAR */
-
     header {
       position: sticky;
       top: 0;
-      z-index: 50;
-      backdrop-filter: blur(16px);
       background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(16px);
       border-bottom: 1px solid #e5e7eb;
+      z-index: 50;
     }
 
     .nav {
       display: flex;
-      align-items: center;
       justify-content: space-between;
       padding: 0.8rem 0;
+      align-items: center;
     }
 
     .nav-logo {
       font-weight: 600;
-      font-size: 1rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
       color: var(--text-muted);
+      font-size: 0.9rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
     }
-
     .nav-logo span {
       color: var(--primary);
     }
@@ -84,796 +70,470 @@
     .nav-links {
       display: flex;
       gap: 1.5rem;
-      font-size: 0.9rem;
     }
 
     .nav-links a {
       color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
       position: relative;
-      padding-bottom: 0.15rem;
     }
 
     .nav-links a::after {
       content: "";
       position: absolute;
+      bottom: -3px;
       left: 0;
-      bottom: 0;
-      width: 0%;
       height: 2px;
+      width: 0%;
       background: var(--primary);
-      border-radius: 999px;
-      transition: width 0.2s ease;
+      transition: all .2s;
     }
-
     .nav-links a:hover::after {
       width: 100%;
     }
 
     /* HERO */
-
     .hero {
-      padding: 3.5rem 0 2.5rem;
+      padding: 3rem 0 2rem;
       display: grid;
-      grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.3fr);
+      grid-template-columns: 1.7fr 1.3fr;
       gap: 2.5rem;
-      align-items: center;
     }
 
     .badge {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      padding: 0.25rem 0.75rem;
+      padding: .3rem .8rem;
       border-radius: 999px;
-      font-size: 0.75rem;
-      border: 1px solid #e5e7eb;
       background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      font-size: .75rem;
+      margin-bottom: .7rem;
       color: var(--text-muted);
-      margin-bottom: 0.9rem;
     }
 
     .badge-dot {
       width: 8px;
       height: 8px;
-      border-radius: 999px;
       background: #22c55e;
+      border-radius: 999px;
     }
 
     .hero-title {
-      font-size: clamp(2.2rem, 3.4vw, 3rem);
+      font-size: 2.4rem;
       font-weight: 600;
-      margin-bottom: 0.4rem;
     }
-
     .hero-title span {
       color: var(--primary);
     }
 
     .hero-role {
+      margin-top: .2rem;
       font-size: 1rem;
       color: var(--text-muted);
-      margin-bottom: 1rem;
     }
 
     .hero-subtitle {
-      font-size: 0.95rem;
+      margin-top: .7rem;
       color: var(--text-muted);
-      max-width: 38rem;
-      margin-bottom: 1.6rem;
-    }
-
-    .hero-subtitle strong {
-      color: var(--text-main);
-      font-weight: 500;
+      font-size: .95rem;
+      max-width: 40rem;
     }
 
     .hero-actions {
+      margin-top: 1.4rem;
       display: flex;
+      gap: .7rem;
       flex-wrap: wrap;
-      gap: 0.8rem;
-      margin-bottom: 1.3rem;
     }
 
     .btn {
+      padding: .55rem 1.2rem;
+      border-radius: 999px;
+      font-size: .9rem;
+      text-decoration: none;
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      gap: 0.4rem;
-      border-radius: 999px;
-      padding: 0.55rem 1.25rem;
-      font-size: 0.9rem;
       border: 1px solid transparent;
       cursor: pointer;
-      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease, border-color 0.12s ease;
-      text-decoration: none;
-      white-space: nowrap;
     }
 
     .btn-primary {
       background: var(--primary);
-      color: #ffffff;
-      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 10px 22px rgba(37, 99, 235, 0.3);
+      color: white;
     }
 
     .btn-outline {
-      background: #ffffff;
-      border-color: #d1d5db;
+      background: white;
+      border: 1px solid #d1d5db;
       color: var(--text-muted);
-    }
-
-    .btn-outline:hover {
-      border-color: var(--primary);
-      color: var(--primary);
-      transform: translateY(-1px);
-      background: #f9fafb;
-    }
-
-    .hero-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.2rem;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .hero-meta span {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-    }
-
-    .hero-meta-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: #d1d5db;
     }
 
     .hero-card {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 1.5rem 1.3rem;
+      background: white;
+      padding: 1.3rem;
+      border-radius: 16px;
       border: 1px solid #e5e7eb;
       box-shadow: var(--shadow-soft);
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .hero-card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.8rem;
-      color: var(--text-muted);
     }
 
     .stack-chips {
+      margin-top: 1rem;
       display: flex;
       flex-wrap: wrap;
-      gap: 0.45rem;
+      gap: .4rem;
     }
 
     .chip {
+      padding: .3rem .7rem;
       border-radius: 999px;
-      padding: 0.25rem 0.7rem;
-      font-size: 0.75rem;
-      border: 1px solid #e5e7eb;
       background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      font-size: .75rem;
       color: var(--text-muted);
     }
 
-    .status-pill {
-      font-size: 0.75rem;
-      border-radius: 999px;
-      padding: 0.2rem 0.6rem;
-      background: var(--primary-soft);
-      border: 1px solid var(--primary-border);
-      color: var(--primary);
-    }
-
-    /* SECCIONES GENERALES */
-
+    /* Section layout */
     section {
-      padding: 2.4rem 0;
+      padding: 2rem 0;
     }
-
     .section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 1.4rem;
-      gap: 1rem;
+      margin-bottom: 1.3rem;
     }
-
     .section-title {
       font-size: 1.4rem;
       font-weight: 600;
     }
-
     .section-subtitle {
-      font-size: 0.9rem;
       color: var(--text-muted);
-      max-width: 26rem;
+      font-size: .9rem;
+      margin-top: .2rem;
     }
 
-    /* SKILLS */
-
+    /* Skills */
     .skills-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.7rem;
+      gap: .5rem;
     }
-
     .skill-pill {
-      padding: 0.3rem 0.9rem;
-      border-radius: 999px;
+      padding: .3rem .9rem;
       border: 1px solid #e5e7eb;
-      font-size: 0.8rem;
-      background: #ffffff;
+      background: white;
+      border-radius: 999px;
+      font-size: .8rem;
       color: var(--text-muted);
     }
 
-    /* PROJECTS */
-
+    /* Projects */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.4rem;
+      gap: 1.3rem;
     }
-
     .project-card {
-      background: #ffffff;
-      border-radius: var(--radius);
+      background: white;
+      padding: 1rem;
+      border-radius: 16px;
       border: 1px solid #e5e7eb;
-      padding: 1.1rem 1.1rem 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.65rem;
-      transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.03);
+      box-shadow: 0 3px 10px rgba(0,0,0,.05);
+      transition: all .2s;
     }
-
     .project-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
-      border-color: var(--primary-border);
+      box-shadow: 0 8px 16px rgba(0,0,0,.08);
     }
-
     .project-title {
-      font-size: 1rem;
       font-weight: 600;
-      color: var(--text-main);
+      font-size: 1rem;
     }
-
     .project-description {
-      font-size: 0.86rem;
+      font-size: .86rem;
       color: var(--text-muted);
+      margin-top: .3rem;
     }
-
-    .project-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
     .project-tags {
       display: flex;
+      gap: .3rem;
       flex-wrap: wrap;
-      gap: 0.35rem;
-      font-size: 0.75rem;
+      margin-top: .5rem;
     }
-
     .tag {
+      padding: .2rem .6rem;
+      font-size: .75rem;
       border-radius: 999px;
-      padding: 0.15rem 0.6rem;
       border: 1px solid #e5e7eb;
       background: #f9fafb;
       color: var(--text-muted);
     }
-
     .project-actions {
+      margin-top: .7rem;
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 0.4rem;
+      gap: .5rem;
     }
-
     .btn-xs {
-      padding: 0.35rem 0.85rem;
-      font-size: 0.8rem;
+      padding: .3rem .8rem;
+      font-size: .8rem;
+      border-radius: 999px;
     }
-
     .btn-ghost {
-      background: #ffffff;
+      background: white;
       border: 1px solid #e5e7eb;
       color: var(--text-muted);
     }
 
-    .btn-ghost:hover {
-      border-color: var(--primary);
-      color: var(--primary);
-      transform: translateY(-1px);
-      background: #f9fafb;
-    }
-
-    /* CONTACTO / ABOUT EXTRA */
-
+    /* Contact */
     .contact-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.1fr);
-      gap: 1.8rem;
-      align-items: start;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 1.5rem;
     }
-
-    .about-text {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-    }
-
-    .about-text p + p {
-      margin-top: 0.6rem;
-    }
-
     .contact-card {
-      background: #ffffff;
-      border-radius: var(--radius);
+      background: white;
       border: 1px solid #e5e7eb;
-      padding: 1.5rem;
+      padding: 1.3rem;
+      border-radius: 16px;
       box-shadow: var(--shadow-soft);
-      display: flex;
-      flex-direction: column;
-      gap: 0.7rem;
-      max-width: 550px;
+      font-size: .9rem;
     }
-
-    .contact-row {
-      display: flex;
-      gap: 0.35rem;
-      font-size: 0.9rem;
-      align-items: center;
-    }
-
-    .contact-label {
-      color: var(--text-muted);
-      min-width: 70px;
-      font-size: 0.8rem;
-    }
-
-    .contact-link {
-      color: var(--primary);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
-    /* FOOTER */
 
     footer {
-      border-top: 1px solid #e5e7eb;
-      padding: 1.1rem 0 1.4rem;
       text-align: center;
-      font-size: 0.8rem;
+      padding: 1rem;
+      font-size: .8rem;
       color: var(--text-muted);
-      background: #ffffff;
-      margin-top: 1.5rem;
+      background: white;
+      margin-top: 2rem;
+      border-top: 1px solid #e5e7eb;
     }
-
-    /* NOTEBOOK EMBED */
-
-    .notebook-embed {
-      margin-top: 0.8rem;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid #e5e7eb;
-      height: 500px; /* ajusta la altura si quieres */
-      background: #ffffff;
-    }
-
-    .notebook-embed iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      background: #ffffff;
-    }
-
-    /* RESPONSIVE */
-
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-        padding-top: 2.8rem;
-      }
-      .hero-card {
-        order: -1;
-      }
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.4rem;
-      }
-      .hero-actions {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .section-header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-
   </style>
 </head>
+
 <body>
-  <!-- NAVBAR -->
-  <header>
-    <div class="container">
-      <nav class="nav">
-        <div class="nav-logo">DAG · <span>Data Analyst</span></div>
-        <div class="nav-links">
-          <a href="#about">Sobre mí</a>
-          <a href="#projects">Proyectos</a>
-          <a href="#contact">Contacto</a>
-        </div>
-      </nav>
-    </div>
-  </header>
+
+<header>
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-logo">DAG · <span>Data Analyst</span></div>
+      <div class="nav-links">
+        <a href="#about">Sobre mí</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#contact">Contacto</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
 
   <!-- HERO -->
-  <main class="container">
-    <section class="hero" id="about">
-      <div>
-        <div class="badge">
-          <span class="badge-dot"></span>
-          En formación como analista de datos · Buscando primera oportunidad
-        </div>
-        <h1 class="hero-title">
-          Hola, soy <span>Daniel Juan de Dios Aguiñaga Gómez</span>
-        </h1>
-        <div class="hero-role">
-          Analista de datos principiante con portafolio de proyectos prácticos.
-        </div>
-        <p class="hero-subtitle">
-          Actualmente estoy construyendo mi perfil como <strong>analista de datos</strong> a través de proyectos
-          prácticos de un bootcamp y estudio autodidacta. Este portafolio reúne los notebooks donde aplico
-          <strong>Python, estadística, visualización y conceptos de machine learning</strong> a problemas concretos,
-          con el objetivo de dar el siguiente paso hacia mi primera experiencia profesional en el área.
+  <section class="hero" id="about">
+    <div>
+      <div class="badge">
+        <span class="badge-dot"></span> En formación como analista de datos
+      </div>
+      <h1 class="hero-title">Hola, soy <span>Daniel Juan de Dios Aguiñaga Gómez</span></h1>
+      <div class="hero-role">Analista de datos principiante</div>
+
+      <p class="hero-subtitle">
+        Actualmente construyo mi portafolio de proyectos aplicando <strong>Python, estadística,
+        visualización y machine learning básico</strong>. Estos notebooks son el resultado de mi
+        proceso de formación y representan mis primeras prácticas reales trabajando con datos.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#">CV (próximamente)</a>
+        <a class="btn btn-outline" href="https://github.com/Dagadover" target="_blank">GitHub</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h4 style="font-size:.9rem;color:var(--text-muted);margin:0;">Stack principal</h4>
+      <div class="stack-chips">
+        <span class="chip">Python</span>
+        <span class="chip">Pandas</span>
+        <span class="chip">NumPy</span>
+        <span class="chip">Matplotlib</span>
+        <span class="chip">SciPy</span>
+        <span class="chip">Machine Learning básico</span>
+        <span class="chip">NLP básico</span>
+        <span class="chip">SQL</span>
+        <span class="chip">Jupyter Notebook</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section>
+    <div class="section-header">
+      <h2 class="section-title">Habilidades en desarrollo</h2>
+      <p class="section-subtitle">Competencias adquiridas mediante ejercicios prácticos y estudio autodidacta.</p>
+    </div>
+
+    <div class="skills-grid">
+      <span class="skill-pill">Limpieza y preparación de datos</span>
+      <span class="skill-pill">Visualización</span>
+      <span class="skill-pill">EDA</span>
+      <span class="skill-pill">Pruebas de hipótesis</span>
+      <span class="skill-pill">Machine learning (básico)</span>
+      <span class="skill-pill">NLP introductorio</span>
+      <span class="skill-pill">SQL</span>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-header">
+      <h2 class="section-title">Proyectos destacados</h2>
+      <p class="section-subtitle">Cada proyecto representa una habilidad concreta que estoy desarrollando.</p>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- NLP -->
+      <article class="project-card">
+        <h3 class="project-title">Clasificación de reseñas de Amazon</h3>
+        <p class="project-description">
+          Proyecto introductorio de NLP donde trabajo con reseñas de productos para practicar
+          limpieza de texto, tokenización, vectorización y entrenamiento de un modelo de clasificación.
         </p>
 
-        <div class="hero-actions">
-          <!-- Actualiza este enlace cuando tengas tu CV en PDF en el repo -->
-          <a class="btn btn-primary" href="#" target="_blank" rel="noopener">
-            CV (próximamente)
-          </a>
-          <a class="btn btn-outline" href="https://github.com/Dagadover" target="_blank" rel="noopener">
-            Ver repositorios en GitHub
-          </a>
+        <div class="project-tags">
+          <span class="tag">NLP</span> <span class="tag">Clasificación</span> <span class="tag">Machine Learning</span>
         </div>
 
-        <div class="hero-meta">
-          <span><span class="hero-meta-dot"></span> Basado en Puebla, México</span>
-          <span><span class="hero-meta-dot"></span> Proyectos de formación en análisis de datos</span>
-          <span><span class="hero-meta-dot"></span> En búsqueda de roles junior o de entrada</span>
+        <div class="project-actions">
+          <a class="btn btn-ghost btn-xs" href="notebooks/Amazon_Reviews_Multiclase.html" target="_blank">Ver notebook</a>
+          <a class="btn btn-primary btn-xs" href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Amazon_Reviews_Multiclase.ipynb" target="_blank">Ejecutar</a>
         </div>
-      </div>
+      </article>
 
-      <div class="hero-card">
-        <div class="hero-card-header">
-          <span>Stack principal</span>
-          <span class="status-pill">Jupyter · Python · SQL</span>
-        </div>
-        <div class="stack-chips">
-          <span class="chip">Python (pandas, numpy, matplotlib)</span>
-          <span class="chip">Jupyter Notebook</span>
-          <span class="chip">SQL para análisis</span>
-          <span class="chip">Estadística básica e inferencial</span>
-          <span class="chip">Machine learning supervisado (nivel inicial)</span>
-          <span class="chip">NLP · clasificación de texto</span>
-          <span class="chip">Visualización de datos</span>
-          <span class="chip">Trabajo con datos tabulares</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section>
-      <div class="section-header">
-        <h2 class="section-title">Habilidades en desarrollo</h2>
-        <p class="section-subtitle">
-          Competencias que he ido adquiriendo a través de proyectos prácticos, ejercicios guiados y estudio independiente.
+      <!-- PLANES TARIFARIOS -->
+      <article class="project-card">
+        <h3 class="project-title">Análisis de planes tarifarios</h3>
+        <p class="project-description">
+          Comparo diferentes planes de telefonía utilizando datos de uso: llamadas, mensajes e internet.
+          Calculo ingresos promedio por usuario y determino qué plan parece más rentable.
         </p>
-      </div>
-      <div class="skills-grid">
-        <span class="skill-pill">Limpieza y preparación de datos</span>
-        <span class="skill-pill">Análisis exploratorio (EDA)</span>
-        <span class="skill-pill">Visualización de datos</span>
-        <span class="skill-pill">Pruebas de hipótesis</span>
-        <span class="skill-pill">Cohortes, retención y LTV</span>
-        <span class="skill-pill">A/B testing (nivel inicial)</span>
-        <span class="skill-pill">Modelos supervisados (ML básico)</span>
-        <span class="skill-pill">Procesamiento de lenguaje natural (NLP básico)</span>
-        <span class="skill-pill">SQL para obtener y filtrar datos</span>
-        <span class="skill-pill">Trabajo reproducible con notebooks</span>
-      </div>
-    </section>
 
-    <!-- PROJECTS -->
-    <section id="projects">
-      <div class="section-header">
-        <h2 class="section-title">Proyectos destacados</h2>
-        <p class="section-subtitle">
-          Todos estos proyectos forman parte de mi proceso de aprendizaje. Cada uno me ha permitido practicar herramientas, conceptos y la forma de presentar resultados.
-        </p>
-      </div>
-
-      <div class="projects-grid">
-        <!-- AMAZON REVIEWS MULTICLASS -->
-        <article class="project-card">
-          <h3 class="project-title">Clasificación de reseñas de Amazon</h3>
-          <p class="project-description">
-            Proyecto de procesamiento de lenguaje natural donde trabajo con reseñas de productos
-            para practicar todo el flujo: cargar datos, limpiar texto, explorar ejemplos,
-            construir un modelo de clasificación y revisar sus resultados dentro de un notebook.
-          </p>
-          <div class="project-meta">
-            <div class="project-tags">
-              <span class="tag">NLP</span>
-              <span class="tag">Machine learning</span>
-              <span class="tag">Clasificación</span>
-              <span class="tag">Python</span>
-            </div>
-            <span>Proyecto de formación</span>
-          </div>
-          <div class="project-actions">
-            <a class="btn btn-ghost btn-xs"
-               href="notebooks/Amazon_Reviews_Multiclase.html"
-               target="_blank" rel="noopener">
-              Ver notebook (pestaña nueva)
-            </a>
-            <a class="btn btn-primary btn-xs"
-               href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Amazon_Reviews_Multiclase.ipynb"
-               target="_blank" rel="noopener">
-              Ejecutar en Binder
-            </a>
-          </div>
-
-          <!-- Notebook incrustado en la página -->
-          <div class="notebook-embed">
-            <iframe
-              src="notebooks/Amazon_Reviews_Multiclase.html"
-              loading="lazy"
-            ></iframe>
-          </div>
-        </article>
-
-        <!-- LTV / COHORTES -->
-        <article class="project-card">
-          <h3 class="project-title">Análisis de cohortes, retención y LTV</h3>
-          <p class="project-description">
-            Notebook donde practico análisis temporal de usuarios: agrupar por cohortes,
-            calcular cómo cambian en el tiempo y estimar su valor. El objetivo principal
-            es entender mejor cómo organizar datos por periodos y resumir su comportamiento
-            con tablas y visualizaciones.
-          </p>
-          <div class="project-meta">
-            <div class="project-tags">
-              <span class="tag">Cohortes</span>
-              <span class="tag">Retención</span>
-              <span class="tag">LTV</span>
-              <span class="tag">Python</span>
-            </div>
-            <span>Proyecto de formación</span>
-          </div>
-          <div class="project-actions">
-            <a class="btn btn-ghost btn-xs"
-               href="notebooks/Proyecto_Sprint_5_Daniel_Aguinaga.html"
-               target="_blank" rel="noopener">
-              Ver notebook
-            </a>
-            <a class="btn btn-primary btn-xs"
-               href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_Sprint_5_Daniel_Aguinaga.ipynb"
-               target="_blank" rel="noopener">
-              Ejecutar en Binder
-            </a>
-          </div>
-        </article>
-
-        <!-- STORYTELLING / PRODUCTO ANALÍTICO -->
-        <article class="project-card">
-          <h3 class="project-title">Análisis de datos con enfoque de negocio</h3>
-          <p class="project-description">
-            En este proyecto recorro un análisis de datos de principio a fin:
-            cargar y limpiar la información, explorarla con gráficos y tablas,
-            y terminar con conclusiones escritas que responden preguntas concretas.
-            El énfasis está en practicar cómo pasar de los datos brutos a ideas claras.
-          </p>
-          <div class="project-meta">
-            <div class="project-tags">
-              <span class="tag">EDA</span>
-              <span class="tag">Análisis de negocio</span>
-              <span class="tag">Visualización</span>
-              <span class="tag">Python</span>
-            </div>
-            <span>Proyecto de formación</span>
-          </div>
-          <div class="project-actions">
-            <a class="btn btn-ghost btn-xs"
-               href="notebooks/Proyecto_Sprint_4_Daniel_Aguinaga.html"
-               target="_blank" rel="noopener">
-              Ver notebook
-            </a>
-            <a class="btn btn-primary btn-xs"
-               href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_Sprint_4_Daniel_Aguinaga.ipynb"
-               target="_blank" rel="noopener">
-              Ejecutar en Binder
-            </a>
-          </div>
-        </article>
-
-        <!-- A/B TESTING -->
-        <article class="project-card">
-          <h3 class="project-title">Pruebas de hipótesis y comparación de grupos</h3>
-          <p class="project-description">
-            Notebook centrado en practicar estadística básica: comparar promedios entre grupos,
-            formular hipótesis nula y alternativa, usar pruebas estadísticas y decidir si una
-            diferencia puede considerarse significativa o no en función del nivel de significancia.
-          </p>
-          <div class="project-meta">
-            <div class="project-tags">
-              <span class="tag">Pruebas de hipótesis</span>
-              <span class="tag">Estadística</span>
-              <span class="tag">SciPy</span>
-              <span class="tag">Python</span>
-            </div>
-            <span>Proyecto de formación</span>
-          </div>
-          <div class="project-actions">
-            <a class="btn btn-ghost btn-xs"
-               href="notebooks/Proyecto_Sprint_6_Daniel_Aguinaga.html"
-               target="_blank" rel="noopener">
-              Ver notebook
-            </a>
-            <a class="btn btn-primary btn-xs"
-               href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_Sprint_6_Daniel_Aguinaga.ipynb"
-               target="_blank" rel="noopener">
-              Ejecutar en Binder
-            </a>
-          </div>
-        </article>
-
-        <!-- MACHINE LEARNING -->
-        <article class="project-card">
-          <h3 class="project-title">Introducción al modelado predictivo</h3>
-          <p class="project-description">
-            Proyecto donde doy mis primeros pasos con modelos supervisados:
-            dividir datos en entrenamiento y prueba, ajustar un modelo, revisar sus
-            métricas básicas y reflexionar sobre qué tan bien está funcionando
-            (y qué se podría mejorar en futuras iteraciones).
-          </p>
-          <div class="project-meta">
-            <div class="project-tags">
-              <span class="tag">Machine learning</span>
-              <span class="tag">Modelado</span>
-              <span class="tag">Python</span>
-            </div>
-            <span>Proyecto de formación</span>
-          </div>
-          <div class="project-actions">
-            <a class="btn btn-ghost btn-xs"
-               href="notebooks/Proyecto_Sprint_8_Daniel_Aguinaga.html"
-               target="_blank" rel="noopener">
-              Ver notebook
-            </a>
-            <a class="btn btn-primary btn-xs"
-               href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_Sprint_8_Daniel_Aguinaga.ipynb"
-               target="_blank" rel="noopener">
-              Ejecutar en Binder
-            </a>
-          </div>
-        </article>
-
-        <!-- PROYECTO INTEGRADOR -->
-        <article class="project-card">
-          <h3 class="project-title">Proyecto integrador end-to-end</h3>
-          <p class="project-description">
-            Proyecto que resume varias habilidades vistas a lo largo del bootcamp:
-            desde entender el contexto del problema y preparar los datos,
-            hasta realizar análisis, probar algunas ideas de modelado y redactar
-            conclusiones generales en un solo notebook.
-          </p>
-          <div class="project-meta">
-            <div class="project-tags">
-              <span class="tag">End-to-end</span>
-              <span class="tag">Python</span>
-              <span class="tag">Análisis completo</span>
-            </div>
-            <span>Proyecto de formación</span>
-          </div>
-          <div class="project-actions">
-            <a class="btn btn-ghost btn-xs"
-               href="notebooks/Proyecto_sprint_9_Daniel_Aguinaga.html"
-               target="_blank" rel="noopener">
-              Ver notebook
-            </a>
-            <a class="btn btn-primary btn-xs"
-               href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_sprint_9_Daniel_Aguinaga.ipynb"
-               target="_blank" rel="noopener">
-              Ejecutar en Binder
-            </a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- CONTACT / ABOUT EXTRA -->
-    <section id="contact">
-      <div class="section-header">
-        <h2 class="section-title">Contacto</h2>
-        <p class="section-subtitle">
-          Si quieres revisar estos proyectos, darme feedback o considerar mi perfil para una vacante junior, estaré encantado de platicar.
-        </p>
-      </div>
-
-      <div class="contact-grid">
-        <div class="about-text">
-          <p>
-            Estoy en una etapa de transición hacia el análisis de datos, por lo que valoro mucho
-            las oportunidades donde pueda seguir aprendiendo mientras aporto con lo que ya sé:
-            estructurar problemas, trabajar con notebooks, hacer análisis claros y comunicar resultados.
-          </p>
-          <p>
-            Me interesa seguir mejorando mis habilidades técnicas (Python, SQL, estadística y machine learning)
-            y entender cada vez mejor cómo los datos ayudan a responder preguntas reales en contextos de negocio.
-          </p>
+        <div class="project-tags">
+          <span class="tag">Estadística</span> <span class="tag">Análisis económico</span>
         </div>
 
-        <div class="contact-card">
-          <p>
-            Estoy abierto a vacantes junior, roles de entrada, prácticas profesionales y proyectos
-            donde pueda seguir practicando análisis de datos en un contexto real.
-          </p>
-          <div class="contact-row">
-            <span class="contact-label">Email</span>
-            <a class="contact-link" href="mailto:danielgg670@gmail.com">danielgg670@gmail.com</a>
-          </div>
-          <div class="contact-row">
-            <span class="contact-label">GitHub</span>
-            <a class="contact-link" href="https://github.com/Dagadover" target="_blank" rel="noopener">
-              github.com/Dagadover
-            </a>
-          </div>
-          <div class="contact-row">
-            <span class="contact-label">LinkedIn</span>
-            <!-- Cambia # por tu URL real cuando la tengas -->
-            <a class="contact-link" href="#" target="_blank" rel="noopener">
-              (agrega aquí tu perfil de LinkedIn cuando esté listo)
-            </a>
-          </div>
+        <div class="project-actions">
+          <a class="btn btn-ghost btn-xs" href="notebooks/Proyecto_Sprint_5_Daniel_Aguinaga.html" target="_blank">Ver notebook</a>
+          <a class="btn btn-primary btn-xs" href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_Sprint_5_Daniel_Aguinaga.ipynb" target="_blank">Ejecutar</a>
         </div>
+      </article>
+
+      <!-- EDA -->
+      <article class="project-card">
+        <h3 class="project-title">Análisis exploratorio con enfoque de negocio</h3>
+        <p class="project-description">
+          Notebook enfocado en explorar datos reales: cálculo de métricas clave, revisión de patrones,
+          visualizaciones y conclusiones orientadas a responder preguntas de negocio.
+        </p>
+
+        <div class="project-tags">
+          <span class="tag">EDA</span> <span class="tag">Visualización</span>
+        </div>
+
+        <div class="project-actions">
+          <a class="btn btn-ghost btn-xs" href="notebooks/Proyecto_Sprint_4_Daniel_Aguinaga.html" target="_blank">Ver notebook</a>
+          <a class="btn btn-primary btn-xs" href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_Sprint_4_Daniel_Aguinaga.ipynb" target="_blank">Ejecutar</a>
+        </div>
+      </article>
+
+      <!-- ESTADÍSTICA -->
+      <article class="project-card">
+        <h3 class="project-title">Pruebas de hipótesis y comparación de grupos</h3>
+        <p class="project-description">
+          Proyecto estadístico donde formulo hipótesis, aplico pruebas como t-test o Mann-Whitney,
+          comparo grupos y tomo decisiones basadas en significancia estadística.
+        </p>
+
+        <div class="project-tags">
+          <span class="tag">Estadística</span> <span class="tag">Pruebas de hipótesis</span>
+        </div>
+
+        <div class="project-actions">
+          <a class="btn btn-ghost btn-xs" href="notebooks/Proyecto_Sprint_6_Daniel_Aguinaga.html" target="_blank">Ver notebook</a>
+          <a class="btn btn-primary btn-xs" href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_Sprint_6_Daniel_Aguinaga.ipynb" target="_blank">Ejecutar</a>
+        </div>
+      </article>
+
+      <!-- ML BÁSICO -->
+      <article class="project-card">
+        <h3 class="project-title">Introducción al modelado predictivo</h3>
+        <p class="project-description">
+          Primer proyecto de machine learning donde entreno modelos supervisados básicos,
+          evalúo métricas y analizo qué variables parecen tener mayor impacto.
+        </p>
+
+        <div class="project-tags">
+          <span class="tag">Machine Learning</span> <span class="tag">Modelado supervisado</span>
+        </div>
+
+        <div class="project-actions">
+          <a class="btn btn-ghost btn-xs" href="notebooks/Proyecto_Sprint_8_Daniel_Aguinaga.html" target="_blank">Ver notebook</a>
+          <a class="btn btn-primary btn-xs" href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_Sprint_8_Daniel_Aguinaga.ipynb" target="_blank">Ejecutar</a>
+        </div>
+      </article>
+
+      <!-- INTEGRADOR -->
+      <article class="project-card">
+        <h3 class="project-title">Proyecto integrador end-to-end</h3>
+        <p class="project-description">
+          Notebook que reúne varios conceptos: exploración, limpieza, análisis, modelado y conclusiones.
+          Resume el progreso acumulado durante el programa de formación.
+        </p>
+
+        <div class="project-tags">
+          <span class="tag">End-to-end</span> <span class="tag">Análisis completo</span>
+        </div>
+
+        <div class="project-actions">
+          <a class="btn btn-ghost btn-xs" href="notebooks/Proyecto_sprint_9_Daniel_Aguinaga.html" target="_blank">Ver notebook</a>
+          <a class="btn btn-primary btn-xs" href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_sprint_9_Daniel_Aguinaga.ipynb" target="_blank">Ejecutar</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-header">
+      <h2 class="section-title">Contacto</h2>
+      <p class="section-subtitle">Estoy abierto a roles junior, prácticas y oportunidades para seguir aprendiendo.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="about-text">
+        <p>Busco mi primera oportunidad como analista de datos. Me interesa mejorar mis habilidades técnicas,
+        trabajar con datos reales y aportar valor mediante análisis claros y bien comunicados.</p>
+        <p>Si tienes feedback, colaboración o una vacante entry-level, será un gusto conversar.</p>
       </div>
-    </section>
-  </main>
 
-  <footer>
-    © <span id="year"></span> Daniel Juan de Dios Aguiñaga Gómez · Analista de datos en formación
-  </footer>
+      <div class="contact-card">
+        <div><strong>Email:</strong> <a href="mailto:danielgg670@gmail.com">danielgg670@gmail.com</a></div>
+        <div><strong>GitHub:</strong> <a href="https://github.com/Dagadover" target="_blank">github.com/Dagadover</a></div>
+        <div><strong>LinkedIn:</strong> (lo actualizarás más adelante)</div>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+</main>
+
+<footer>
+  © <span id="year"></span> Daniel Juan de Dios Aguiñaga Gómez
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
