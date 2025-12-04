@@ -411,7 +411,6 @@
       color: var(--text-muted);
     }
 
-    /* Responsive */
     @media (max-width: 900px) {
       .hero {
         grid-template-columns: 1fr;
@@ -435,7 +434,6 @@
       }
     }
 
-    /* Estilos para iframe de notebooks */
     .notebook-embed {
       margin-top: 1rem;
       border-radius: 12px;
@@ -480,24 +478,22 @@
           Analista de datos
         </h1>
         <p class="hero-subtitle">
-          Me especializo en transformar datos en decisiones accionables para
-          negocio. Trabajo con Python, SQL, R y herramientas de visualización
-          para descubrir patrones, medir impacto y optimizar procesos.
+          Me especializo en transformar datos en decisiones accionables para negocio.
+          Trabajo con Python, SQL, R y herramientas de visualización para descubrir patrones,
+          medir impacto y optimizar procesos.
         </p>
 
         <div class="hero-actions">
-          <!-- Cambia el href a tu CV (por ahora vacío) -->
           <a class="btn btn-primary" href="#" target="_blank" rel="noopener">
             Descargar CV
           </a>
-          <!-- GitHub real -->
           <a class="btn btn-outline" href="https://github.com/Dagadover" target="_blank" rel="noopener">
             Ver repositorios en GitHub
           </a>
         </div>
 
         <div class="hero-meta">
-          <span>+X proyectos analíticos</span>
+          <span>+9 proyectos analíticos</span>
           <span>Experiencia en datos, negocio y docencia</span>
         </div>
       </div>
@@ -544,106 +540,191 @@
       <div class="section-header">
         <h2 class="section-title">Proyectos destacados</h2>
         <p class="section-subtitle">
-          Cada proyecto incluye acceso al notebook y, cuando es posible, una versión ejecutable.
+          Selección de proyectos de análisis, modelado y comunicación de resultados desarrollados con un enfoque profesional.
         </p>
       </div>
 
       <div class="projects-grid">
-        <!-- PROYECTO 1 -->
+
+        <!-- AMAZON REVIEWS MULTICLASS -->
         <article class="project-card">
-          <h3 class="project-title">Análisis de comportamiento de clientes y LTV</h3>
+          <h3 class="project-title">Clasificación de reseñas de Amazon</h3>
           <p class="project-description">
-            Análisis de cohortes, retención y valor del tiempo de vida (LTV) para una tienda online.
-            Incluye segmentación por canal de adquisición, frecuencia de compra y ticket promedio.
+            Proyecto de procesamiento de lenguaje natural para clasificar reseñas de productos en múltiples categorías.
+            Incluye preprocesamiento de texto, vectorización, modelos supervisados y evaluación con métricas avanzadas.
           </p>
           <div class="project-meta">
             <div class="project-tags">
+              <span class="tag">NLP</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Clasificación</span>
               <span class="tag">Python</span>
-              <span class="tag">pandas</span>
-              <span class="tag">Cohortes & LTV</span>
             </div>
             <span>2025</span>
           </div>
           <div class="project-actions">
-            <!-- HTML del notebook (cuando lo generes) -->
-            <a class="btn btn-ghost btn-xs" href="notebooks/proyecto_ltv.html" target="_blank" rel="noopener">
+            <a class="btn btn-ghost btn-xs"
+               href="notebooks/Amazon_Reviews_Multiclase.html"
+               target="_blank" rel="noopener">
               Ver notebook
             </a>
-            <!-- Binder con tu repo -->
             <a class="btn btn-primary btn-xs"
-               href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/proyecto_ltv.ipynb"
+               href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Amazon_Reviews_Multiclase.ipynb"
                target="_blank" rel="noopener">
               Ejecutar en Binder
             </a>
           </div>
-
-          <!-- EJEMPLO de notebook embebido (opcional) -->
-          <!--
-          <div class="notebook-embed">
-            <iframe src="notebooks/proyecto_ltv.html"></iframe>
-          </div>
-          -->
         </article>
 
-        <!-- PROYECTO 2 -->
+        <!-- LTV / COHORTES -->
         <article class="project-card">
-          <h3 class="project-title">Impacto del clima en la duración de viajes</h3>
+          <h3 class="project-title">Análisis de cohortes, retención y LTV</h3>
           <p class="project-description">
-            Estudio basado en datos de taxis en Chicago para evaluar si la duración media de los viajes
-            cambia bajo diferentes condiciones climáticas usando pruebas de hipótesis.
+            Análisis completo del comportamiento de usuarios, identificando patrones de retención,
+            valor del tiempo de vida (LTV) y rentabilidad por canal de adquisición.
+            Incluye recomendaciones estratégicas basadas en datos.
           </p>
           <div class="project-meta">
             <div class="project-tags">
+              <span class="tag">Cohortes</span>
+              <span class="tag">Retención</span>
+              <span class="tag">LTV</span>
               <span class="tag">Python</span>
-              <span class="tag">SciPy</span>
-              <span class="tag">Estadística</span>
             </div>
             <span>2025</span>
           </div>
           <div class="project-actions">
             <a class="btn btn-ghost btn-xs"
-               href="https://nbviewer.org/github/Dagadover/Portafolio_Analisis_de_Datos/blob/main/notebooks/proyecto_clima_viajes.ipynb"
+               href="notebooks/Proyecto_Sprint_5_Daniel_Aguinaga.html"
                target="_blank" rel="noopener">
-              Ver notebook (nbviewer)
+              Ver notebook
             </a>
             <a class="btn btn-primary btn-xs"
-               href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/proyecto_clima_viajes.ipynb"
+               href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_Sprint_5_Daniel_Aguinaga.ipynb"
                target="_blank" rel="noopener">
               Ejecutar en Binder
             </a>
           </div>
         </article>
 
-        <!-- PROYECTO 3 -->
+        <!-- STORYTELLING / PRODUCTO ANALÍTICO -->
         <article class="project-card">
-          <h3 class="project-title">Dashboard de ventas interactivo</h3>
+          <h3 class="project-title">Producto analítico y análisis de negocio</h3>
           <p class="project-description">
-            Construcción de un dashboard interactivo para ventas usando notebooks con Plotly y despliegue
-            en la web. Permite explorar ingresos, margen y comportamiento por segmento.
+            Desarrollo de un producto analítico centrado en métricas clave, visualización avanzada y storytelling,
+            con entrega ejecutiva para la toma de decisiones empresariales.
           </p>
           <div class="project-meta">
             <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Plotly</span>
+              <span class="tag">Storytelling</span>
+              <span class="tag">Análisis de negocio</span>
               <span class="tag">Visualización</span>
+              <span class="tag">Python</span>
             </div>
             <span>2025</span>
           </div>
           <div class="project-actions">
             <a class="btn btn-ghost btn-xs"
-               href="notebooks/dashboard_ventas.html"
-               target="_blank"
-               rel="noopener">
-              Ver demo
+               href="notebooks/Proyecto_Sprint_4_Daniel_Aguinaga.html"
+               target="_blank" rel="noopener">
+              Ver notebook
             </a>
             <a class="btn btn-primary btn-xs"
-               href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/dashboard_ventas.ipynb"
-               target="_blank"
-               rel="noopener">
+               href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_Sprint_4_Daniel_Aguinaga.ipynb"
+               target="_blank" rel="noopener">
               Ejecutar en Binder
             </a>
           </div>
         </article>
+
+        <!-- A/B TESTING -->
+        <article class="project-card">
+          <h3 class="project-title">Análisis experimental y pruebas de hipótesis</h3>
+          <p class="project-description">
+            Implementación de pruebas estadísticas, diseño de experimentos A/B y análisis de significancia
+            para validar estrategias de producto y marketing basadas en evidencia.
+          </p>
+          <div class="project-meta">
+            <div class="project-tags">
+              <span class="tag">A/B Testing</span>
+              <span class="tag">Estadística inferencial</span>
+              <span class="tag">SciPy</span>
+              <span class="tag">Python</span>
+            </div>
+            <span>2025</span>
+          </div>
+          <div class="project-actions">
+            <a class="btn btn-ghost btn-xs"
+               href="notebooks/Proyecto_Sprint_6_Daniel_Aguinaga.html"
+               target="_blank" rel="noopener">
+              Ver notebook
+            </a>
+            <a class="btn btn-primary btn-xs"
+               href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_Sprint_6_Daniel_Aguinaga.ipynb"
+               target="_blank" rel="noopener">
+              Ejecutar en Binder
+            </a>
+          </div>
+        </article>
+
+        <!-- MACHINE LEARNING -->
+        <article class="project-card">
+          <h3 class="project-title">Modelado predictivo y machine learning</h3>
+          <p class="project-description">
+            Construcción y evaluación de modelos de machine learning supervisado, con selección de características,
+            métricas de desempeño y justificación de decisiones técnicas.
+          </p>
+          <div class="project-meta">
+            <div class="project-tags">
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Modelado</span>
+              <span class="tag">Python</span>
+            </div>
+            <span>2025</span>
+          </div>
+          <div class="project-actions">
+            <a class="btn btn-ghost btn-xs"
+               href="notebooks/Proyecto_Sprint_8_Daniel_Aguinaga.html"
+               target="_blank" rel="noopener">
+              Ver notebook
+            </a>
+            <a class="btn btn-primary btn-xs"
+               href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_Sprint_8_Daniel_Aguinaga.ipynb"
+               target="_blank" rel="noopener">
+              Ejecutar en Binder
+            </a>
+          </div>
+        </article>
+
+        <!-- PROYECTO INTEGRADOR -->
+        <article class="project-card">
+          <h3 class="project-title">Proyecto integrador end-to-end</h3>
+          <p class="project-description">
+            Proyecto completo de ciencia de datos: limpieza, transformación, análisis, modelado y presentación ejecutiva
+            de resultados orientados a negocio.
+          </p>
+          <div class="project-meta">
+            <div class="project-tags">
+              <span class="tag">End-to-end</span>
+              <span class="tag">Python</span>
+              <span class="tag">Modelado</span>
+            </div>
+            <span>2025</span>
+          </div>
+          <div class="project-actions">
+            <a class="btn btn-ghost btn-xs"
+               href="notebooks/Proyecto_sprint_9_Daniel_Aguinaga.html"
+               target="_blank" rel="noopener">
+              Ver notebook
+            </a>
+            <a class="btn btn-primary btn-xs"
+               href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_sprint_9_Daniel_Aguinaga.ipynb"
+               target="_blank" rel="noopener">
+              Ejecutar en Binder
+            </a>
+          </div>
+        </article>
+
       </div>
     </section>
 
@@ -666,7 +747,6 @@
         </div>
         <div class="contact-row">
           <span class="contact-label">LinkedIn</span>
-          <!-- Pon aquí tu URL real cuando la tengas -->
           <a class="contact-link" href="#" target="_blank" rel="noopener">
             (agrega aquí tu perfil de LinkedIn)
           </a>
@@ -686,7 +766,6 @@
   </footer>
 
   <script>
-    // año automático en el footer
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
