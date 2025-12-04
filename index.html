@@ -2,25 +2,28 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Portafolio | Analista de Datos</title>
+  <title>Daniel Aguiñaga | Portafolio de Análisis de Datos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Fuentes de Google (opcional) -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <!-- SEO básico -->
+  <meta name="description" content="Portafolio de análisis de datos de Daniel Juan de Dios Aguiñaga Gómez: proyectos académicos y de bootcamp en análisis de datos, estadística, machine learning y NLP.">
+  <meta name="author" content="Daniel Juan de Dios Aguiñaga Gómez">
+
+  <!-- Fuentes de Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <style>
     :root {
       --primary: #2563eb;
-      --primary-dark: #1d4ed8;
-      --bg: #0f172a;
-      --bg-light: #111827;
-      --card-bg: #020617;
-      --text-main: #e5e7eb;
-      --text-muted: #9ca3af;
-      --accent: #22c55e;
-      --border: #1f2937;
-      --radius: 18px;
-      --shadow-soft: 0 20px 40px rgba(15, 23, 42, 0.8);
+      --primary-soft: #e5efff;
+      --primary-border: #c3d6ff;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --bg: #f5f5f7;
+      --bg-alt: #ffffff;
+      --border: #e5e7eb;
+      --radius: 16px;
+      --shadow-soft: 0 10px 25px rgba(15, 23, 42, 0.06);
     }
 
     * {
@@ -31,7 +34,7 @@
 
     body {
       font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: radial-gradient(circle at top left, #1e293b 0, #020617 45%, #000 100%);
+      background: var(--bg);
       color: var(--text-main);
       line-height: 1.6;
     }
@@ -48,40 +51,46 @@
       padding: 0 1.5rem;
     }
 
+    /* NAVBAR */
+
     header {
       position: sticky;
       top: 0;
       z-index: 50;
-      backdrop-filter: blur(18px);
-      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.7), transparent);
-      border-bottom: 1px solid rgba(31, 41, 55, 0.6);
+      backdrop-filter: blur(16px);
+      background: rgba(255, 255, 255, 0.92);
+      border-bottom: 1px solid #e5e7eb;
     }
 
     .nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.75rem 0;
+      padding: 0.8rem 0;
     }
 
     .nav-logo {
       font-weight: 600;
-      font-size: 1.1rem;
+      font-size: 1rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--text-muted);
     }
 
+    .nav-logo span {
+      color: var(--primary);
+    }
+
     .nav-links {
       display: flex;
-      gap: 1.25rem;
+      gap: 1.5rem;
       font-size: 0.9rem;
     }
 
     .nav-links a {
       color: var(--text-muted);
       position: relative;
-      padding-bottom: 0.2rem;
+      padding-bottom: 0.15rem;
     }
 
     .nav-links a::after {
@@ -91,16 +100,19 @@
       bottom: 0;
       width: 0%;
       height: 2px;
-      background: linear-gradient(to right, var(--primary), var(--accent));
-      transition: width 0.25s ease;
+      background: var(--primary);
+      border-radius: 999px;
+      transition: width 0.2s ease;
     }
 
     .nav-links a:hover::after {
       width: 100%;
     }
 
+    /* HERO */
+
     .hero {
-      padding: 5rem 0 3rem;
+      padding: 3.5rem 0 2.5rem;
       display: grid;
       grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.3fr);
       gap: 2.5rem;
@@ -111,11 +123,11 @@
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      padding: 0.2rem 0.7rem;
+      padding: 0.25rem 0.75rem;
       border-radius: 999px;
       font-size: 0.75rem;
-      border: 1px solid rgba(55, 65, 81, 0.8);
-      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
       color: var(--text-muted);
       margin-bottom: 0.9rem;
     }
@@ -124,34 +136,42 @@
       width: 8px;
       height: 8px;
       border-radius: 999px;
-      background: var(--accent);
-      box-shadow: 0 0 10px rgba(34, 197, 94, 0.8);
+      background: #22c55e;
     }
 
     .hero-title {
-      font-size: clamp(2.4rem, 4vw, 3.3rem);
+      font-size: clamp(2.2rem, 3.4vw, 3rem);
       font-weight: 600;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.4rem;
     }
 
     .hero-title span {
-      background: linear-gradient(to right, var(--primary), var(--accent));
-      -webkit-background-clip: text;
-      color: transparent;
+      color: var(--primary);
+    }
+
+    .hero-role {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
     }
 
     .hero-subtitle {
       font-size: 0.95rem;
       color: var(--text-muted);
-      max-width: 37rem;
+      max-width: 38rem;
       margin-bottom: 1.6rem;
+    }
+
+    .hero-subtitle strong {
+      color: var(--text-main);
+      font-weight: 500;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 0.8rem;
-      margin-bottom: 1.4rem;
+      margin-bottom: 1.3rem;
     }
 
     .btn {
@@ -160,50 +180,65 @@
       justify-content: center;
       gap: 0.4rem;
       border-radius: 999px;
-      padding: 0.6rem 1.3rem;
+      padding: 0.55rem 1.25rem;
       font-size: 0.9rem;
       border: 1px solid transparent;
       cursor: pointer;
-      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease, border-color 0.12s ease;
       text-decoration: none;
+      white-space: nowrap;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      box-shadow: 0 18px 35px rgba(37, 99, 235, 0.4);
+      background: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
     }
 
     .btn-primary:hover {
       transform: translateY(-1px);
-      box-shadow: 0 22px 40px rgba(37, 99, 235, 0.55);
+      box-shadow: 0 10px 22px rgba(37, 99, 235, 0.3);
     }
 
     .btn-outline {
-      background: transparent;
-      border-color: rgba(75, 85, 99, 0.9);
+      background: #ffffff;
+      border-color: #d1d5db;
       color: var(--text-muted);
     }
 
     .btn-outline:hover {
       border-color: var(--primary);
-      background: rgba(15, 23, 42, 0.8);
+      color: var(--primary);
       transform: translateY(-1px);
+      background: #f9fafb;
     }
 
     .hero-meta {
       display: flex;
-      gap: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1.2rem;
       font-size: 0.8rem;
       color: var(--text-muted);
     }
 
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .hero-meta-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #d1d5db;
+    }
+
     .hero-card {
-      background: radial-gradient(circle at top left, rgba(37,99,235,0.13), transparent 50%),
-                  radial-gradient(circle at bottom right, rgba(34,197,94,0.12), transparent 55%),
-                  var(--bg-light);
-      border-radius: 1.7rem;
-      padding: 1.6rem 1.4rem;
-      border: 1px solid rgba(55, 65, 81, 0.9);
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 1.5rem 1.3rem;
+      border: 1px solid #e5e7eb;
       box-shadow: var(--shadow-soft);
       display: flex;
       flex-direction: column;
@@ -228,28 +263,32 @@
       border-radius: 999px;
       padding: 0.25rem 0.7rem;
       font-size: 0.75rem;
-      border: 1px solid rgba(75, 85, 99, 0.9);
-      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+      color: var(--text-muted);
     }
 
     .status-pill {
       font-size: 0.75rem;
       border-radius: 999px;
-      padding: 0.2rem 0.55rem;
-      background: rgba(34, 197, 94, 0.1);
-      border: 1px solid rgba(34, 197, 94, 0.7);
-      color: var(--accent);
+      padding: 0.2rem 0.6rem;
+      background: var(--primary-soft);
+      border: 1px solid var(--primary-border);
+      color: var(--primary);
     }
 
+    /* SECCIONES GENERALES */
+
     section {
-      padding: 2.5rem 0;
+      padding: 2.4rem 0;
     }
 
     .section-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 1.3rem;
+      margin-bottom: 1.4rem;
+      gap: 1rem;
     }
 
     .section-title {
@@ -260,7 +299,10 @@
     .section-subtitle {
       font-size: 0.9rem;
       color: var(--text-muted);
+      max-width: 26rem;
     }
+
+    /* SKILLS */
 
     .skills-grid {
       display: flex;
@@ -271,11 +313,13 @@
     .skill-pill {
       padding: 0.3rem 0.9rem;
       border-radius: 999px;
-      border: 1px solid rgba(55, 65, 81, 0.9);
+      border: 1px solid #e5e7eb;
       font-size: 0.8rem;
-      background: rgba(15, 23, 42, 0.9);
+      background: #ffffff;
       color: var(--text-muted);
     }
+
+    /* PROJECTS */
 
     .projects-grid {
       display: grid;
@@ -284,45 +328,33 @@
     }
 
     .project-card {
-      background: var(--card-bg);
+      background: #ffffff;
       border-radius: var(--radius);
-      border: 1px solid var(--border);
+      border: 1px solid #e5e7eb;
       padding: 1.1rem 1.1rem 1rem;
       display: flex;
       flex-direction: column;
       gap: 0.65rem;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+      transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
       position: relative;
       overflow: hidden;
-    }
-
-    .project-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.22), transparent 55%);
-      opacity: 0;
-      transition: opacity 0.18s ease;
-      pointer-events: none;
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.03);
     }
 
     .project-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.9);
-      border-color: rgba(37, 99, 235, 0.7);
-    }
-
-    .project-card:hover::before {
-      opacity: 1;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+      border-color: var(--primary-border);
     }
 
     .project-title {
       font-size: 1rem;
       font-weight: 600;
+      color: var(--text-main);
     }
 
     .project-description {
-      font-size: 0.85rem;
+      font-size: 0.86rem;
       color: var(--text-muted);
     }
 
@@ -344,15 +376,16 @@
     .tag {
       border-radius: 999px;
       padding: 0.15rem 0.6rem;
-      border: 1px solid rgba(55, 65, 81, 0.9);
-      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+      color: var(--text-muted);
     }
 
     .project-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      margin-top: 0.3rem;
+      margin-top: 0.4rem;
     }
 
     .btn-xs {
@@ -361,23 +394,42 @@
     }
 
     .btn-ghost {
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(55, 65, 81, 0.9);
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
       color: var(--text-muted);
     }
 
     .btn-ghost:hover {
       border-color: var(--primary);
-      color: #e5e7eb;
+      color: var(--primary);
       transform: translateY(-1px);
+      background: #f9fafb;
+    }
+
+    /* CONTACTO / ABOUT EXTRA */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.1fr);
+      gap: 1.8rem;
+      align-items: start;
+    }
+
+    .about-text {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    .about-text p + p {
+      margin-top: 0.6rem;
     }
 
     .contact-card {
-      background: var(--card-bg);
+      background: #ffffff;
       border-radius: var(--radius);
-      border: 1px solid var(--border);
+      border: 1px solid #e5e7eb;
       padding: 1.5rem;
-      box-shadow: 0 18px 35px rgba(15, 23, 42, 0.8);
+      box-shadow: var(--shadow-soft);
       display: flex;
       flex-direction: column;
       gap: 0.7rem;
@@ -398,27 +450,35 @@
     }
 
     .contact-link {
-      color: var(--text-main);
-      text-decoration: underline dotted;
+      color: var(--primary);
+      text-decoration: underline;
       text-underline-offset: 3px;
     }
 
+    /* FOOTER */
+
     footer {
-      border-top: 1px solid rgba(31, 41, 55, 0.9);
-      padding: 1.2rem 0 1.5rem;
+      border-top: 1px solid #e5e7eb;
+      padding: 1.1rem 0 1.4rem;
       text-align: center;
       font-size: 0.8rem;
       color: var(--text-muted);
+      background: #ffffff;
+      margin-top: 1.5rem;
     }
+
+    /* RESPONSIVE */
 
     @media (max-width: 900px) {
       .hero {
         grid-template-columns: 1fr;
-        padding-top: 4rem;
+        padding-top: 2.8rem;
       }
-
       .hero-card {
         order: -1;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -432,22 +492,12 @@
         flex-direction: column;
         align-items: flex-start;
       }
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
 
-    .notebook-embed {
-      margin-top: 1rem;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid rgba(55, 65, 81, 0.9);
-      height: 420px;
-    }
-
-    .notebook-embed iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      background: #fff;
-    }
   </style>
 </head>
 <body>
@@ -455,7 +505,7 @@
   <header>
     <div class="container">
       <nav class="nav">
-        <div class="nav-logo">DATA PORTFOLIO</div>
+        <div class="nav-logo">DAG · <span>Data Analyst</span></div>
         <div class="nav-links">
           <a href="#about">Sobre mí</a>
           <a href="#projects">Proyectos</a>
@@ -471,21 +521,25 @@
       <div>
         <div class="badge">
           <span class="badge-dot"></span>
-          Disponible para proyectos de análisis de datos
+          En formación como analista de datos · Buscando primera oportunidad
         </div>
         <h1 class="hero-title">
-          Hola, soy <span>Daniel Juan de Dios Aguiñaga Gómez</span><br />
-          Analista de datos
+          Hola, soy <span>Daniel Juan de Dios Aguiñaga Gómez</span>
         </h1>
+        <div class="hero-role">
+          Analista de datos principiante con portafolio de proyectos prácticos.
+        </div>
         <p class="hero-subtitle">
-          Me especializo en transformar datos en decisiones accionables para negocio.
-          Trabajo con Python, SQL, R y herramientas de visualización para descubrir patrones,
-          medir impacto y optimizar procesos.
+          Actualmente estoy construyendo mi perfil como <strong>analista de datos</strong> a través de proyectos
+          prácticos de un bootcamp y estudio autodidacta. Este portafolio reúne los notebooks donde aplico
+          <strong>Python, estadística, visualización y conceptos de machine learning</strong> a problemas concretos,
+          con el objetivo de dar el siguiente paso hacia mi primera experiencia profesional en el área.
         </p>
 
         <div class="hero-actions">
+          <!-- Actualiza este enlace cuando tengas tu CV en PDF en el repo -->
           <a class="btn btn-primary" href="#" target="_blank" rel="noopener">
-            Descargar CV
+            CV (próximamente)
           </a>
           <a class="btn btn-outline" href="https://github.com/Dagadover" target="_blank" rel="noopener">
             Ver repositorios en GitHub
@@ -493,8 +547,9 @@
         </div>
 
         <div class="hero-meta">
-          <span>+9 proyectos analíticos</span>
-          <span>Experiencia en datos, negocio y docencia</span>
+          <span><span class="hero-meta-dot"></span> Basado en Puebla, México</span>
+          <span><span class="hero-meta-dot"></span> Proyectos de formación en análisis de datos</span>
+          <span><span class="hero-meta-dot"></span> En búsqueda de roles junior o de entrada</span>
         </div>
       </div>
 
@@ -505,12 +560,13 @@
         </div>
         <div class="stack-chips">
           <span class="chip">Python (pandas, numpy, matplotlib)</span>
-          <span class="chip">Jupyter Notebook / JupyterLab</span>
-          <span class="chip">SQL (PostgreSQL / MySQL)</span>
-          <span class="chip">R · ggplot2 · dplyr</span>
-          <span class="chip">Tableau / Power BI</span>
-          <span class="chip">Estadística inferencial</span>
-          <span class="chip">Machine Learning básico</span>
+          <span class="chip">Jupyter Notebook</span>
+          <span class="chip">SQL para análisis</span>
+          <span class="chip">Estadística básica e inferencial</span>
+          <span class="chip">Machine learning supervisado (nivel inicial)</span>
+          <span class="chip">NLP · clasificación de texto</span>
+          <span class="chip">Visualización de datos</span>
+          <span class="chip">Trabajo con datos tabulares</span>
         </div>
       </div>
     </section>
@@ -518,9 +574,9 @@
     <!-- SKILLS -->
     <section>
       <div class="section-header">
-        <h2 class="section-title">Habilidades clave</h2>
+        <h2 class="section-title">Habilidades en desarrollo</h2>
         <p class="section-subtitle">
-          De la extracción de datos al insight accionable.
+          Competencias que he ido adquiriendo a través de proyectos prácticos, ejercicios guiados y estudio independiente.
         </p>
       </div>
       <div class="skills-grid">
@@ -528,10 +584,12 @@
         <span class="skill-pill">Análisis exploratorio (EDA)</span>
         <span class="skill-pill">Visualización de datos</span>
         <span class="skill-pill">Pruebas de hipótesis</span>
-        <span class="skill-pill">Segmentación de clientes</span>
-        <span class="skill-pill">Cohortes · Retención · LTV</span>
-        <span class="skill-pill">Automatización en Python</span>
-        <span class="skill-pill">Reporting ejecutivo</span>
+        <span class="skill-pill">Cohortes, retención y LTV</span>
+        <span class="skill-pill">A/B testing (nivel inicial)</span>
+        <span class="skill-pill">Modelos supervisados (ML básico)</span>
+        <span class="skill-pill">Procesamiento de lenguaje natural (NLP básico)</span>
+        <span class="skill-pill">SQL para obtener y filtrar datos</span>
+        <span class="skill-pill">Trabajo reproducible con notebooks</span>
       </div>
     </section>
 
@@ -540,27 +598,27 @@
       <div class="section-header">
         <h2 class="section-title">Proyectos destacados</h2>
         <p class="section-subtitle">
-          Selección de proyectos de análisis, modelado y comunicación de resultados desarrollados con un enfoque profesional.
+          Todos estos proyectos forman parte de mi proceso de aprendizaje. Cada uno me ha permitido practicar herramientas, conceptos y la forma de presentar resultados.
         </p>
       </div>
 
       <div class="projects-grid">
-
         <!-- AMAZON REVIEWS MULTICLASS -->
         <article class="project-card">
           <h3 class="project-title">Clasificación de reseñas de Amazon</h3>
           <p class="project-description">
-            Proyecto de procesamiento de lenguaje natural para clasificar reseñas de productos en múltiples categorías.
-            Incluye preprocesamiento de texto, vectorización, modelos supervisados y evaluación con métricas avanzadas.
+            Proyecto de procesamiento de lenguaje natural donde trabajo con reseñas de productos de Amazon
+            para clasificarlas en varias categorías. Incluye limpieza de texto, vectorización, entrenamiento
+            de modelos supervisados y evaluación con métricas como precisión y recall.
           </p>
           <div class="project-meta">
             <div class="project-tags">
               <span class="tag">NLP</span>
-              <span class="tag">Machine Learning</span>
+              <span class="tag">Machine learning</span>
               <span class="tag">Clasificación</span>
               <span class="tag">Python</span>
             </div>
-            <span>2025</span>
+            <span>Proyecto de formación</span>
           </div>
           <div class="project-actions">
             <a class="btn btn-ghost btn-xs"
@@ -580,9 +638,9 @@
         <article class="project-card">
           <h3 class="project-title">Análisis de cohortes, retención y LTV</h3>
           <p class="project-description">
-            Análisis completo del comportamiento de usuarios, identificando patrones de retención,
-            valor del tiempo de vida (LTV) y rentabilidad por canal de adquisición.
-            Incluye recomendaciones estratégicas basadas en datos.
+            En este proyecto analizo el comportamiento de usuarios a lo largo del tiempo: agrupo en cohortes,
+            calculo su retención y estimo el valor de tiempo de vida (LTV). A partir de los resultados,
+            planteo conclusiones sobre qué canales parecen más rentables y cómo podría optimizarse la inversión.
           </p>
           <div class="project-meta">
             <div class="project-tags">
@@ -591,7 +649,7 @@
               <span class="tag">LTV</span>
               <span class="tag">Python</span>
             </div>
-            <span>2025</span>
+            <span>Proyecto de formación</span>
           </div>
           <div class="project-actions">
             <a class="btn btn-ghost btn-xs"
@@ -611,8 +669,9 @@
         <article class="project-card">
           <h3 class="project-title">Producto analítico y análisis de negocio</h3>
           <p class="project-description">
-            Desarrollo de un producto analítico centrado en métricas clave, visualización avanzada y storytelling,
-            con entrega ejecutiva para la toma de decisiones empresariales.
+            Proyecto en el que estructuro un análisis completo alrededor de preguntas de negocio específicas.
+            Además de hacer el análisis con Python, trabajo en la narrativa: cómo presentar hallazgos,
+            qué gráficos usar y cómo pasar de los números a recomendaciones sencillas de entender.
           </p>
           <div class="project-meta">
             <div class="project-tags">
@@ -621,7 +680,7 @@
               <span class="tag">Visualización</span>
               <span class="tag">Python</span>
             </div>
-            <span>2025</span>
+            <span>Proyecto de formación</span>
           </div>
           <div class="project-actions">
             <a class="btn btn-ghost btn-xs"
@@ -641,17 +700,18 @@
         <article class="project-card">
           <h3 class="project-title">Análisis experimental y pruebas de hipótesis</h3>
           <p class="project-description">
-            Implementación de pruebas estadísticas, diseño de experimentos A/B y análisis de significancia
-            para validar estrategias de producto y marketing basadas en evidencia.
+            Aquí practico el diseño y análisis de experimentos A/B: formulo hipótesis, elijo pruebas estadísticas,
+            calculo p-values y reflexiono sobre cuándo una diferencia es estadísticamente significativa
+            y qué significa eso en términos prácticos.
           </p>
           <div class="project-meta">
             <div class="project-tags">
-              <span class="tag">A/B Testing</span>
-              <span class="tag">Estadística inferencial</span>
+              <span class="tag">A/B testing</span>
+              <span class="tag">Estadística</span>
               <span class="tag">SciPy</span>
               <span class="tag">Python</span>
             </div>
-            <span>2025</span>
+            <span>Proyecto de formación</span>
           </div>
           <div class="project-actions">
             <a class="btn btn-ghost btn-xs"
@@ -671,16 +731,17 @@
         <article class="project-card">
           <h3 class="project-title">Modelado predictivo y machine learning</h3>
           <p class="project-description">
-            Construcción y evaluación de modelos de machine learning supervisado, con selección de características,
-            métricas de desempeño y justificación de decisiones técnicas.
+            Proyecto donde aplico modelos supervisados para intentar predecir una variable objetivo
+            (por ejemplo, probabilidad de abandono o una métrica de interés), practicando la división
+            en train/test, el manejo de métricas y la interpretación de resultados.
           </p>
           <div class="project-meta">
             <div class="project-tags">
-              <span class="tag">Machine Learning</span>
+              <span class="tag">Machine learning</span>
               <span class="tag">Modelado</span>
               <span class="tag">Python</span>
             </div>
-            <span>2025</span>
+            <span>Proyecto de formación</span>
           </div>
           <div class="project-actions">
             <a class="btn btn-ghost btn-xs"
@@ -700,16 +761,17 @@
         <article class="project-card">
           <h3 class="project-title">Proyecto integrador end-to-end</h3>
           <p class="project-description">
-            Proyecto completo de ciencia de datos: limpieza, transformación, análisis, modelado y presentación ejecutiva
-            de resultados orientados a negocio.
+            Proyecto que recorre todas las etapas típicas de un trabajo de análisis de datos:
+            entender el problema, preparar los datos, analizarlos, probar algunas ideas de modelado
+            y resumir los hallazgos en conclusiones generales.
           </p>
           <div class="project-meta">
             <div class="project-tags">
               <span class="tag">End-to-end</span>
               <span class="tag">Python</span>
-              <span class="tag">Modelado</span>
+              <span class="tag">Análisis completo</span>
             </div>
-            <span>2025</span>
+            <span>Proyecto de formación</span>
           </div>
           <div class="project-actions">
             <a class="btn btn-ghost btn-xs"
@@ -724,45 +786,60 @@
             </a>
           </div>
         </article>
-
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- CONTACT / ABOUT EXTRA -->
     <section id="contact">
       <div class="section-header">
         <h2 class="section-title">Contacto</h2>
         <p class="section-subtitle">
-          Si quieres colaborar en un proyecto o revisar mi trabajo con más detalle, escríbeme.
+          Si quieres revisar estos proyectos, darme feedback o considerar mi perfil para una vacante junior, estaré encantado de platicar.
         </p>
       </div>
-      <div class="contact-card">
-        <p>
-          Estoy abierto a proyectos de análisis de datos, visualización, automatización de reportes
-          y desarrollo de soluciones analíticas para negocio.
-        </p>
-        <div class="contact-row">
-          <span class="contact-label">Email</span>
-          <a class="contact-link" href="mailto:danielgg670@gmail.com">danielgg670@gmail.com</a>
+
+      <div class="contact-grid">
+        <div class="about-text">
+          <p>
+            Estoy en una etapa de transición hacia el análisis de datos, por lo que valoro mucho
+            las oportunidades donde pueda seguir aprendiendo mientras aporto con lo que ya sé:
+            estructurar problemas, trabajar con notebooks, hacer análisis claros y comunicar resultados.
+          </p>
+          <p>
+            Me interesa seguir mejorando mis habilidades técnicas (Python, SQL, estadística y machine learning)
+            y entender cada vez mejor cómo los datos ayudan a responder preguntas reales en contextos de negocio.
+          </p>
         </div>
-        <div class="contact-row">
-          <span class="contact-label">LinkedIn</span>
-          <a class="contact-link" href="#" target="_blank" rel="noopener">
-            (agrega aquí tu perfil de LinkedIn)
-          </a>
-        </div>
-        <div class="contact-row">
-          <span class="contact-label">GitHub</span>
-          <a class="contact-link" href="https://github.com/Dagadover" target="_blank" rel="noopener">
-            github.com/Dagadover
-          </a>
+
+        <div class="contact-card">
+          <p>
+            Estoy abierto a vacantes junior, roles de entrada, prácticas profesionales y proyectos
+            donde pueda seguir practicando análisis de datos en un contexto real.
+          </p>
+          <div class="contact-row">
+            <span class="contact-label">Email</span>
+            <a class="contact-link" href="mailto:danielgg670@gmail.com">danielgg670@gmail.com</a>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">GitHub</span>
+            <a class="contact-link" href="https://github.com/Dagadover" target="_blank" rel="noopener">
+              github.com/Dagadover
+            </a>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">LinkedIn</span>
+            <!-- Cambia # por tu URL real cuando la tengas -->
+            <a class="contact-link" href="#" target="_blank" rel="noopener">
+              (agrega aquí tu perfil de LinkedIn cuando esté listo)
+            </a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    © <span id="year"></span> Daniel Juan de Dios Aguiñaga Gómez · Analista de datos
+    © <span id="year"></span> Daniel Juan de Dios Aguiñaga Gómez · Analista de datos en formación
   </footer>
 
   <script>
