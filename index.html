@@ -395,6 +395,18 @@
       min-height: 0;
     }
 
+    /* Lista de métricas en proyectos destacados */
+    .project-metrics {
+      margin: .4rem 0 0;
+      padding-left: 1.1rem;
+      font-size: .84rem;
+      color: var(--text-muted);
+    }
+
+    .project-metrics li {
+      margin-bottom: .2rem;
+    }
+
     /* Contact */
     .contact-grid {
       display: grid;
@@ -668,6 +680,13 @@
           Conecto los resultados con decisiones prácticas, priorizo indicadores útiles, comparo escenarios e interpreto las salidas
           de los modelos para proponer siguientes pasos realistas.</p>
 
+          <p><strong>Métricas destacadas del análisis:</strong></p>
+          <ul class="project-metrics">
+            <li>Análisis de <strong>207,051 usuarios</strong>, con una retención del <strong>22.5%</strong> (usuarios recurrentes).</li>
+            <li>Estimación de un <strong>LTV promedio de $6.90 USD por usuario</strong>, combinando comportamiento de visitas y compras.</li>
+            <li>Identificación de que las <strong>3 principales fuentes de adquisición concentran el 75.8% del tráfico</strong>, mostrando alta dependencia de pocos canales.</li>
+          </ul>
+
           <div class="project-actions">
             <a class="btn btn-ghost btn-xs"
                href="notebooks/Proyecto_sprint_9_Daniel_Aguinaga.html"
@@ -718,6 +737,13 @@
           Analizo en qué clases el modelo se desempeña mejor o peor, identifico posibles sesgos y discuto cómo podría integrarse
           en un flujo real de negocio basado en feedback de clientes.</p>
 
+          <p><strong>Métricas destacadas del modelo:</strong></p>
+          <ul class="project-metrics">
+            <li>Entrenamiento sobre <strong>103,460 reseñas</strong>, vectorizadas con TF-IDF y un vocabulario de <strong>51,932 términos</strong>.</li>
+            <li>Mejor modelo (LinearSVC) con una <strong>accuracy de 89.2%</strong>, superando a Random Forest (86.0%) y Decision Tree (73.9%).</li>
+            <li><strong>F1-score ponderado de 0.88</strong> en el mejor modelo, mostrando buen equilibrio entre precisión y recall en las clases.</li>
+          </ul>
+
           <div class="project-actions">
             <a class="btn btn-ghost btn-xs"
                href="notebooks/Amazon_Reviews_Multiclase.html"
@@ -767,6 +793,13 @@
           <p><strong>Valor agregado del análisis:</strong><br>
           Identifico qué tipo de clientes parecen más valiosos, qué señales podrían indicar riesgo de abandono y cómo
           se podrían diseñar estrategias de retención y crecimiento basadas en datos.</p>
+
+          <p><strong>Métricas destacadas del análisis:</strong></p>
+          <ul class="project-metrics">
+            <li>Eliminación de <strong>207 filas duplicadas</strong>, garantizando 0 duplicados tras la depuración.</li>
+            <li>Corrección de <strong>15 order_id duplicados</strong>, dejando el identificador de pedidos sin inconsistencias.</li>
+            <li>Identificación de ventanas de baja actividad, por ejemplo solo <strong>0.025% de pedidos</strong> ocurren los miércoles a las 2:00 a.m.</li>
+          </ul>
 
           <div class="project-actions">
             <a class="btn btn-ghost btn-xs"
