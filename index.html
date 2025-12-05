@@ -626,174 +626,249 @@
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="section-header">
-      <h2 class="section-title">Proyectos destacados</h2>
-      <p class="section-subtitle">
-        Comienzo con un proyecto end-to-end que integra todo el flujo analítico, seguido de proyectos
-        enfocados en habilidades específicas como NLP, EDA, estadística y machine learning.
+<!-- PROJECTS -->
+<section id="projects">
+  <!-- PROYECTOS DESTACADOS -->
+  <div class="section-header">
+    <h2 class="section-title">Proyectos destacados</h2>
+    <p class="section-subtitle">
+      Comienzo con un proyecto end-to-end que integra todo el flujo analítico, seguido de proyectos
+      enfocados en habilidades específicas como NLP, EDA, estadística y machine learning.
+    </p>
+  </div>
+
+  <!-- GRID DE PROYECTOS DESTACADOS -->
+  <div class="projects-grid">
+
+    <!-- 1. PROYECTO END-TO-END DESTACADO -->
+    <article class="project-card project-card--featured">
+      <span class="featured-label">Proyecto end-to-end</span>
+      <h3 class="project-title">Proyecto Analítico: Exploración, Modelado y Generación de Insights</h3>
+
+      <div class="project-tags">
+        <span class="tag">End-to-end</span>
+        <span class="tag">Análisis completo</span>
+        <span class="tag">Modelado</span>
+        <span class="tag">Storytelling</span>
+      </div>
+
+      <div class="featured-content">
+        <div class="featured-text">
+          <p><strong>Problemática abordada:</strong><br>
+          Integro todo el flujo de trabajo de un analista de datos para resolver una problemática de negocio de principio a fin:
+          desde datos crudos hasta recomendaciones accionables.</p>
+
+          <p><strong>¿Qué hago en este proyecto?</strong><br>
+          – Limpieza y preparación de los datos.<br>
+          – Análisis exploratorio (EDA) y visualización.<br>
+          – Modelado supervisado básico.<br>
+          – Síntesis de hallazgos y conclusiones orientadas al negocio.</p>
+
+          <p><strong>Valor agregado del análisis:</strong><br>
+          Conecto los resultados con decisiones prácticas, priorizo indicadores útiles, comparo escenarios e interpreto las salidas
+          de los modelos para proponer siguientes pasos realistas.</p>
+
+          <div class="project-actions">
+            <a class="btn btn-ghost btn-xs"
+               href="notebooks/Proyecto_sprint_9_Daniel_Aguinaga.html"
+               target="_blank" rel="noopener">
+              Ver en pestaña nueva
+            </a>
+            <a class="btn btn-primary btn-xs"
+               href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_sprint_9_Daniel_Aguinaga.ipynb"
+               target="_blank" rel="noopener">
+               Ejecutar en Binder
+            </a>
+          </div>
+        </div>
+
+        <div class="featured-notebook">
+          <iframe
+            src="notebooks/Proyecto_sprint_9_Daniel_Aguinaga.html"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2. NLP: CLASIFICACIÓN AMAZON -->
+    <article class="project-card project-card--featured">
+      <span class="featured-label">NLP y clasificación de texto</span>
+      <h3 class="project-title">Clasificación de reseñas de Amazon</h3>
+
+      <div class="project-tags">
+        <span class="tag">NLP</span>
+        <span class="tag">Clasificación</span>
+        <span class="tag">Machine learning</span>
+      </div>
+
+      <div class="featured-content">
+        <div class="featured-text">
+          <p><strong>Problemática abordada:</strong><br>
+          Trabajo con reseñas de productos de Amazon para entrenar un modelo que clasifique automáticamente los comentarios
+          en distintas categorías, transformando texto libre en información estructurada.</p>
+
+          <p><strong>¿Qué hago en este proyecto?</strong><br>
+          – Limpieza y normalización del texto.<br>
+          – Tokenización y vectorización de reseñas.<br>
+          – Entrenamiento de modelos de clasificación multiclase.<br>
+          – Evaluación con métricas como accuracy, precisión, recall y F1.</p>
+
+          <p><strong>Valor agregado del análisis:</strong><br>
+          Analizo en qué clases el modelo se desempeña mejor o peor, identifico posibles sesgos y discuto cómo podría integrarse
+          en un flujo real de negocio basado en feedback de clientes.</p>
+
+          <div class="project-actions">
+            <a class="btn btn-ghost btn-xs"
+               href="notebooks/Amazon_Reviews_Multiclase.html"
+               target="_blank" rel="noopener">
+              Ver en pestaña nueva
+            </a>
+            <a class="btn btn-primary btn-xs"
+               href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Amazon_Reviews_Multiclase.ipynb"
+               target="_blank" rel="noopener">
+              Ejecutar en Binder
+            </a>
+          </div>
+        </div>
+
+        <div class="featured-notebook">
+          <iframe
+            src="notebooks/Amazon_Reviews_Multiclase.html"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3. EDA / SEGMENTACIÓN CLIENTES -->
+    <article class="project-card project-card--featured">
+      <span class="featured-label">EDA y comportamiento de clientes</span>
+      <h3 class="project-title">Análisis exploratorio y segmentación del comportamiento del cliente</h3>
+
+      <div class="project-tags">
+        <span class="tag">EDA</span>
+        <span class="tag">Visualización</span>
+        <span class="tag">Segmentación</span>
+      </div>
+
+      <div class="featured-content">
+        <div class="featured-text">
+          <p><strong>Problemática abordada:</strong><br>
+          Analizo cómo se comportan distintos tipos de clientes: frecuencia de uso, gasto, recencia y patrones de interacción,
+          con el fin de identificar segmentos diferenciados.</p>
+
+          <p><strong>¿Qué hago en este proyecto?</strong><br>
+          – Limpieza y preparación de datos de usuarios.<br>
+          – EDA con métricas como frecuencia, recencia y valor.<br>
+          – Visualización de distribuciones y patrones de uso.<br>
+          – Construcción de segmentos simples y comparación entre grupos.</p>
+
+          <p><strong>Valor agregado del análisis:</strong><br>
+          Identifico qué tipo de clientes parecen más valiosos, qué señales podrían indicar riesgo de abandono y cómo
+          se podrían diseñar estrategias de retención y crecimiento basadas en datos.</p>
+
+          <div class="project-actions">
+            <a class="btn btn-ghost btn-xs"
+               href="notebooks/Proyecto_Sprint_4_Daniel_Aguinaga.html"
+               target="_blank" rel="noopener">
+              Ver en pestaña nueva
+            </a>
+            <a class="btn btn-primary btn-xs"
+               href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_Sprint_4_Daniel_Aguinaga.ipynb"
+               target="_blank" rel="noopener">
+              Ejecutar en Binder
+            </a>
+          </div>
+        </div>
+
+        <div class="featured-notebook">
+          <iframe
+            src="notebooks/Proyecto_Sprint_4_Daniel_Aguinaga.html"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </article>
+
+  </div> <!-- /projects-grid de destacados -->
+
+  <!-- ============================== -->
+  <!-- NUEVA SUBSECCIÓN: OTROS PROYECTOS -->
+  <!-- ============================== -->
+
+  <div class="section-header" style="margin-top: 3rem;">
+    <h2 class="section-title">Otros proyectos</h2>
+    <p class="section-subtitle">
+      Proyectos complementarios donde aplico EDA, estadísticas descriptivas, KPIs, pruebas de hipótesis
+      y visualización en distintos contextos.
+    </p>
+  </div>
+
+  <!-- GRID DE OTROS PROYECTOS -->
+  <div class="projects-grid">
+
+    <!-- 4. ANALISIS COMPARATIVO DE SERVICIOS -->
+    <article class="project-card">
+      <h3 class="project-title">Análisis comparativo de servicios y evaluación de rentabilidad</h3>
+      <p class="project-description">
+        Análisis estadístico comparativo donde evalúo el rendimiento de diferentes productos mediante métricas
+        clave como ingresos promedio y rentabilidad. Demuestro habilidades en EDA, cálculo de KPIs y conclusiones
+        orientadas al negocio.
       </p>
-    </div>
 
-    <div class="projects-grid">
+      <div class="project-tags">
+        <span class="tag">Estadística</span>
+        <span class="tag">Análisis económico</span>
+      </div>
 
-      <!-- INTEGRADOR DESTACADO -->
-      <article class="project-card project-card--featured">
-        <span class="featured-label">Proyecto end-to-end</span>
-        <h3 class="project-title">Proyecto Analítico: Exploración, Modelado y Generación de Insights</h3>
+      <div class="project-actions">
+        <a class="btn btn-ghost btn-xs" href="notebooks/Proyecto_Sprint_5_Daniel_Aguinaga.html" target="_blank" rel="noopener">Ver notebook</a>
+        <a class="btn btn-primary btn-xs" href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_Sprint_5_Daniel_Aguinaga.ipynb" target="_blank" rel="noopener">Ejecutar</a>
+      </div>
+    </article>
 
-        <div class="project-tags">
-          <span class="tag">End-to-end</span>
-          <span class="tag">Análisis completo</span>
-          <span class="tag">Modelado</span>
-          <span class="tag">Storytelling</span>
-        </div>
+    <!-- 5. FACTORES PREDICTIVOS / PRODUCTOS -->
+    <article class="project-card">
+      <h3 class="project-title">Evaluación de desempeño de productos y factores predictivos de éxito</h3>
+      <p class="project-description">
+        Análisis de datos de productos para identificar qué factores explican su éxito.
+        Practico EDA, correlaciones, pruebas estadísticas y extracción de insights accionables.
+      </p>
 
-        <div class="featured-content">
-          <div class="featured-text">
-            <p><strong>Problemática abordada:</strong><br>
-            Este proyecto integra todo el flujo de trabajo de un analista de datos para resolver una problemática
-            de negocio de principio a fin: partir de una base de datos cruda, entender el contexto, formular preguntas,
-            depurar y transformar los datos, explorar patrones clave y, finalmente, construir modelos sencillos
-            que ayuden a apoyar decisiones.</p>
+      <div class="project-tags">
+        <span class="tag">Estadística</span>
+        <span class="tag">Pruebas de hipótesis</span>
+      </div>
 
-            <p><strong>¿Qué hago en este proyecto?</strong><br>
-            – Limpieza y preparación de los datos para que sean analizables y consistentes.<br>
-            – Análisis exploratorio (EDA) para entender el comportamiento de las variables y detectar patrones relevantes.<br>
-            – Construcción y evaluación de modelos predictivos básicos para responder preguntas concretas.<br>
-            – Síntesis de hallazgos y redacción de conclusiones en lenguaje claro.</p>
+      <div class="project-actions">
+        <a class="btn btn-ghost btn-xs" href="notebooks/Proyecto_Sprint_6_Daniel_Aguinaga.html" target="_blank" rel="noopener">Ver notebook</a>
+        <a class="btn btn-primary btn-xs" href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_Sprint_6_Daniel_Aguinaga.ipynb" target="_blank" rel="noopener">Ejecutar</a>
+      </div>
+    </article>
 
-            <p><strong>Valor agregado del análisis:</strong><br>
-            El valor de este proyecto no está solo en el código, sino en cómo conecto los resultados con decisiones prácticas:
-            priorizo qué indicadores son realmente útiles, comparo escenarios, interpreto las salidas de los modelos y señalo
-            posibles siguientes pasos. Este trabajo muestra mi capacidad para llevar un problema desde la definición hasta
-            recomendaciones accionables, tal como se esperaría en un entorno real de análisis de datos.</p>
+    <!-- 6. EFICIENCIA OPERATIVA -->
+    <article class="project-card">
+      <h3 class="project-title">Análisis de eficiencia operativa y comportamiento de la demanda</h3>
+      <p class="project-description">
+        Análisis comparativo del rendimiento de varias compañías mediante métricas operativas,
+        visualizaciones y patrones de demanda. Practico EDA, KPIs y análisis orientado al desempeño.
+      </p>
 
-            <div class="project-actions">
-              <a class="btn btn-ghost btn-xs"
-                 href="notebooks/Proyecto_sprint_9_Daniel_Aguinaga.html"
-                 target="_blank" rel="noopener">
-                Ver en pestaña nueva
-              </a>
-              <a class="btn btn-primary btn-xs"
-                 href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_sprint_9_Daniel_Aguinaga.ipynb"
-                 target="_blank" rel="noopener">
-                 Ejecutar en Binder
-              </a>
-            </div>
-          </div>
+      <div class="project-tags">
+        <span class="tag">Machine learning</span>
+        <span class="tag">Modelado supervisado</span>
+      </div>
 
-          <div class="featured-notebook">
-            <!-- Notebook HTML incrustado directamente -->
-            <iframe
-              src="notebooks/Proyecto_sprint_9_Daniel_Aguinaga.html"
-              loading="lazy">
-            </iframe>
-          </div>
-        </div>
-      </article>
+      <div class="project-actions">
+        <a class="btn btn-ghost btn-xs" href="notebooks/Proyecto_Sprint_8_Daniel_Aguinaga.html" target="_blank" rel="noopener">Ver notebook</a>
+        <a class="btn btn-primary btn-xs" href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_Sprint_8_Daniel_Aguinaga.ipynb" target="_blank" rel="noopener">Ejecutar</a>
+      </div>
+    </article>
 
-      <!-- NLP -->
-      <article class="project-card">
-        <h3 class="project-title">Clasificación de reseñas de Amazon</h3>
-        <p class="project-description">
-          Proyecto introductorio de NLP donde trabajo con reseñas de productos para practicar
-          limpieza de texto, tokenización, vectorización y entrenamiento de un modelo de clasificación.
-        </p>
+  </div> <!-- /projects-grid de otros proyectos -->
+</section>
 
-        <div class="project-tags">
-          <span class="tag">NLP</span>
-          <span class="tag">Clasificación</span>
-          <span class="tag">Machine learning</span>
-        </div>
-
-        <div class="project-actions">
-          <a class="btn btn-ghost btn-xs" href="notebooks/Amazon_Reviews_Multiclase.html" target="_blank" rel="noopener">Ver notebook</a>
-          <a class="btn btn-primary btn-xs" href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Amazon_Reviews_Multiclase.ipynb" target="_blank" rel="noopener">Ejecutar</a>
-        </div>
-      </article>
-
-      <!-- PLANES TARIFARIOS / SERVICIOS -->
-      <article class="project-card">
-        <h3 class="project-title">Análisis comparativo de servicios y evaluación de rentabilidad</h3>
-        <p class="project-description">
-          Análisis estadístico comparativo donde evalúo el rendimiento de diferentes productos mediante métricas
-          clave como ingresos promedio y rentabilidad. Demuestro habilidades en EDA, cálculo de KPIs y conclusiones
-          orientadas al negocio.
-        </p>
-
-        <div class="project-tags">
-          <span class="tag">Estadística</span>
-          <span class="tag">Análisis económico</span>
-        </div>
-
-        <div class="project-actions">
-          <a class="btn btn-ghost btn-xs" href="notebooks/Proyecto_Sprint_5_Daniel_Aguinaga.html" target="_blank" rel="noopener">Ver notebook</a>
-          <a class="btn btn-primary btn-xs" href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_Sprint_5_Daniel_Aguinaga.ipynb" target="_blank" rel="noopener">Ejecutar</a>
-        </div>
-      </article>
-
-      <!-- EDA / CLIENTES -->
-      <article class="project-card">
-        <h3 class="project-title">Análisis exploratorio y segmentación de comportamiento del cliente</h3>
-        <p class="project-description">
-          Análisis exploratorio donde identifico patrones en el comportamiento de clientes,
-          genero métricas clave, visualizaciones y conclusiones accionables. Practico EDA,
-          segmentación y comunicación clara de insights.
-        </p>
-
-        <div class="project-tags">
-          <span class="tag">EDA</span>
-          <span class="tag">Visualización</span>
-        </div>
-
-        <div class="project-actions">
-          <a class="btn btn-ghost btn-xs" href="notebooks/Proyecto_Sprint_4_Daniel_Aguinaga.html" target="_blank" rel="noopener">Ver notebook</a>
-          <a class="btn btn-primary btn-xs" href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_Sprint_4_Daniel_Aguinaga.ipynb" target="_blank" rel="noopener">Ejecutar</a>
-        </div>
-      </article>
-
-      <!-- ESTADÍSTICA / PRODUCTOS -->
-      <article class="project-card">
-        <h3 class="project-title">Evaluación de desempeño de productos y factores predictivos de éxito</h3>
-        <p class="project-description">
-          Análisis de datos de productos para identificar qué factores explican su éxito.
-          Practico EDA, correlaciones, pruebas estadísticas y extracción de insights accionables.
-        </p>
-
-        <div class="project-tags">
-          <span class="tag">Estadística</span>
-          <span class="tag">Pruebas de hipótesis</span>
-        </div>
-
-        <div class="project-actions">
-          <a class="btn btn-ghost btn-xs" href="notebooks/Proyecto_Sprint_6_Daniel_Aguinaga.html" target="_blank" rel="noopener">Ver notebook</a>
-          <a class="btn btn-primary btn-xs" href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_Sprint_6_Daniel_Aguinaga.ipynb" target="_blank" rel="noopener">Ejecutar</a>
-        </div>
-      </article>
-
-      <!-- EFICIENCIA OPERATIVA / DEMANDA -->
-      <article class="project-card">
-        <h3 class="project-title">Análisis de eficiencia operativa y comportamiento de la demanda</h3>
-        <p class="project-description">
-          Análisis comparativo del rendimiento de varias compañías mediante métricas operativas,
-          visualizaciones y patrones de demanda. Practico EDA, KPIs y análisis orientado al desempeño.
-        </p>
-
-        <div class="project-tags">
-          <span class="tag">Machine learning</span>
-          <span class="tag">Modelado supervisado</span>
-        </div>
-
-        <div class="project-actions">
-          <a class="btn btn-ghost btn-xs" href="notebooks/Proyecto_Sprint_8_Daniel_Aguinaga.html" target="_blank" rel="noopener">Ver notebook</a>
-          <a class="btn btn-primary btn-xs" href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_Sprint_8_Daniel_Aguinaga.ipynb" target="_blank" rel="noopener">Ejecutar</a>
-        </div>
-      </article>
-
-    </div>
-  </section>
 
   <!-- CONTACT -->
   <section id="contact">
