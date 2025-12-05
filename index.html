@@ -12,6 +12,9 @@
   <!-- Fuentes de Google -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
+  <!-- Devicon CDN para logos de tecnologías -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
   <style>
     :root {
       --primary: #2563eb;
@@ -226,12 +229,20 @@
     }
 
     .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
       padding: .3rem .7rem;
       border-radius: 999px;
       background: #f9fafb;
       border: 1px solid #e5e7eb;
-      font-size: .75rem;
+      font-size: .78rem;
       color: var(--text-muted);
+    }
+
+    .chip i {
+      font-size: 18px;
+      line-height: 1;
     }
 
     /* Section layout */
@@ -355,7 +366,7 @@
       display: grid;
       grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.8fr);
       gap: 1rem;
-      align-items: stretch; /* importante para igualar alturas */
+      align-items: stretch;
     }
 
     .featured-text p {
@@ -373,7 +384,7 @@
       overflow: hidden;
       border: 1px solid #e5e7eb;
       background: white;
-      height: 100%;   /* se adapta a la altura de la fila */
+      height: 100%;
       min-height: 0;
     }
 
@@ -495,23 +506,34 @@
       <h1 class="hero-title">Hola, soy <span>Daniel Juan de Dios Aguiñaga Gómez</span></h1>
       <div class="hero-role">Científico / Analista de datos</div>
       <div class="hero-role">
-        con una Maestría en Ciencia de Datos. Construyo experiencia a través de proyectos prácticos.
+        con una Maestría en Ciencia de Datos. Estoy construyendo experiencia a través de proyectos prácticos.
       </div>
 
       <p class="hero-subtitle">
-        Bienvenid@ a mi portafolio de proyectos aplicando <strong>Python, estadística,
-        visualización y machine learning básico</strong>. Estos notebooks son el resultado de mi
-        proceso de formación y son representativos de mis habilidades trabajando con datos.
-      </p>
+  Soy un científico / analista de datos con formación en <strong>Ciencia de Datos</strong> y una fuerte inclinación al
+  aprendizaje autodidacta. Disfruto investigar cómo funcionan las cosas, explorar nuevos temas y profundizar en
+  aquello que despierta mi interés.
+</p>
+
+<p class="hero-subtitle">
+  Me considero una persona sociable y comunicativa; disfruto colaborar, intercambiar ideas y explicar conceptos
+  de forma clara. Valoro la responsabilidad, el trabajo bien hecho y la mejora continua, por lo que procuro que
+  cada proyecto no solo incluya buen código, sino también un análisis estructurado y conclusiones útiles.
+</p>
+
+<p class="hero-subtitle">
+  En este portafolio encontrarás proyectos donde aplico <strong>Python, estadística, visualización y machine learning
+  básico</strong> para resolver preguntas reales y transformar datos en insights accionables.
+</p>
 
       <div class="hero-actions">
-  <a class="btn btn-primary" 
-     href="CV_Daniel_Aguinaga_DA_2025.pdf" 
-     target="_blank" 
-     rel="noopener noreferrer">
-     Descargar mi CV
-  </a>
-</div>
+        <a class="btn btn-primary" 
+           href="CV_Daniel_Aguinaga_DA_2025.pdf" 
+           target="_blank" 
+           rel="noopener noreferrer">
+           Descargar mi CV
+        </a>
+      </div>
     </div>
 
     <div class="hero-right">
@@ -519,31 +541,86 @@
       <div class="hero-card">
         <h4 style="font-size:.9rem;color:var(--text-muted);margin:0;">Stack principal</h4>
         <div class="stack-chips">
-          <span class="chip">Python</span>
-          <span class="chip">JavaScript</span>
-          <span class="chip">Desarrollo web</span>
-          <span class="chip">Pandas</span>
-          <span class="chip">NumPy</span>
-          <span class="chip">Matplotlib</span>
-          <span class="chip">SciPy</span>
-          <span class="chip">Machine learning básico</span>
-          <span class="chip">NLP básico</span>
-          <span class="chip">SQL</span>
-          <span class="chip">Jupyter Notebook</span>
+          <span class="chip">
+            <i class="devicon-python-plain colored"></i>
+            <span>Python</span>
+          </span>
+          <span class="chip">
+            <i class="devicon-pandas-plain colored"></i>
+            <span>Pandas</span>
+          </span>
+          <span class="chip">
+            <i class="devicon-numpy-original colored"></i>
+            <span>NumPy</span>
+          </span>
+          <span class="chip">
+            <i class="devicon-matplotlib-plain colored"></i>
+            <span>Matplotlib</span>
+          </span>
+          <span class="chip">
+            <i class="devicon-scipy-original colored"></i>
+            <span>SciPy</span>
+          </span>
+          <span class="chip">
+            <i class="devicon-mysql-plain colored"></i>
+            <span>SQL</span>
+          </span>
+          <span class="chip">
+            <i class="devicon-javascript-plain colored"></i>
+            <span>JavaScript</span>
+          </span>
+          <span class="chip">
+            <i class="devicon-html5-plain colored"></i>
+            <span>HTML</span>
+          </span>
         </div>
       </div>
 
-      <!-- Habilidades técnicas como tarjeta -->
+      <!-- Herramientas -->
+      <div class="hero-card">
+        <h4 style="font-size:.9rem;color:var(--text-muted);margin:0;">Herramientas</h4>
+        <div class="stack-chips">
+          <span class="chip">
+            <i class="devicon-vscode-plain colored"></i>
+            <span>VS Code</span>
+          </span>
+          <span class="chip">
+            <i class="devicon-jupyter-plain colored"></i>
+            <span>Jupyter Notebook</span>
+          </span>
+          <span class="chip">
+            <i class="devicon-google-plain colored"></i>
+            <span>Google Sheets</span>
+          </span>
+          <span class="chip">
+            <i class="devicon-excel-plain colored"></i>
+            <span>Excel</span>
+          </span>
+          <span class="chip">
+            <i class="devicon-git-plain colored"></i>
+            <span>Git</span>
+          </span>
+          <span class="chip">
+            <i class="devicon-github-original colored"></i>
+            <span>GitHub</span>
+          </span>
+          <span class="chip">
+            <i class="devicon-tableau-plain colored"></i>
+            <span>Tableau</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Habilidades técnicas -->
       <div class="hero-card">
         <h4 style="font-size:.9rem;color:var(--text-muted);margin:0;">Habilidades técnicas</h4>
         <div class="skills-grid">
+          <span class="skill-pill">Análisis exploratorio de datos (EDA)</span>
           <span class="skill-pill">Limpieza y preparación de datos</span>
           <span class="skill-pill">Visualización</span>
-          <span class="skill-pill">Análisis exploratorio de datos (EDA)</span>
           <span class="skill-pill">Pruebas de hipótesis</span>
           <span class="skill-pill">Machine learning</span>
           <span class="skill-pill">Natural Language Processing</span>
-          <span class="skill-pill">SQL</span>
         </div>
       </div>
     </div>
@@ -726,9 +803,16 @@
 
     <div class="contact-grid">
       <div class="about-text">
-        <p>Busco oportunidades como analista / científico de datos. Me interesa mejorar mis habilidades técnicas,
-        trabajar con datos reales y aportar valor mediante análisis claros y bien comunicados.</p>
-        <p>Si tienes feedback, colaboración o una vacante, será un gusto conversar.</p>
+        <p>
+          Busco oportunidades junior o entry-level como analista / científico de datos. Me interesa mejorar mis habilidades técnicas,
+          trabajar con datos reales y aportar valor mediante análisis claros y bien comunicados.
+        </p>
+        <p>
+          Ubicación: México. Abierto a roles remotos o híbridos.
+        </p>
+        <p>
+          Si tienes feedback, colaboración o una vacante, será un gusto conversar.
+        </p>
       </div>
 
       <div class="contact-card">
