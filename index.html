@@ -16,6 +16,14 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
   <style>
+    .code-link {
+  cursor: pointer;
+}
+.code-link:hover {
+  text-decoration: underline;
+  color: var(--primary);
+}
+
     :root {
       --primary: #2563eb;
       --primary-soft: #e5efff;
@@ -666,15 +674,21 @@
 
       <div class="featured-content">
         <div class="featured-text">
-          <p><strong>Problemática abordada:</strong><br>
-          Integro todo el flujo de trabajo de un analista de datos para resolver una problemática de negocio de principio a fin:
-          desde datos crudos hasta recomendaciones accionables.</p>
-
           <p><strong>¿Qué hago en este proyecto?</strong><br>
-          – Limpieza y preparación de los datos.<br>
-          – Análisis exploratorio (EDA) y visualización.<br>
-          – Modelado supervisado básico.<br>
-          – Síntesis de hallazgos y conclusiones orientadas al negocio.</p>
+            – <span class="code-link" data-target="sec-limpieza">
+              Limpieza y preparación de los datos para que sean analizables y consistentes.
+              </span><br>
+            – <span class="code-link" data-target="sec-eda">
+              Análisis exploratorio (EDA) para entender el comportamiento de las variables y detectar patrones relevantes.
+              </span><br>
+            – <span class="code-link" data-target="sec-modelo">
+              Construcción y evaluación de modelos predictivos básicos para responder preguntas concretas.
+              </span><br>
+            – <span class="code-link" data-target="sec-conclusiones">
+              Síntesis de hallazgos y redacción de conclusiones en lenguaje claro.
+              </span>
+          </p>
+
 
           <p><strong>Valor agregado del análisis:</strong><br>
           Conecto los resultados con decisiones prácticas, priorizo indicadores útiles, comparo escenarios e interpreto las salidas
@@ -703,10 +717,12 @@
 
         <div class="featured-notebook">
           <iframe
+            id="iframe-sprint9"
             src="notebooks/Proyecto_sprint_9_Daniel_Aguinaga.html"
             loading="lazy">
           </iframe>
         </div>
+
       </div>
     </article>
 
@@ -969,6 +985,33 @@
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<script>
+  function setupNotebookLinks(linksSelector, iframeId) {
+    const iframe = document.getElementById(iframeId);
+    if (!iframe) return;
+
+    iframe.addEventListener('load', () => {
+      const links = document.querySelectorAll(linksSelector);
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          const targetId = link.dataset.target;
+          if (!targetId) return;
+
+          const doc = iframe.contentDocument || iframe.contentWindow.document;
+          if (!doc) return;
+
+          const target = doc.getElementById(targetId);
+          if (target && typeof target.scrollIntoView === 'function') {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    });
+  }
+
+  // Activamos el comportamiento solo para el primer proyecto
+  setupNotebookLinks('.code-link', 'iframe-sprint9');
 </script>
 
 </body>
