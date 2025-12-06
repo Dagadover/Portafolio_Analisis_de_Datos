@@ -1,4 +1,4 @@
-# 📊 Portafolio de Análisis de Datos — Daniel Juan de Dios Aguiñaga Gómez
+# Portafolio de Análisis de Datos — Daniel Juan de Dios Aguiñaga Gómez
 
 Bienvenido a mi portafolio profesional de análisis de datos.  
 Este repositorio reúne los proyectos más importantes que he desarrollado a lo largo de mi formación y práctica como analista de datos.
@@ -9,7 +9,7 @@ El sitio web del portafolio (publicado con GitHub Pages) está disponible en:
 
 ---
 
-## 🧠 Sobre mí
+## Sobre mí
 
 Soy **Daniel Juan de Dios Aguiñaga Gómez**, analista de datos con experiencia en:
 
@@ -27,7 +27,7 @@ Mi objetivo es transformar datos en información clara, útil y accionable para 
 
 ---
 
-## 🌐 Portafolio publicado
+## Portafolio publicado
 
 Puedes ver mi portafolio web completo aquí:
 
@@ -43,7 +43,7 @@ El sitio incluye:
 
 ---
 
-## 🚀 Proyectos destacados incluidos en el portafolio
+## Proyectos destacados incluidos en el portafolio
 
 ### 🔹 Clasificación de reseñas de Amazon (NLP)
 - Limpieza y preprocesamiento de texto  
@@ -96,7 +96,7 @@ El sitio incluye:
 
 ---
 
-## 📬 Contacto
+## Contacto
 
 - **Email:** danielgg670@gmail.com  
 - **GitHub:** https://github.com/Dagadover  
