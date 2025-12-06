@@ -500,6 +500,26 @@
         grid-template-columns: 1fr;
       }
     }
+
+/* Ocultar iframes en móviles y mostrar botones alternativos */
+@media (max-width: 768px) {
+  /* Iframes ocultos en móvil */
+  .featured-notebook iframe {
+    display: none;
+  }
+  .notebook-mobile-links {
+    display: block;
+    margin-top: 1rem;
+  }
+}
+
+/* En desktop mostrar iframes y ocultar botones móviles */
+@media (min-width: 769px) {
+  .notebook-mobile-links {
+    display: none;
+  }
+}
+
   </style>
 </head>
 
@@ -661,70 +681,163 @@
   <div class="projects-grid">
 
     <!-- 1. PROYECTO END-TO-END DESTACADO -->
-    <article class="project-card project-card--featured">
-      <span class="featured-label">Proyecto end-to-end</span>
-      <h3 class="project-title">Proyecto Analítico: Exploración, Modelado y Generación de Insights</h3>
+<article class="project-card project-card--featured">
+  <span class="featured-label">Proyecto end-to-end</span>
+  <h3 class="project-title">Proyecto Analítico: Exploración, Modelado y Generación de Insights</h3>
 
-      <div class="project-tags">
-        <span class="tag">End-to-end</span>
-        <span class="tag">Análisis completo</span>
-        <span class="tag">Modelado</span>
-        <span class="tag">Storytelling</span>
+  <div class="project-tags">
+    <span class="tag">End-to-end</span>
+    <span class="tag">Análisis completo</span>
+    <span class="tag">Modelado</span>
+    <span class="tag">Storytelling</span>
+  </div>
+
+  <div class="featured-content">
+    <div class="featured-text">
+      <p><strong>¿Qué hago en este proyecto?</strong><br>
+        – <span class="code-link" data-target="sec-limpieza">
+          Limpieza y preparación de los datos.
+          </span><br>
+        – <span class="code-link" data-target="sec-eda">
+          Análisis exploratorio (EDA) para encontrar patrones.
+          </span><br>
+        – <span class="code-link" data-target="sec-modelo">
+          Entrenamiento de modelos predictivos básicos.
+          </span><br>
+        – <span class="code-link" data-target="sec-conclusiones">
+          Conclusiones y recomendaciones accionables.
+          </span>
+      </p>
+
+      <p><strong>Valor agregado:</strong><br>
+      Conecto resultados con decisiones reales, priorizo indicadores útiles y traduzco los hallazgos en acciones.</p>
+
+      <p><strong>Métricas destacadas:</strong></p>
+      <ul class="project-metrics">
+        <li>Análisis de <strong>207,051 usuarios</strong>, con retención del <strong>22.5%</strong>.</li>
+        <li>LTV promedio proyectado de <strong>$6.90 USD</strong>.</li>
+        <li>Las 3 principales fuentes de adquisición generan el <strong>75.8% del tráfico</strong>.</li>
+      </ul>
+
+      <div class="project-actions">
+        <a class="btn btn-ghost btn-xs"
+           href="notebooks/Proyecto_sprint_9_Daniel_Aguinaga.html"
+           target="_blank" rel="noopener">Ver en pestaña nueva</a>
+
+        <a class="btn btn-primary btn-xs"
+           href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_sprint_9_Daniel_Aguinaga.ipynb"
+           target="_blank" rel="noopener">Ejecutar en Binder</a>
       </div>
+    </div>
 
-      <div class="featured-content">
-        <div class="featured-text">
-          <p><strong>¿Qué hago en este proyecto?</strong><br>
-            – <span class="code-link" data-target="sec-limpieza">
-              Limpieza y preparación de los datos para que sean analizables y consistentes.
-              </span><br>
-            – <span class="code-link" data-target="sec-eda">
-              Análisis exploratorio (EDA) para entender el comportamiento de las variables y detectar patrones relevantes.
-              </span><br>
-            – <span class="code-link" data-target="sec-modelo">
-              Construcción y evaluación de modelos predictivos básicos para responder preguntas concretas.
-              </span><br>
-            – <span class="code-link" data-target="sec-conclusiones">
-              Síntesis de hallazgos y redacción de conclusiones en lenguaje claro.
-              </span>
-          </p>
+    <div class="featured-notebook">
+      <iframe
+        class="notebook-iframe"
+        id="iframe-sprint9"
+        src="notebooks/Proyecto_sprint_9_Daniel_Aguinaga.html"
+        loading="lazy"></iframe>
+    </div>
+  </div>
+</article>
 
+<!-- 2. NLP: CLASIFICACIÓN AMAZON -->
+<article class="project-card project-card--featured">
+  <span class="featured-label">NLP y clasificación de texto</span>
+  <h3 class="project-title">Clasificación de reseñas de Amazon</h3>
 
-          <p><strong>Valor agregado del análisis:</strong><br>
-          Conecto los resultados con decisiones prácticas, priorizo indicadores útiles, comparo escenarios e interpreto las salidas
-          de los modelos para proponer siguientes pasos realistas.</p>
+  <div class="project-tags">
+    <span class="tag">NLP</span>
+    <span class="tag">Clasificación</span>
+    <span class="tag">Machine learning</span>
+  </div>
 
-          <p><strong>Métricas destacadas del análisis:</strong></p>
-          <ul class="project-metrics">
-            <li>Análisis de <strong>207,051 usuarios</strong>, con una retención del <strong>22.5%</strong> (usuarios recurrentes).</li>
-            <li>Estimación de un <strong>LTV promedio de $6.90 USD por usuario</strong>, combinando comportamiento de visitas y compras.</li>
-            <li>Identificación de que las <strong>3 principales fuentes de adquisición concentran el 75.8% del tráfico</strong>, mostrando alta dependencia de pocos canales.</li>
-          </ul>
+  <div class="featured-content">
+    <div class="featured-text">
+      <p><strong>Problemática:</strong><br>
+      Clasificar reseñas de Amazon en categorías mediante modelos de NLP.</p>
 
-          <div class="project-actions">
-            <a class="btn btn-ghost btn-xs"
-               href="notebooks/Proyecto_sprint_9_Daniel_Aguinaga.html"
-               target="_blank" rel="noopener">
-              Ver en pestaña nueva
-            </a>
-            <a class="btn btn-primary btn-xs"
-               href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_sprint_9_Daniel_Aguinaga.ipynb"
-               target="_blank" rel="noopener">
-               Ejecutar en Binder
-            </a>
-          </div>
-        </div>
+      <p><strong>¿Qué hago?</strong><br>
+      – Limpieza y normalización del texto.<br>
+      – Vectorización TF-IDF.<br>
+      – Entrenamiento de modelos multiclase.<br>
+      – Evaluación con accuracy, precisión, recall y F1.</p>
 
-        <div class="featured-notebook">
-          <iframe
-            id="iframe-sprint9"
-            src="notebooks/Proyecto_sprint_9_Daniel_Aguinaga.html"
-            loading="lazy">
-          </iframe>
-        </div>
+      <p><strong>Métricas del modelo:</strong></p>
+      <ul class="project-metrics">
+        <li>Entrenamiento con <strong>103,460 reseñas</strong> (vocabulario de 51,932 términos).</li>
+        <li>Mejor modelo LinearSVC con <strong>89.2% accuracy</strong>.</li>
+        <li><strong>F1 ponderado: 0.88</strong>.</li>
+      </ul>
 
+      <div class="project-actions">
+        <a class="btn btn-ghost btn-xs"
+           href="notebooks/Amazon_Reviews_Multiclase.html"
+           target="_blank" rel="noopener">Ver en pestaña nueva</a>
+
+        <a class="btn btn-primary btn-xs"
+           href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Amazon_Reviews_Multiclase.ipynb"
+           target="_blank" rel="noopener">Ejecutar en Binder</a>
       </div>
-    </article>
+    </div>
+
+    <div class="featured-notebook">
+      <iframe
+        class="notebook-iframe"
+        src="notebooks/Amazon_Reviews_Multiclase.html"
+        loading="lazy"></iframe>
+    </div>
+  </div>
+</article>
+
+<!-- 3. EDA / SEGMENTACIÓN CLIENTES -->
+<article class="project-card project-card--featured">
+  <span class="featured-label">EDA y comportamiento de clientes</span>
+  <h3 class="project-title">Análisis exploratorio y segmentación del comportamiento del cliente</h3>
+
+  <div class="project-tags">
+    <span class="tag">EDA</span>
+    <span class="tag">Visualización</span>
+    <span class="tag">Segmentación</span>
+  </div>
+
+  <div class="featured-content">
+    <div class="featured-text">
+      <p><strong>Problemática:</strong><br>
+      Entender patrones de comportamiento, frecuencia y gasto para identificar segmentos.</p>
+
+      <p><strong>¿Qué hago?</strong><br>
+      – Limpieza de datos.<br>
+      – Métricas de frecuencia, recencia y valor.<br>
+      – Visualización de patrones.<br>
+      – Construcción de segmentos.</p>
+
+      <p><strong>Métricas destacadas:</strong></p>
+      <ul class="project-metrics">
+        <li>Eliminación de <strong>207 duplicados</strong>.</li>
+        <li>Corrección de <strong>15 order_id duplicados</strong>.</li>
+        <li>Solo <strong>0.025% de pedidos</strong> ocurren a las 2:00 a.m. en miércoles.</li>
+      </ul>
+
+      <div class="project-actions">
+        <a class="btn btn-ghost btn-xs"
+           href="notebooks/Proyecto_Sprint_4_Daniel_Aguinaga.html"
+           target="_blank" rel="noopener">Ver en pestaña nueva</a>
+
+        <a class="btn btn-primary btn-xs"
+           href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_Sprint_4_Daniel_Aguinaga.ipynb"
+           target="_blank" rel="noopener">Ejecutar en Binder</a>
+      </div>
+    </div>
+
+    <div class="featured-notebook">
+      <iframe
+        class="notebook-iframe"
+        src="notebooks/Proyecto_Sprint_4_Daniel_Aguinaga.html"
+        loading="lazy"></iframe>
+    </div>
+  </div>
+</article>
+
 
     <!-- 2. NLP: CLASIFICACIÓN AMAZON -->
     <article class="project-card project-card--featured">
