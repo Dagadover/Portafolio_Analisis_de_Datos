@@ -500,6 +500,30 @@
         display: none !important;
       }
     }
+
+    /* Featured card: stack layout for specific projects (e.g., Tableau) */
+    .featured-content--stack {
+      grid-template-columns: 1fr !important;
+    }
+
+    .project-card--featured .tableau-wrapper {
+      width: 100%;
+      margin-top: 1.25rem;
+    }
+
+    .project-card--featured .tableauPlaceholder,
+    .project-card--featured .tableauViz {
+      width: 100% !important;
+    }
+
+    /* Make Tableau embed adapt nicely on small screens */
+    @media (max-width: 768px) {
+      .project-card--featured .tableauViz {
+        height: 75vh !important;
+        max-height: 900px;
+      }
+    }
+
 </style>
 </head>
 
@@ -652,13 +676,93 @@
   <div class="section-header">
     <h2 class="section-title">Proyectos destacados</h2>
     <p class="section-subtitle">
-      Comienzo con un proyecto end-to-end que integra todo el flujo analítico, seguido de proyectos
-      enfocados en habilidades específicas como NLP, EDA, estadística y machine learning.
+      Comienzo con un proyecto de análisis visual e interactivo desarrollado en Tableau, enfocado en la exploración 
+      y comunicación de insights, seguido de un proyecto end-to-end que integra todo el flujo analítico. 
+      Posteriormente presento proyectos enfocados en habilidades específicas como NLP, EDA, estadística y machine learning.
     </p>
   </div>
 
   <!-- GRID DE PROYECTOS DESTACADOS -->
   <div class="projects-grid">
+
+
+    <!-- 1. DASHBOARD TABLEAU (DESTACADO) -->
+    <article class="project-card project-card--featured">
+      <div class="featured-label">Dashboard interactivo (Tableau)</div>
+      <h3 class="project-title">Análisis de accidentes — Exploración interactiva en Tableau</h3>
+
+      <div class="project-tags">
+        <span class="tag">Tableau</span>
+        <span class="tag">Dashboard</span>
+        <span class="tag">Visualización</span>
+        <span class="tag">Exploración</span>
+      </div>
+
+      <!-- Nota: en este proyecto apilamos (texto arriba + dashboard abajo) para usar todo el ancho -->
+      <div class="featured-content featured-content--stack">
+        <div class="featured-text">
+          <p><strong>Problemática abordada:</strong><br>
+          Analizar patrones y tendencias de accidentes para identificar zonas y periodos de mayor incidencia
+          y facilitar la toma de decisiones mediante visualizaciones interactivas.</p>
+
+          <p><strong>¿Qué puede explorar el usuario?</strong><br>
+          – Distribución de accidentes y comparaciones por dimensiones clave.<br>
+          – Filtros interactivos para profundizar en segmentos específicos.<br>
+          – Vistas para detectar outliers, picos temporales y concentraciones.</p>
+
+          <div class="project-actions">
+            <a class="btn btn-primary btn-xs" href="https://public.tableau.com/app/profile/daniel.aguinaga/viz/EntregaFinalAguiaga/DASH_ANLISISACCIDENTES" target="_blank" rel="noopener">
+              Abrir en Tableau Public
+            </a>
+          </div>
+        </div>
+
+        <div class="tableau-wrapper">
+          <div class="tableauPlaceholder" id="viz_accidentes" style="position: relative;">
+            <noscript>
+              <a href="#">
+                <img alt="Dashboard Tableau" src="https://public.tableau.com/static/images/En/EntregaFinalAguiaga/DASH_ANLISISACCIDENTES/1.png" style="border:none;" />
+              </a>
+            </noscript>
+
+            <object class="tableauViz" style="width:100%; height:900px;">
+              <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+              <param name="embed_code_version" value="3" />
+              <param name="site_root" value="" />
+              <param name="name" value="EntregaFinalAguiaga/DASH_ANLISISACCIDENTES" />
+              <param name="tabs" value="no" />
+              <param name="toolbar" value="yes" />
+              <param name="static_image" value="https://public.tableau.com/static/images/En/EntregaFinalAguiaga/DASH_ANLISISACCIDENTES/1.png" />
+              <param name="animate_transition" value="yes" />
+              <param name="display_static_image" value="yes" />
+              <param name="display_spinner" value="yes" />
+              <param name="display_overlay" value="yes" />
+              <param name="display_count" value="yes" />
+              <param name="language" value="es-ES" />
+            </object>
+          </div>
+
+          <script type="text/javascript">
+            (function () {
+              var divElement = document.getElementById("viz_accidentes");
+              if (!divElement) return;
+              var vizElement = divElement.getElementsByTagName("object")[0];
+
+              // Cargar Tableau JS una sola vez
+              if (!document.querySelector('script[src="https://public.tableau.com/javascripts/api/viz_v1.js"]')) {
+                var scriptElement = document.createElement("script");
+                scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+              } else {
+                // Si ya existe, solo mostramos el object
+                vizElement.style.display = "block";
+              }
+            })();
+          </script>
+        </div>
+      </div>
+    </article>
+
 
     <!-- 1. PROYECTO END-TO-END DESTACADO -->
     <article class="project-card project-card--featured">
