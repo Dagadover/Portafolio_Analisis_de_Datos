@@ -524,6 +524,12 @@
       }
     }
 
+    @media (max-width: 900px) {
+  .project-card--featured .featured-content {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 </style>
 </head>
 
@@ -680,10 +686,9 @@
     <span class="tag">Automatización</span>
   </div>
 
-  <!-- Layout 50 / 50 -->
   <div class="featured-content" style="grid-template-columns: 1fr 1fr;">
 
-    <!-- TEXTO (IZQUIERDA) -->
+    <!-- TEXTO -->
     <div class="featured-text">
       <p><strong>Descripción del proyecto:</strong><br>
         Desarrollo de un <strong>match report profesional completamente automatizado</strong> a partir de datos
@@ -717,9 +722,22 @@
         <strong>departamentos de análisis profesional</strong>,
         transformando datos crudos en insights tácticos claros
         para la toma de decisiones deportivas.</p>
+
+      <!-- ✅ BOTONES AÑADIDOS -->
+      <div class="project-actions">
+        <a
+          class="btn btn-primary btn-xs"
+          href="match_report_real_madrid_vs_barcelona_compna_seasonna_match3773497.pdf"
+          target="_blank"
+          rel="noopener"
+        >
+          Ver reporte (PDF)
+        </a>
+
+      </div>
     </div>
 
-    <!-- IMAGEN (DERECHA, CONTENEDOR AJUSTADO AL CONTENIDO) -->
+    <!-- IMAGEN -->
     <div class="featured-notebook" style="padding:0; height:auto; align-self:flex-start;">
       <img
         src="match_report_real_madrid_vs_barcelona_compna_seasonna_match3773497.png"
