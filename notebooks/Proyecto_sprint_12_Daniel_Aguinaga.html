@@ -8606,6 +8606,7 @@ Name: device_id_hash, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<a id="Tests-A-A-validación-de-grupos"></a>
 <pre>=== TEST A/A: GRUPOS 246 vs 247 (evento más popular) ===
 Evento: MainScreenAppear
 Grupo 246: 2450 / 2484 = 0.9863 (98.63%)
@@ -8634,7 +8635,8 @@ P-value: 0.1146
 <div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Tests A/B (nuevas fuentes: grupo 248)</span>
+<div class="highlight hl-ipython3"><pre><span></span><a id="Tests-A-B-nuevas-fuentes-grupo-248"></a>
+<span class="c1"># Tests A/B (nuevas fuentes: grupo 248)</span>
 
 <span class="n">control_groups</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"246"</span><span class="p">,</span> <span class="s2">"247"</span><span class="p">]</span>
 <span class="n">test_group</span> <span class="o">=</span> <span class="s2">"248"</span>
@@ -8664,6 +8666,7 @@ P-value: 0.1146
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<a id="TESTS-A-B-MAINSCREENAPPEAR"></a>
 <pre>=== TESTS A/B: MAINSCREENAPPEAR ===
 - Comparación 246 vs 248
 Evento: MainScreenAppear
@@ -9104,6 +9107,7 @@ Los eventos analizados fueron:</p>
 <p>En todas las comparaciones A/B realizadas, los p-values obtenidos fueron mayores a 0.05, por lo que no se detectaron diferencias estadísticamente significativas entre los grupos de control y el grupo experimental.</p>
 <p>Las pruebas A/A confirmaron que los grupos de control se encuentran correctamente balanceados, validando la calidad del diseño experimental y la confiabilidad de los resultados obtenidos.</p>
 <hr/>
+<h2 id="Conclusiones-Finales-del-Experimento">Conclusiones Finales del Experimento<a class="anchor-link" href="#Conclusiones-Finales-del-Experimento">¶</a></h2>
 <h2 id="Interpretaci%C3%B3n-de-Negocio">Interpretación de Negocio<a class="anchor-link" href="#Interpretaci%C3%B3n-de-Negocio">¶</a></h2><p>Los resultados indican que la incorporación de nuevas fuentes de tráfico no produce un impacto medible en el comportamiento del usuario ni en la tasa de conversión bajo las condiciones actuales del experimento.</p>
 <p>Desde el punto de vista del negocio, esto implica que:</p>
 <ul>
