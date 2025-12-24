@@ -720,86 +720,133 @@
   <!-- GRID DE PROYECTOS DESTACADOS -->
   <div class="projects-grid">
 
-<!-- 0. MATCH REPORT AUTOMATIZADO (FÚTBOL) -->
+
+    
+
+    
+
+    
+
+    
+
+  <!--  NUEVO PROYECTO DESTACADO: EXPERIMENTO A/B -->
 <article class="project-card project-card--featured">
-  <span class="featured-label">Match report automatizado · Fútbol</span>
-  <h3 class="project-title">Análisis de partido — Match Report profesional (StatsBomb)</h3>
+  <span class="featured-label">Experimentación · A/B Testing</span>
+  <h3 class="project-title">Evaluación del Impacto de Nuevas Fuentes de Tráfico mediante Experimentación A/B</h3>
 
   <div class="project-tags">
-    <span class="tag">Python</span>
-    <span class="tag">StatsBomb</span>
-    <span class="tag">Data Viz</span>
-    <span class="tag">Fútbol</span>
-    <span class="tag">Automatización</span>
+    <span class="tag">Estadística</span>
+    <span class="tag">A/B Testing</span>
+    <span class="tag">Experimentación</span>
+    <span class="tag">Producto</span>
+    <span class="tag">Negocio</span>
   </div>
 
-  <div class="featured-content" style="grid-template-columns: 1fr 1fr;">
+  <div class="featured-content">
 
     <!-- TEXTO -->
     <div class="featured-text">
-      <p><strong>Descripción del proyecto:</strong><br>
-        Desarrollo de un <strong>match report profesional completamente automatizado</strong> a partir de datos
-        de <em>StatsBomb Open Data</em>, generado mediante un Jupyter Notebook.
-        El flujo integra extracción de datos vía API, limpieza, transformación,
-        visualización avanzada y presentación final en formato dashboard.</p>
+      <p><strong>Problemática abordada:</strong><br>
+      Un producto digital necesita evaluar si la incorporación de <strong>nuevas fuentes de tráfico</strong> mejora el desempeño del funnel de conversión y, en particular, el evento clave de pago. El objetivo es tomar una decisión informada sobre si escalar estas nuevas fuentes sin comprometer la rentabilidad ni la experiencia del usuario.</p>
 
-      <p><strong>¿Qué hace este proyecto?</strong><br>
-        – Descarga automática de eventos, alineaciones y acciones del partido.<br>
-        – Generación de múltiples visualizaciones tácticas y analíticas.<br>
-        – Composición final en un <strong>dashboard tipo reporte profesional</strong>.<br>
-        – Exportación automática del informe en <strong>PNG y PDF</strong>, listo para compartir.</p>
+      <p><strong>¿Qué hago en este proyecto?</strong><br>
+      – <span class="code-link-ab" data-target="Estudiar-el-embudo-de-eventos">Construcción y análisis del <strong>funnel de eventos</strong></span><br>
+      – <span class="code-link-ab" data-target="Tests-A-A-validación-de-grupos">Validación del diseño experimental mediante pruebas <strong>A/A</strong></span><br>
+      – <span class="code-link-ab" data-target="Tests-A-B-nuevas-fuentes-grupo-248">Ejecución de pruebas <strong>A/B</strong> sobre múltiples eventos del funnel</span><br>
+      – <span class="code-link-ab" data-target="TESTS-A-B-MAINSCREENAPPEAR">Evaluación estadística rigurosa (incluye <strong>múltiples comparaciones</strong>)</span><br>
+      – <span class="code-link-ab" data-target="Conclusiones-Finales-del-Experimento">Interpretación de hallazgos y <strong>recomendación final</strong></span>
+      </p>
 
-      <p><strong>Visualizaciones incluidas:</strong><br>
-        – Mapa de tiros (xG y goles).<br>
-        – xG acumulado por minuto.<br>
-        – Redes de pases (local vs visitante).<br>
-        – Pases progresivos comparados.<br>
-        – Mapas de calor de presiones.</p>
+      <p><strong>Valor agregado del análisis:</strong><br>
+      No solo reporto métricas: traduzco resultados estadísticos en decisiones accionables (cuándo escalar una iniciativa, cuándo detenerla y qué cambios adicionales podrían generar mayor impacto). Este enfoque reduce el riesgo de invertir recursos sin beneficio comprobado y fortalece la toma de decisiones basada en evidencia.</p>
 
-      <p><strong>Principales conclusiones que permite obtener:</strong></p>
+      <p><strong>Métricas destacadas:</strong></p>
       <ul class="project-metrics">
-        <li>Comparar la <strong>calidad de las oportunidades</strong> generadas por cada equipo.</li>
-        <li>Identificar <strong>estructuras de posesión</strong> y roles clave.</li>
-        <li>Detectar <strong>patrones de progresión</strong> del juego.</li>
-        <li>Analizar la <strong>intensidad defensiva</strong> y zonas de presión.</li>
+        <li>Evaluación de más de <strong>4,900 usuarios</strong> distribuidos en tres grupos experimentales.</li>
+        <li>Análisis del comportamiento a través de <strong>5 eventos clave</strong> del funnel de conversión.</li>
+        <li>Las diferencias observadas no fueron estadísticamente significativas con <strong>α = 0.05</strong> ni con el nivel ajustado por múltiples pruebas.</li>
       </ul>
 
-      <p><strong>Valor analítico:</strong><br>
-        Reporte comparable a los utilizados por
-        <strong>departamentos de análisis profesional</strong>,
-        transformando datos crudos en insights tácticos claros
-        para la toma de decisiones deportivas.</p>
-
-      <!-- ✅ BOTONES AÑADIDOS -->
       <div class="project-actions">
-        <a
-          class="btn btn-primary btn-xs"
-          href="match_report_real_madrid_vs_barcelona_compna_seasonna_match3773497.pdf"
-          target="_blank"
-          rel="noopener"
-        >
-          Ver reporte (PDF)
-        </a>
+        <a class="btn btn-ghost btn-xs"
+           href="notebooks/Proyecto_sprint_12_Daniel_Aguinaga.html"
+           target="_blank" rel="noopener">Ver notebook completo</a>
 
-        <a class="btn btn-ghost btn-xs" href="notebooks/StatsBomb_OpenData_Menu_code.html" target="_blank" rel="noopener">Ver código</a>
-
+        <a class="btn btn-primary btn-xs"
+           href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos_limpio/HEAD?labpath=notebooks/Proyecto_sprint_12_Daniel_Aguinaga.ipynb"
+           target="_blank" rel="noopener">Ejecutar en Binder</a>
       </div>
-    </div>
+</div>
 
-    <!-- IMAGEN -->
-    <div class="featured-notebook" style="padding:0; height:auto; align-self:flex-start;">
-      <img
-        src="match_report_real_madrid_vs_barcelona_compna_seasonna_match3773497.png"
-        alt="Match report automatizado Real Madrid vs Barcelona"
-        style="width:100%; height:auto; display:block;"
-        loading="lazy"
-      />
+    <!-- NOTEBOOK -->
+    <div class="featured-notebook">
+      <iframe
+        class="notebook-iframe"
+        id="iframe-abtest"
+        src="notebooks/Proyecto_sprint_12_Daniel_Aguinaga.html"
+        loading="lazy"></iframe>
     </div>
 
   </div>
 </article>
+<!-- 1. PROYECTO END-TO-END DESTACADO -->
+    <article class="project-card project-card--featured">
+  <span class="featured-label">Proyecto end-to-end</span>
+  <h3 class="project-title">Proyecto analítico: exploración, modelado y generación de insights accionables</h3>
 
-    <!-- 1. DASHBOARD TABLEAU (DESTACADO) -->
+  <div class="project-tags">
+    <span class="tag">End-to-end</span>
+    <span class="tag">EDA</span>
+    <span class="tag">Retención</span>
+    <span class="tag">LTV</span>
+  </div>
+
+  <div class="featured-content">
+    <div class="featured-text">
+      <p><strong>Problemática abordada:</strong><br>
+      Un servicio digital necesita entender mejor el comportamiento de sus usuarios para optimizar campañas de marketing,
+      mejorar la retención y estimar el valor de tiempo de vida (LTV) por cohorte y canal de adquisición.</p>
+
+      <p><strong>¿Qué hago en este proyecto?</strong><br>
+      – <span class="code-link" data-target="sec-limpieza">Limpieza y preparación de los datos para que sean consistentes y analizables.</span><br>
+      – <span class="code-link" data-target="sec-eda">Análisis exploratorio (EDA) para entender patrones de uso, retención y comportamiento por cohorte.</span><br>
+      – <span class="code-link" data-target="sec-modelo">Construcción de métricas y modelos sencillos para estimar el LTV y comparar canales de adquisición.</span><br>
+      – <span class="code-link" data-target="sec-conclusiones">Síntesis de hallazgos y redacción de recomendaciones en lenguaje accesible para negocio.</span>
+      </p>
+
+      <p><strong>Valor agregado del análisis:</strong><br>
+      No solo calculo métricas; las conecto con decisiones concretas: qué canales parecen más rentables,
+      cómo se comportan las cohortes en el tiempo y qué tipo de inversión podría tener mejor retorno.
+      El resultado es un conjunto de insights que ayudan a priorizar acciones de marketing con base en datos.</p>
+
+      <p><strong>Métricas destacadas:</strong></p>
+      <ul class="project-metrics">
+        <li>Análisis de <strong>207,051 usuarios</strong> con una retención aproximada del <strong>22.5%</strong> a 30 días.</li>
+        <li>Cálculo de un LTV promedio proyectado de alrededor de <strong>$6.90 USD</strong> por usuario.</li>
+        <li>Identificación de que las <strong>3 principales fuentes de adquisición</strong> concentran el <strong>75.8% del tráfico</strong> analizado.</li>
+      </ul>
+
+      <div class="project-actions">
+        <a class="btn btn-ghost btn-xs"
+           href="notebooks/Proyecto_sprint_9_Daniel_Aguinaga.html"
+           target="_blank" rel="noopener">Ver notebook en pestaña nueva</a>
+
+        <a class="btn btn-primary btn-xs"
+           href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_sprint_9_Daniel_Aguinaga.ipynb"
+           target="_blank" rel="noopener">Ejecutar en Binder</a>
+      </div>
+    </div>
+
+    <div class="featured-notebook">
+      <iframe
+        class="notebook-iframe"
+        id="iframe-sprint9"
+        src="notebooks/Proyecto_sprint_9_Daniel_Aguinaga.html"
+        loading="lazy"></iframe>
+    </div>
+  </div>
+</article>
+<!-- 1. DASHBOARD TABLEAU (DESTACADO) -->
     <article class="project-card project-card--featured">
       <div class="featured-label">Dashboard interactivo (Tableau)</div>
       <h3 class="project-title">Análisis de accidentes — Exploración interactiva en Tableau</h3>
@@ -882,68 +929,85 @@
         </div>
       </div>
     </article>
-
-
-    <!-- 1. PROYECTO END-TO-END DESTACADO -->
-    <article class="project-card project-card--featured">
-  <span class="featured-label">Proyecto end-to-end</span>
-  <h3 class="project-title">Proyecto analítico: exploración, modelado y generación de insights accionables</h3>
+<!-- 0. MATCH REPORT AUTOMATIZADO (FÚTBOL) -->
+<article class="project-card project-card--featured">
+  <span class="featured-label">Match report automatizado · Fútbol</span>
+  <h3 class="project-title">Análisis de partido — Match Report profesional (StatsBomb)</h3>
 
   <div class="project-tags">
-    <span class="tag">End-to-end</span>
-    <span class="tag">EDA</span>
-    <span class="tag">Retención</span>
-    <span class="tag">LTV</span>
+    <span class="tag">Python</span>
+    <span class="tag">StatsBomb</span>
+    <span class="tag">Data Viz</span>
+    <span class="tag">Fútbol</span>
+    <span class="tag">Automatización</span>
   </div>
 
-  <div class="featured-content">
+  <div class="featured-content" style="grid-template-columns: 1fr 1fr;">
+
+    <!-- TEXTO -->
     <div class="featured-text">
-      <p><strong>Problemática abordada:</strong><br>
-      Un servicio digital necesita entender mejor el comportamiento de sus usuarios para optimizar campañas de marketing,
-      mejorar la retención y estimar el valor de tiempo de vida (LTV) por cohorte y canal de adquisición.</p>
+      <p><strong>Descripción del proyecto:</strong><br>
+        Desarrollo de un <strong>match report profesional completamente automatizado</strong> a partir de datos
+        de <em>StatsBomb Open Data</em>, generado mediante un Jupyter Notebook.
+        El flujo integra extracción de datos vía API, limpieza, transformación,
+        visualización avanzada y presentación final en formato dashboard.</p>
 
-      <p><strong>¿Qué hago en este proyecto?</strong><br>
-      – <span class="code-link" data-target="sec-limpieza">Limpieza y preparación de los datos para que sean consistentes y analizables.</span><br>
-      – <span class="code-link" data-target="sec-eda">Análisis exploratorio (EDA) para entender patrones de uso, retención y comportamiento por cohorte.</span><br>
-      – <span class="code-link" data-target="sec-modelo">Construcción de métricas y modelos sencillos para estimar el LTV y comparar canales de adquisición.</span><br>
-      – <span class="code-link" data-target="sec-conclusiones">Síntesis de hallazgos y redacción de recomendaciones en lenguaje accesible para negocio.</span>
-      </p>
+      <p><strong>¿Qué hace este proyecto?</strong><br>
+        – Descarga automática de eventos, alineaciones y acciones del partido.<br>
+        – Generación de múltiples visualizaciones tácticas y analíticas.<br>
+        – Composición final en un <strong>dashboard tipo reporte profesional</strong>.<br>
+        – Exportación automática del informe en <strong>PNG y PDF</strong>, listo para compartir.</p>
 
-      <p><strong>Valor agregado del análisis:</strong><br>
-      No solo calculo métricas; las conecto con decisiones concretas: qué canales parecen más rentables,
-      cómo se comportan las cohortes en el tiempo y qué tipo de inversión podría tener mejor retorno.
-      El resultado es un conjunto de insights que ayudan a priorizar acciones de marketing con base en datos.</p>
+      <p><strong>Visualizaciones incluidas:</strong><br>
+        – Mapa de tiros (xG y goles).<br>
+        – xG acumulado por minuto.<br>
+        – Redes de pases (local vs visitante).<br>
+        – Pases progresivos comparados.<br>
+        – Mapas de calor de presiones.</p>
 
-      <p><strong>Métricas destacadas:</strong></p>
+      <p><strong>Principales conclusiones que permite obtener:</strong></p>
       <ul class="project-metrics">
-        <li>Análisis de <strong>207,051 usuarios</strong> con una retención aproximada del <strong>22.5%</strong> a 30 días.</li>
-        <li>Cálculo de un LTV promedio proyectado de alrededor de <strong>$6.90 USD</strong> por usuario.</li>
-        <li>Identificación de que las <strong>3 principales fuentes de adquisición</strong> concentran el <strong>75.8% del tráfico</strong> analizado.</li>
+        <li>Comparar la <strong>calidad de las oportunidades</strong> generadas por cada equipo.</li>
+        <li>Identificar <strong>estructuras de posesión</strong> y roles clave.</li>
+        <li>Detectar <strong>patrones de progresión</strong> del juego.</li>
+        <li>Analizar la <strong>intensidad defensiva</strong> y zonas de presión.</li>
       </ul>
 
-      <div class="project-actions">
-        <a class="btn btn-ghost btn-xs"
-           href="notebooks/Proyecto_sprint_9_Daniel_Aguinaga.html"
-           target="_blank" rel="noopener">Ver notebook en pestaña nueva</a>
+      <p><strong>Valor analítico:</strong><br>
+        Reporte comparable a los utilizados por
+        <strong>departamentos de análisis profesional</strong>,
+        transformando datos crudos en insights tácticos claros
+        para la toma de decisiones deportivas.</p>
 
-        <a class="btn btn-primary btn-xs"
-           href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_sprint_9_Daniel_Aguinaga.ipynb"
-           target="_blank" rel="noopener">Ejecutar en Binder</a>
+      <!-- ✅ BOTONES AÑADIDOS -->
+      <div class="project-actions">
+        <a
+          class="btn btn-primary btn-xs"
+          href="match_report_real_madrid_vs_barcelona_compna_seasonna_match3773497.pdf"
+          target="_blank"
+          rel="noopener"
+        >
+          Ver reporte (PDF)
+        </a>
+
+        <a class="btn btn-ghost btn-xs" href="notebooks/StatsBomb_OpenData_Menu_code.html" target="_blank" rel="noopener">Ver código</a>
+
       </div>
     </div>
 
-    <div class="featured-notebook">
-      <iframe
-        class="notebook-iframe"
-        id="iframe-sprint9"
-        src="notebooks/Proyecto_sprint_9_Daniel_Aguinaga.html"
-        loading="lazy"></iframe>
+    <!-- IMAGEN -->
+    <div class="featured-notebook" style="padding:0; height:auto; align-self:flex-start;">
+      <img
+        src="match_report_real_madrid_vs_barcelona_compna_seasonna_match3773497.png"
+        alt="Match report automatizado Real Madrid vs Barcelona"
+        style="width:100%; height:auto; display:block;"
+        loading="lazy"
+      />
     </div>
+
   </div>
 </article>
-
-
-    <!-- 2. NLP: CLASIFICACIÓN AMAZON -->
+<!-- 2. NLP: CLASIFICACIÓN AMAZON -->
     <article class="project-card project-card--featured">
   <span class="featured-label">NLP y clasificación de texto</span>
   <h3 class="project-title">Clasificación de reseñas de Amazon</h3>
@@ -1002,9 +1066,7 @@
     </div>
   </div>
 </article>
-
-
-    <!-- 3. EDA / SEGMENTACIÓN CLIENTES -->
+<!-- 3. EDA / SEGMENTACIÓN CLIENTES -->
     <article class="project-card project-card--featured">
   <span class="featured-label">EDA y comportamiento de clientes</span>
   <h3 class="project-title">Análisis exploratorio y segmentación del comportamiento del cliente</h3>
@@ -1064,67 +1126,6 @@
         src="notebooks/Proyecto_Sprint_4_Daniel_Aguinaga.html"
         loading="lazy"></iframe>
     </div>
-  </div>
-</article>
-
-<!--  NUEVO PROYECTO DESTACADO: EXPERIMENTO A/B -->
-<article class="project-card project-card--featured">
-  <span class="featured-label">Experimentación · A/B Testing</span>
-  <h3 class="project-title">Evaluación del Impacto de Nuevas Fuentes de Tráfico mediante Experimentación A/B</h3>
-
-  <div class="project-tags">
-    <span class="tag">Estadística</span>
-    <span class="tag">A/B Testing</span>
-    <span class="tag">Experimentación</span>
-    <span class="tag">Producto</span>
-    <span class="tag">Negocio</span>
-  </div>
-
-  <div class="featured-content">
-
-    <!-- TEXTO -->
-    <div class="featured-text">
-      <p><strong>Problemática abordada:</strong><br>
-      Un producto digital necesita evaluar si la incorporación de <strong>nuevas fuentes de tráfico</strong> mejora el desempeño del funnel de conversión y, en particular, el evento clave de pago. El objetivo es tomar una decisión informada sobre si escalar estas nuevas fuentes sin comprometer la rentabilidad ni la experiencia del usuario.</p>
-
-      <p><strong>¿Qué hago en este proyecto?</strong><br>
-      – <span class="code-link-ab" data-target="Estudiar-el-embudo-de-eventos">Construcción y análisis del <strong>funnel de eventos</strong></span><br>
-      – <span class="code-link-ab" data-target="Tests-A-A-validación-de-grupos">Validación del diseño experimental mediante pruebas <strong>A/A</strong></span><br>
-      – <span class="code-link-ab" data-target="Tests-A-B-nuevas-fuentes-grupo-248">Ejecución de pruebas <strong>A/B</strong> sobre múltiples eventos del funnel</span><br>
-      – <span class="code-link-ab" data-target="TESTS-A-B-MAINSCREENAPPEAR">Evaluación estadística rigurosa (incluye <strong>múltiples comparaciones</strong>)</span><br>
-      – <span class="code-link-ab" data-target="Conclusiones-Finales-del-Experimento">Interpretación de hallazgos y <strong>recomendación final</strong></span>
-      </p>
-
-      <p><strong>Valor agregado del análisis:</strong><br>
-      No solo reporto métricas: traduzco resultados estadísticos en decisiones accionables (cuándo escalar una iniciativa, cuándo detenerla y qué cambios adicionales podrían generar mayor impacto). Este enfoque reduce el riesgo de invertir recursos sin beneficio comprobado y fortalece la toma de decisiones basada en evidencia.</p>
-
-      <p><strong>Métricas destacadas:</strong></p>
-      <ul class="project-metrics">
-        <li>Evaluación de más de <strong>4,900 usuarios</strong> distribuidos en tres grupos experimentales.</li>
-        <li>Análisis del comportamiento a través de <strong>5 eventos clave</strong> del funnel de conversión.</li>
-        <li>Las diferencias observadas no fueron estadísticamente significativas con <strong>α = 0.05</strong> ni con el nivel ajustado por múltiples pruebas.</li>
-      </ul>
-
-      <div class="project-actions">
-        <a class="btn btn-ghost btn-xs"
-           href="notebooks/Proyecto_sprint_12_Daniel_Aguinaga.html"
-           target="_blank" rel="noopener">Ver notebook completo</a>
-
-        <a class="btn btn-primary btn-xs"
-           href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos_limpio/HEAD?labpath=notebooks/Proyecto_sprint_12_Daniel_Aguinaga.ipynb"
-           target="_blank" rel="noopener">Ejecutar en Binder</a>
-      </div>
-</div>
-
-    <!-- NOTEBOOK -->
-    <div class="featured-notebook">
-      <iframe
-        class="notebook-iframe"
-        id="iframe-abtest"
-        src="notebooks/Proyecto_sprint_12_Daniel_Aguinaga.html"
-        loading="lazy"></iframe>
-    </div>
-
   </div>
 </article>
 
