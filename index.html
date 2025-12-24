@@ -559,6 +559,23 @@
       }
     }
 
+
+    /* Estilo exclusivo para links del proyecto A/B */
+    a.code-link-ab {
+      color: var(--primary);
+      text-decoration: underline;
+      cursor: pointer;
+      text-underline-offset: 2px;
+    }
+    a.code-link-ab:hover {
+      opacity: 0.85;
+    }
+
+
+    /* Enlaces clicables (solo proyecto A/B) */
+    .code-link-ab { cursor: pointer; }
+    .code-link-ab:hover { text-decoration: underline; color: var(--primary); }
+
 </style>
 </head>
 
@@ -1050,6 +1067,59 @@
   </div>
 </article>
 
+<!--  NUEVO PROYECTO DESTACADO: EXPERIMENTO A/B -->
+<article class="project-card project-card--featured">
+  <span class="featured-label">Experimentación · A/B Testing</span>
+  <h3 class="project-title">Evaluación del Impacto de Nuevas Fuentes de Tráfico mediante Experimentación A/B</h3>
+
+  <div class="project-tags">
+    <span class="tag">Estadística</span>
+    <span class="tag">A/B Testing</span>
+    <span class="tag">Experimentación</span>
+    <span class="tag">Producto</span>
+    <span class="tag">Negocio</span>
+  </div>
+
+  <div class="featured-content">
+
+    <!-- TEXTO -->
+    <div class="featured-text">
+      <p><strong>Objetivo:</strong><br>
+      Determinar si la incorporación de nuevas fuentes de tráfico mejora la conversión del funnel de pagos mediante un diseño experimental riguroso.</p>
+
+      <p><strong>Análisis clave:</strong><br>
+      – <span class="code-link-ab" data-target="sec-validacion">Validación A/A del experimento</span><br>
+      – <span class="code-link-ab" data-target="sec-funnel">Construcción y análisis del funnel</span><br>
+      – <span class="code-link-ab" data-target="sec-experimento">Resultados del experimento A/B</span><br>
+      – <span class="code-link-ab" data-target="sec-conclusiones">Conclusiones y recomendación final</span>
+      </p>
+
+      <p><strong>Hallazgo principal:</strong><br>
+      No se detectaron diferencias estadísticamente significativas entre los grupos de control y el grupo experimental.  
+      La evidencia indica que las nuevas fuentes no generan un impacto medible en la conversión bajo las condiciones actuales.</p>
+
+      <div class="project-actions">
+        <a class="btn btn-ghost btn-xs"
+           href="notebooks/Proyecto_sprint_12_Daniel_Aguinaga.html"
+           target="_blank" rel="noopener">Ver notebook completo</a>
+
+        <a class="btn btn-primary btn-xs"
+           href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_sprint_12_Daniel_Aguinaga.ipynb"
+           target="_blank" rel="noopener">Ejecutar en Binder</a>
+      </div>
+    </div>
+
+    <!-- NOTEBOOK -->
+    <div class="featured-notebook">
+      <iframe
+        class="notebook-iframe"
+        id="iframe-abtest"
+        src="notebooks/Proyecto_sprint_12_Daniel_Aguinaga.html"
+        loading="lazy"></iframe>
+    </div>
+
+  </div>
+</article>
 
   </div> <!-- /projects-grid de destacados -->
 
@@ -1206,11 +1276,12 @@
     iframe.addEventListener('load', () => {
       const links = document.querySelectorAll(linksSelector);
       links.forEach(link => {
-        link.addEventListener('click', () => {
+        link.addEventListener('click', (e) => {
+          if (e && typeof e.preventDefault === 'function') e.preventDefault();
           const targetId = link.dataset.target;
           if (!targetId) return;
 
-          const doc = iframe.contentDocument || iframe.contentWindow.document;
+          const doc = iframe.contentDocument || iframe.contentWindow?.document;
           if (!doc) return;
 
           const target = doc.getElementById(targetId);
@@ -1230,6 +1301,9 @@
 
   // Proyecto Instacart / comportamiento de clientes
   setupNotebookLinks('.code-link-instacart', 'iframe-instacart');
+
+  // Proyecto A/B Testing
+  setupNotebookLinks('.code-link-ab', 'iframe-abtest');
 </script>
 
 </body>
