@@ -7528,7 +7528,6 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="%C2%A1Llena-ese-carrito!">¡Llena ese carrito!<a class="anchor-link" href="#%C2%A1Llena-ese-carrito!">¶</a></h1>
 </div>
 </div>
 </div>
@@ -7539,9 +7538,6 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Introducci%C3%B3n">Introducción<a class="anchor-link" href="#Introducci%C3%B3n">¶</a></h1><p>Instacart es una plataforma de entregas de comestibles donde la clientela puede registrar un pedido y hacer que se lo entreguen, similar a Uber Eats y Door Dash.
-El conjunto de datos que te hemos proporcionado tiene modificaciones del original. Redujimos el tamaño del conjunto para que tus cálculos se hicieran más rápido e introdujimos valores ausentes y duplicados. Tuvimos cuidado de conservar las distribuciones de los datos originales cuando hicimos los cambios.</p>
-<p>Debes completar tres pasos. Para cada uno de ellos, escribe una breve introducción que refleje con claridad cómo pretendes resolver cada paso, y escribe párrafos explicatorios que justifiquen tus decisiones al tiempo que avanzas en tu solución.  También escribe una conclusión que resuma tus hallazgos y elecciones.</p>
 </div>
 </div>
 </div>
@@ -7552,39 +7548,14 @@ El conjunto de datos que te hemos proporcionado tiene modificaciones del origina
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Diccionario-de-datos">Diccionario de datos<a class="anchor-link" href="#Diccionario-de-datos">¶</a></h2><p>Hay cinco tablas en el conjunto de datos, y tendrás que usarlas todas para hacer el preprocesamiento de datos y el análisis exploratorio de datos. A continuación se muestra un diccionario de datos que enumera las columnas de cada tabla y describe los datos que contienen.</p>
 <ul>
-<li><code>instacart_orders.csv</code>: cada fila corresponde a un pedido en la aplicación Instacart.<ul>
-<li><code>'order_id'</code>: número de ID que identifica de manera única cada pedido.</li>
-<li><code>'user_id'</code>: número de ID que identifica de manera única la cuenta de cada cliente.</li>
-<li><code>'order_number'</code>: el número de veces que este cliente ha hecho un pedido.</li>
-<li><code>'order_dow'</code>: día de la semana en que se hizo el pedido (0 si es domingo).</li>
-<li><code>'order_hour_of_day'</code>: hora del día en que se hizo el pedido.</li>
-<li><code>'days_since_prior_order'</code>: número de días transcurridos desde que este cliente hizo su pedido anterior.</li>
+</li>
 </ul>
 </li>
-<li><code>products.csv</code>: cada fila corresponde a un producto único que pueden comprar los clientes.<ul>
-<li><code>'product_id'</code>: número ID que identifica de manera única cada producto.</li>
-<li><code>'product_name'</code>: nombre del producto.</li>
-<li><code>'aisle_id'</code>: número ID que identifica de manera única cada categoría de pasillo de víveres.</li>
-<li><code>'department_id'</code>: número ID que identifica de manera única cada departamento de víveres.</li>
 </ul>
 </li>
-<li><code>order_products.csv</code>: cada fila corresponde a un artículo pedido en un pedido.<ul>
-<li><code>'order_id'</code>: número de ID que identifica de manera única cada pedido.</li>
-<li><code>'product_id'</code>: número ID que identifica de manera única cada producto.</li>
-<li><code>'add_to_cart_order'</code>: el orden secuencial en el que se añadió cada artículo en el carrito.</li>
-<li><code>'reordered'</code>: 0 si el cliente nunca ha pedido este producto antes, 1 si lo ha pedido.</li>
 </ul>
 </li>
-<li><code>aisles.csv</code><ul>
-<li><code>'aisle_id'</code>: número ID que identifica de manera única cada categoría de pasillo de víveres.</li>
-<li><code>'aisle'</code>: nombre del pasillo.</li>
-</ul>
-</li>
-<li><code>departments.csv</code><ul>
-<li><code>'department_id'</code>: número ID que identifica de manera única cada departamento de víveres.</li>
-<li><code>'department'</code>: nombre del departamento.</li>
 </ul>
 </li>
 </ul>
