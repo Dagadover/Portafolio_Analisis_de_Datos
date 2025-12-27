@@ -1,0 +1,158 @@
+Chelsea,Liverpool
+"    player_id                        player_name    player_nickname  \
+0        2956            Bertrand Isidore Traoré    Bertrand Traoré   
+1        3317                       Kasey Palmer               None   
+2        3339                      Asmir Begović               None   
+3        3381                      Nemanja Matić               None   
+4        3440               Tammy Bakumo-Abraham      Tammy Abraham   
+5        3472            Willian Borges da Silva            Willian   
+6        3478          Francesc Fàbregas i Soler      Cesc Fàbregas   
+7        3504                 Ruben Loftus-Cheek               None   
+8        3621                        Eden Hazard               None   
+9        3645                        Gary Cahill               None   
+10       3666  Robert Kenedy Nunes do Nascimento             Kenedy   
+11       3957            César Azpilicueta Tanco  César Azpilicueta   
+12       3958    Pedro Eliezer Rodríguez Ledesma              Pedro   
+13       5475      John Michael Nchekwube Obinna     John Obi Mikel   
+14      10458                      Fikayo Tomori               None   
+15      12325                  Abdul Rahman Baba        Baba Rahman   
+16      25351       Alexandre Rodrigues da Silva     Alexandre Pato   
+17      44981                       Marco Amelia               None   
+
+    jersey_number                 country  \
+0              14            Burkina Faso   
+1              38                 Jamaica   
+2               1  Bosnia and Herzegovina   
+3              21                  Serbia   
+4              42                 England   
+5              22                  Brazil   
+6               4                   Spain   
+7              36                 England   
+8              10                 Belgium   
+9              24                 England   
+10             16                  Brazil   
+11             28                   Spain   
+12             17                   Spain   
+13             12                 Nigeria   
+14             43                 England   
+15              6                   Ghana   
+16             11                  Brazil   
+17             32                   Italy   
+
+                                                cards  \
+0                                                  []   
+1                                                  []   
+2                                                  []   
+3                                                  []   
+4                                                  []   
+5                                                  []   
+6                                                  []   
+7                                                  []   
+8                                                  []   
+9                                                  []   
+10                                                 []   
+11  [{'time': '86:31', 'card_type': 'Yellow Card',...   
+12                                                 []   
+13                                                 []   
+14                                                 []   
+15                                                 []   
+16                                                 []   
+17                                                 []   
+
+                                            positions  
+0   [{'position_id': 23, 'position': 'Center Forwa...  
+1                                                  []  
+2   [{'position_id': 1, 'position': 'Goalkeeper', ...  
+3   [{'position_id': 11, 'position': 'Left Defensi...  
+4   [{'position_id': 23, 'position': 'Center Forwa...  
+5   [{'position_id': 17, 'position': 'Right Wing',...  
+6   [{'position_id': 9, 'position': 'Right Defensi...  
+7   [{'position_id': 21, 'position': 'Left Wing', ...  
+8   [{'position_id': 19, 'position': 'Center Attac...  
+9   [{'position_id': 3, 'position': 'Right Center ...  
+10  [{'position_id': 17, 'position': 'Right Wing',...  
+11  [{'position_id': 2, 'position': 'Right Back', ...  
+12  [{'position_id': 21, 'position': 'Left Wing', ...  
+13  [{'position_id': 5, 'position': 'Left Center B...  
+14                                                 []  
+15  [{'position_id': 6, 'position': 'Left Back', '...  
+16                                                 []  
+17                                                 []  ","    player_id                          player_name    player_nickname  \
+0        3380              Christian Benteke Liolo  Christian Benteke   
+1        3471                         Dejan Lovren               None   
+2        3473                  James Philip Milner       James Milner   
+3        3493                             Emre Can               None   
+4        3501            Philippe Coutinho Correia  Philippe Coutinho   
+5        3515                 Alberto Moreno Pérez     Alberto Moreno   
+6        3529               Daniel Andre Sturridge   Daniel Sturridge   
+7        3535  Roberto Firmino Barbosa de Oliveira    Roberto Firmino   
+8        3539                       Simon Mignolet               None   
+9        4090                   Adam David Lallana       Adam Lallana   
+10       4590                Nathaniel Edwin Clyne    Nathaniel Clyne   
+11       7780                  Lucas Pezzini Leiva        Lucas Leiva   
+12       9985                          Ádám Bogdán               None   
+13      10931                            Joe Allen               None   
+14      13200               Oluwaseyi Babajide Ojo          Sheyi Ojo   
+15      13448                  Bradley Shaun Smith               None   
+16      18872                        Martin Škrtel               None   
+17      38412                     Kolo Habib Touré         Kolo Touré   
+
+    jersey_number        country  \
+0               9        Belgium   
+1               6        Croatia   
+2               7        England   
+3              23        Germany   
+4              10         Brazil   
+5              18          Spain   
+6              15        England   
+7              11         Brazil   
+8              22        Belgium   
+9              20        England   
+10              2        England   
+11             21         Brazil   
+12             34        Hungary   
+13             24          Wales   
+14             54        England   
+15             44      Australia   
+16             37       Slovakia   
+17              4  Côte d'Ivoire   
+
+                                                cards  \
+0                                                  []   
+1                                                  []   
+2   [{'time': '72:03', 'card_type': 'Yellow Card',...   
+3   [{'time': '42:47', 'card_type': 'Yellow Card',...   
+4                                                  []   
+5                                                  []   
+6                                                  []   
+7                                                  []   
+8                                                  []   
+9                                                  []   
+10                                                 []   
+11                                                 []   
+12                                                 []   
+13                                                 []   
+14                                                 []   
+15                                                 []   
+16                                                 []   
+17  [{'time': '47:12', 'card_type': 'Yellow Card',...   
+
+                                            positions  
+0   [{'position_id': 12, 'position': 'Right Midfie...  
+1   [{'position_id': 3, 'position': 'Right Center ...  
+2   [{'position_id': 13, 'position': 'Right Center...  
+3   [{'position_id': 15, 'position': 'Left Center ...  
+4   [{'position_id': 16, 'position': 'Left Midfiel...  
+5   [{'position_id': 6, 'position': 'Left Back', '...  
+6   [{'position_id': 23, 'position': 'Center Forwa...  
+7   [{'position_id': 19, 'position': 'Center Attac...  
+8   [{'position_id': 1, 'position': 'Goalkeeper', ...  
+9   [{'position_id': 12, 'position': 'Right Midfie...  
+10  [{'position_id': 2, 'position': 'Right Back', ...  
+11                                                 []  
+12                                                 []  
+13  [{'position_id': 13, 'position': 'Right Center...  
+14  [{'position_id': 5, 'position': 'Left Center B...  
+15                                                 []  
+16                                                 []  
+17  [{'position_id': 5, 'position': 'Left Center B...  "
