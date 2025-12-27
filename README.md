@@ -1,109 +1,74 @@
 # Portafolio de Análisis de Datos — Daniel Juan de Dios Aguiñaga Gómez
 
 Bienvenido a mi portafolio profesional de análisis de datos.  
-Este repositorio reúne los proyectos más importantes que he desarrollado a lo largo de mi formación y práctica como analista de datos.
+Este repositorio reúne proyectos reales orientados a negocio, marketing y futbol desarrollados a lo largo de mi formación académica y práctica como **Data Analyst**.
 
-El sitio web del portafolio (publicado con GitHub Pages) está disponible en:
+El portafolio publicado puede consultarse en:
 
-👉 **https://dagadover.github.io/Portafolio_Analisis_de_Datos/**
+https://dagadover.github.io/Portafolio_Analisis_de_Datos/
 
 ---
 
 ## Sobre mí
 
-Soy **Daniel Juan de Dios Aguiñaga Gómez**, analista de datos con experiencia en:
+Soy **Daniel Juan de Dios Aguiñaga Gómez**, Data Analyst con enfoque en transformar datos complejos en información clara, útil y accionable para la toma de decisiones.
 
-- Análisis exploratorio (EDA)
-- Procesamiento y limpieza de datos
-- Estadística aplicada y pruebas de hipótesis
-- Cohortes, retención y LTV
-- Machine learning supervisado
-- Procesamiento de lenguaje natural (NLP)
-- Visualización de datos (matplotlib, seaborn)
-- Automatización con Python
-- SQL para análisis y extracción de datos
+Trabajo principalmente con **Python, SQL y Tableau**, aplicando estadística, análisis exploratorio, visualización avanzada y modelos predictivos para resolver problemas de negocio en contextos reales como marketing, producto y analítica deportiva.
 
-Mi objetivo es transformar datos en información clara, útil y accionable para la toma de decisiones.
+Actualmente curso una **Maestría en Ciencia de Datos** y continúo fortaleciendo mi perfil mediante proyectos prácticos y certificaciones especializadas.
 
 ---
 
-## Portafolio publicado
+## Contenido del portafolio
 
-Puedes ver mi portafolio web completo aquí:
+El sitio web incluye:
 
-🔗 **https://dagadover.github.io/Portafolio_Analisis_de_Datos/**
-
-El sitio incluye:
-
-- Vista general de mis habilidades  
-- Proyectos destacados con descripción profesional  
-- Acceso a notebooks convertidos a HTML  
-- Enlaces para ejecutar cada proyecto en **Binder**  
-- Información de contacto  
-
----
-
-## Proyectos destacados incluidos en el portafolio
-
-### 🔹 Clasificación de reseñas de Amazon (NLP)
-- Limpieza y preprocesamiento de texto  
-- Vectorización (TF-IDF)  
-- Modelos de clasificación supervisada  
-- Evaluación de desempeño  
-
-### 🔹 Cohortes, retención y LTV
-- Análisis del comportamiento de usuarios  
-- Cálculo de LTV por cohorte  
-- Evaluación de rentabilidad por canal  
-- Recomendaciones de inversión en marketing  
-
-### 🔹 Producto analítico y storytelling
-- Selección de métricas clave  
-- Análisis exploratorio profundo  
-- Comunicación efectiva de insights  
-- Visualización para ejecutivos  
-
-### 🔹 Experimentación A/B y pruebas de hipótesis
-- Formulación estadística  
-- Pruebas t, U de Mann-Whitney, etc.  
-- Análisis de significancia  
-- Interpretación orientada a negocio  
-
-### 🔹 Modelado predictivo (Machine Learning)
-- Preparación de datos  
-- Entrenamiento de modelos supervisados  
-- Selección de características  
-- Métricas de evaluación  
-
-### 🔹 Proyecto integrador end-to-end
-- Pipeline completo de análisis  
-- Limpieza, transformación, modelado  
-- Presentación ejecutiva de resultados  
+- Página de presentación profesional con stack técnico completo  
+- Proyectos documentados con enfoque a negocio  
+- Dashboards interactivos  
+- Notebooks convertidos a HTML  
+- Proyectos ejecutables en Binder  
+- Pipeline de análisis automatizado  
+- Proyecto especializado en **analítica de fútbol**  
+- Información de contacto y enlaces profesionales  
 
 ---
 
-## 🔧 Tecnologías utilizadas
+## Proyectos destacados
 
-- **Python 3**  
-- **pandas**, **numpy**  
-- **matplotlib**, **seaborn**  
-- **scikit-learn**  
-- **SciPy**  
-- **Jupyter Notebook**  
-- **SQL**  
-- **GitHub Pages**  
-- **Binder**  
+1. **Evaluación del Impacto de Nuevas Fuentes de Tráfico mediante Experimentación A/B**  
+2. **Proyecto analítico end-to-end: exploración, modelado y generación de insights accionables**  
+3. **Análisis de accidentes — Exploración interactiva en Tableau**  
+4. **Análisis de partido — Match Report profesional (StatsBomb)**  
+5. **Clasificación de reseñas de Amazon (NLP)**  
+6. **Análisis exploratorio y segmentación del comportamiento del cliente (EDA)**  
+
+---
+
+## Tecnologías utilizadas
+
+- Python  
+- SQL  
+- pandas, NumPy  
+- matplotlib, seaborn  
+- scikit-learn, SciPy  
+- Jupyter Notebook  
+- Tableau  
+- Git, GitHub  
+- GitHub Pages  
+- Binder  
+
+---
+
+## Objetivo profesional
+
+Busco oportunidades como **Data Analyst Junior / Trainee**, donde pueda aportar valor desde el primer día, aprender de equipos experimentados y seguir desarrollándome en entornos orientados a datos.
 
 ---
 
 ## Contacto
 
-- **Email:** danielgg670@gmail.com  
-- **GitHub:** https://github.com/Dagadover  
-- **LinkedIn:** _(pendiente de agregar)_  
-
-Si deseas colaborar en un proyecto, necesitas un análisis o quieres revisar mi portafolio más a detalle, estoy disponible.
-
----
-
-
+Email: danielgg670@gmail.com  
+Portafolio: https://dagadover.github.io/Portafolio_Analisis_de_Datos/  
+GitHub: https://github.com/Dagadover  
+LinkedIn: https://www.linkedin.com/in/daniel-juan-de-dios-aguiñaga-gómez-3404a4119  
