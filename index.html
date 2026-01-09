@@ -577,6 +577,9 @@
     .code-link-ab { cursor: pointer; }
     .code-link-ab:hover { text-decoration: underline; color: var(--primary); }
 
+    /* Enlaces clicables (proyecto Churn) */
+    .code-link-churn { cursor: pointer; }
+    .code-link-churn:hover { text-decoration: underline; color: var(--primary); }
 </style>
 </head>
 
@@ -835,6 +838,61 @@
     </div>
   </div>
 </article>
+
+<!-- Predicción de Churn y Segmentación de Clientes -->
+<article class="project-card project-card--featured">
+  <span class="featured-label">Predicción & Segmentación</span>
+  <h3 class="project-title">Predicción de Churn y Segmentación de Clientes</h3>
+
+  <div class="project-tags">
+    <span class="tag">EDA</span>
+    <span class="tag">Machine Learning</span>
+    <span class="tag">Clustering</span>
+    <span class="tag">Negocio</span>
+  </div>
+
+  <div class="featured-content">
+    <div class="featured-text">
+      <p><strong>Problemática abordada:</strong><br>
+      Entender las causas de la cancelación de usuarios y diseñar estrategias de retención basadas en segmentación y predicción.</p>
+
+      <p><strong>¿Qué hago en este proyecto?</strong><br>
+      <span class="code-link-churn" data-target="eda">– Realizo un análisis exploratorio de los datos para identificar patrones relevantes (EDA).</span><br>
+      <span class="code-link-churn" data-target="modelo-churn">– Construyo un modelo de machine learning para predecir la probabilidad de cancelación de los usuarios (modelo de churn).</span><br>
+      <span class="code-link-churn" data-target="clustering">– Segmento a los usuarios mediante técnicas de clustering para identificar perfiles de comportamiento (clustering).</span><br>
+      <span class="code-link-churn" data-target="conclusiones">– Integro los resultados en conclusiones orientadas a la toma de decisiones (conclusiones).</span></p>
+
+      <p><strong>Valor agregado del análisis:</strong><br>
+      El proyecto permite anticipar la cancelación de clientes, comprender los distintos perfiles de comportamiento y priorizar acciones de retención basadas en evidencia.</p>
+
+      <p><strong>Métricas destacadas:</strong><br>
+  – Desempeño del modelo (Regresión Logística): <strong>accuracy = 0.925</strong>, <strong>precision ≈ 0.88</strong>, <strong>recall ≈ 0.83</strong>, <strong>AUC-ROC = 0.977</strong>.<br>
+  – Segmentación: <strong>5 clústeres</strong> con perfiles diferenciados y tasas de churn contrastantes.<br>
+  – Rango de churn por segmento: desde <strong>≈ 1.4&nbsp;%</strong> (clientes premium/ideales) hasta <strong>≈ 58.8&nbsp;%</strong> (segmento de alto riesgo).
+</p>
+
+
+      <div class="project-actions">
+  <a class="btn btn-ghost btn-xs"
+     href="notebooks/Proyecto_sprint_14_Daniel_Aguinaga.html"
+     target="_blank" rel="noopener">Ver notebook completo</a>
+
+  <a class="btn btn-primary btn-xs"
+     href="https://mybinder.org/v2/gh/dagadover/Portafolio_Analisis_de_Datos/HEAD?filepath=notebooks/Proyecto_sprint_14_Daniel_Aguinaga.ipynb"
+     target="_blank" rel="noopener">Ejecutar en Binder</a>
+</div>
+    </div>
+
+    <div class="featured-notebook">
+      <iframe
+        class="notebook-iframe"
+        id="iframe-churn" src="notebooks/Proyecto_sprint_14_Daniel_Aguinaga.html"
+        loading="lazy"></iframe>
+    </div>
+
+  </div>
+</article>
+
 <!-- 1. DASHBOARD TABLEAU (DESTACADO) -->
     <article class="project-card project-card--featured">
       <div class="featured-label">Dashboard interactivo (Tableau)</div>
@@ -1301,7 +1359,9 @@
 
   // Proyecto A/B Testing
   setupNotebookLinks('.code-link-ab', 'iframe-abtest');
-</script>
+
+  // Proyecto Churn (EDA / modelo / clustering / conclusiones)
+  setupNotebookLinks('.code-link-churn', 'iframe-churn');</script>
 
 </body>
 </html>
