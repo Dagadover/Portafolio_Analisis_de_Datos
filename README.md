@@ -71,4 +71,4 @@ Busco oportunidades como **Data Analyst Junior / Trainee**, donde pueda aportar 
 Email: danielgg670@gmail.com  
 Portafolio: https://dagadover.github.io/Portafolio_Analisis_de_Datos/  
 GitHub: https://github.com/Dagadover  
-LinkedIn: https://www.linkedin.com/in/daniel-juan-de-dios-aguiñaga-gómez-3404a4119  
+LinkedIn: https://www.linkedin.com/in/danielaguinaga/
