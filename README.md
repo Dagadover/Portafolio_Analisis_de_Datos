@@ -62,7 +62,7 @@ El sitio web incluye:
 
 ## Objetivo profesional
 
-Busco oportunidades como **Data Analyst Junior / Trainee**, donde pueda aportar valor desde el primer día, aprender de equipos experimentados y seguir desarrollándome en entornos orientados a datos.
+Busco oportunidades como **Data Analyst Junior**, donde pueda aportar valor desde el primer día, aprender de equipos experimentados y seguir desarrollándome en entornos orientados a datos.
 
 ---
 
