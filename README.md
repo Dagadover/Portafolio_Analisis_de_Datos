@@ -1,4 +1,4 @@
-# Portafolio de Análisis de Datos — Daniel Juan de Dios Aguiñaga Gómez
+# Portafolio de Análisis de Datos — Daniel Aguiñaga
 
 Bienvenido a mi portafolio profesional de análisis de datos.  
 Este repositorio reúne proyectos reales orientados a negocio, marketing y futbol desarrollados a lo largo de mi formación académica y práctica como **Data Analyst**.
@@ -11,7 +11,7 @@ https://dagadover.github.io/Portafolio_Analisis_de_Datos/
 
 ## Sobre mí
 
-Soy **Daniel Juan de Dios Aguiñaga Gómez**, Data Analyst con enfoque en transformar datos complejos en información clara, útil y accionable para la toma de decisiones.
+Soy **Daniel Aguiñaga**, Data Analyst con enfoque en transformar datos complejos en información clara, útil y accionable para la toma de decisiones.
 
 Trabajo principalmente con **Python, SQL y Tableau**, aplicando estadística, análisis exploratorio, visualización avanzada y modelos predictivos para resolver problemas de negocio en contextos reales como marketing, producto y analítica deportiva.
 
