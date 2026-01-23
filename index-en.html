@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Daniel Aguiñaga | Data Analytics Portfolio</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!--Basic SEO-->
+<meta content="Data analytics portfolio by Daniel Juan de Dios Aguiñaga Gómez: applied projects in business analytics, statistics, machine learning, NLP, Tableau dashboards, and football analytics." name="description"/>
+<meta content="Daniel Juan de Dios Aguiñaga Gómez" name="author"/>
+<!--Google Fonts-->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@600&amp;display=swap" rel="stylesheet"/>
+<!--Devicon CDN for technology icons-->
+<link href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" rel="stylesheet"/>
+<style>
+    :root {
+      --primary: #2563eb;
+      --primary-soft: #e5efff;
+      --primary-border: #c3d6ff;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --bg: #f5f5f7;
+      --bg-alt: #ffffff;
+      --border: #e5e7eb;
+      --radius: 16px;
+      --shadow-soft: 0 10px 25px rgba(15, 23, 42, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 50;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.8rem 0;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-logo {
+      font-weight: 600;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    .nav-logo span {
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.9rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      position: relative;
+      padding-bottom: 0.1rem;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      height: 2px;
+      width: 0%;
+      background: var(--primary);
+      transition: all .2s;
+    }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 3rem 0 2rem;
+      display: grid;
+      grid-template-columns: 1.9fr 1.1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 420px;
+      width: 100%;
+      justify-self: end;
+    }
+    
+
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: .3rem .8rem;
+      border-radius: 999px;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      font-size: .75rem;
+      margin-bottom: .3rem;
+      color: var(--text-muted);
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      background: #22c55e;
+      border-radius: 999px;
+    }
+
+    .hero-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: clamp(2.2rem, 3.4vw, 2.8rem);
+      font-weight: 600;
+      margin-top: 0.6rem;
+    }
+    .hero-title span {
+      color: var(--primary);
+    }
+
+    .hero-role {
+      margin-top: .3rem;
+      font-size: 1rem;
+      color: var(--text-muted);
+    }
+
+    .hero-subtitle {
+      margin-top: .7rem;
+      color: var(--text-muted);
+      font-size: .95rem;
+      max-width: 40rem;
+    }
+
+    .hero-subtitle strong {
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    .hero-actions {
+      margin-top: 1.4rem;
+      display: flex;
+      gap: .7rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: .55rem 1.2rem;
+      border-radius: 999px;
+      font-size: .9rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid transparent;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 10px 22px rgba(37, 99, 235, 0.3);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: white;
+      border: 1px solid #d1d5db;
+      color: var(--text-muted);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-1px);
+      background: #f9fafb;
+    }
+
+    .hero-card {
+      background: white;
+      padding: 1.3rem 1.4rem;
+      border-radius: 16px;
+      border: 1px solid #e5e7eb;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .stack-chips {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .4rem;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      padding: .3rem .7rem;
+      border-radius: 999px;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      font-size: .78rem;
+      color: var(--text-muted);
+    }
+
+    .chip i {
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    /* Section layout */
+    section {
+      padding: 2rem 0;
+    }
+    .section-header {
+      margin-bottom: 1.3rem;
+    }
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+    .section-subtitle {
+      color: var(--text-muted);
+      font-size: .9rem;
+      margin-top: .2rem;
+      max-width: 34rem;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin-top: .8rem;
+    }
+    .skill-pill {
+      padding: .3rem .9rem;
+      border: 1px solid #e5e7eb;
+      background: white;
+      border-radius: 999px;
+      font-size: .8rem;
+      color: var(--text-muted);
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.3rem;
+    }
+
+    .project-card {
+      background: white;
+      padding: 1rem 1.1rem;
+      border-radius: 16px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 3px 10px rgba(0,0,0,.05);
+      transition: all .2s;
+    }
+    .project-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(0,0,0,.08);
+    }
+    .project-title {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .project-description {
+      font-size: .86rem;
+      color: var(--text-muted);
+      margin-top: .3rem;
+    }
+    .project-tags {
+      display: flex;
+      gap: .3rem;
+      flex-wrap: wrap;
+      margin-top: .5rem;
+    }
+    .tag {
+      padding: .2rem .6rem;
+      font-size: .75rem;
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+      color: var(--text-muted);
+    }
+    .project-actions {
+      margin-top: .7rem;
+      display: flex;
+      gap: .5rem;
+      flex-wrap: wrap;
+    }
+    .btn-xs {
+      padding: .3rem .8rem;
+      font-size: .8rem;
+      border-radius: 999px;
+    }
+    .btn-ghost {
+      background: white;
+      border: 1px solid #e5e7eb;
+      color: var(--text-muted);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-1px);
+    }
+
+    /* Featured end-to-end card */
+    .project-card--featured {
+      grid-column: 1 / -1;
+      padding: 1.4rem 1.5rem 1.3rem;
+    }
+
+    .featured-label {
+      display: inline-block;
+      font-size: .75rem;
+      padding: .2rem .6rem;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      border: 1px solid var(--primary-border);
+      color: var(--primary);
+      margin-bottom: .4rem;
+    }
+
+    .featured-content {
+      margin-top: .8rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.8fr);
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .featured-text p {
+      font-size: .86rem;
+      color: var(--text-muted);
+      margin-top: .4rem;
+    }
+
+    .featured-text p + p {
+      margin-top: .3rem;
+    }
+
+    .featured-notebook {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+      background: white;
+      height: 100%;
+      min-height: 0;
+    }
+
+    .featured-notebook iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      min-height: 0;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 1.5rem;
+    }
+    .contact-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      padding: 1.3rem 1.2rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow-soft);
+      font-size: .9rem;
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: .55rem;
+    }
+
+    .contact-icon {
+      width: 20px;
+      height: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: #eff2ff;
+      border: 1px solid #d4ddff;
+      flex-shrink: 0;
+    }
+
+    .contact-link {
+      font-size: .9rem;
+      color: var(--primary);
+      word-break: break-word;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: .8rem;
+      color: var(--text-muted);
+      background: white;
+      margin-top: 2rem;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
+        padding-top: 2.4rem;
+      }
+      .hero-right {
+        order: 2;
+      }
+      .featured-content {
+        grid-template-columns: 1fr;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  
+    /* Enlaces clicables que sincronizan el texto con el notebook */
+    .code-link,
+    .code-link-amazon,
+    .code-link-instacart {
+      cursor: pointer;
+    }
+    .code-link:hover,
+    .code-link-amazon:hover,
+    .code-link-instacart:hover {
+      text-decoration: underline;
+      color: var(--primary);
+    }
+
+    /* Ocultar iframes de notebooks en móviles para mejorar la experiencia */
+    @media (max-width: 768px) {
+      .notebook-iframe {
+        display: none !important;
+      }
+    }
+
+    /* Featured card: stack layout for specific projects (e.g., Tableau) */
+    .featured-content--stack {
+      grid-template-columns: 1fr !important;
+    }
+
+    .project-card--featured .tableau-wrapper {
+      width: 100%;
+      margin-top: 1.25rem;
+    }
+
+    .project-card--featured .tableauPlaceholder,
+    .project-card--featured .tableauViz {
+      width: 100% !important;
+    }
+
+    /* Make Tableau embed adapt nicely on small screens */
+    @media (max-width: 768px) {
+      .project-card--featured .tableauViz {
+        height: 75vh !important;
+        max-height: 900px;
+      }
+    }
+
+    @media (max-width: 900px) {
+  .project-card--featured .featured-content {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+    .hero-photo {
+      width: 190px;
+      max-width: 32%;
+      height: auto;
+      border-radius: 18px;
+      object-fit: cover;
+      float: left;
+      margin: 0 28px 18px 0;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, .10);
+      border: 1px solid rgba(17, 24, 39, .08);
+      background: #fff;
+    }
+
+    @media (max-width: 900px) {
+      .hero-photo {
+        float: none;
+        display: block;
+        width: 160px;
+        max-width: 60%;
+        margin: 0 auto 14px;
+      }
+    }
+
+
+    /* Estilo exclusivo para links del proyecto A/B */
+    a.code-link-ab {
+      color: var(--primary);
+      text-decoration: underline;
+      cursor: pointer;
+      text-underline-offset: 2px;
+    }
+    a.code-link-ab:hover {
+      opacity: 0.85;
+    }
+
+
+    /* Enlaces clicables (solo proyecto A/B) */
+    .code-link-ab { cursor: pointer; }
+    .code-link-ab:hover { text-decoration: underline; color: var(--primary); }
+
+    /* Enlaces clicables (proyecto Churn) */
+    .code-link-churn { cursor: pointer; }
+    .code-link-churn:hover { text-decoration: underline; color: var(--primary); }
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<nav class="nav">
+<div class="nav-logo">Data Analytics Portfolio</div>
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+<span style="font-size:0.75rem; color:#6b7280; margin-right:6px;">
+  Change language:
+</span>
+<a href="index.html" title="Ver en español">🇪🇸</a>
+</div>
+</nav>
+</div>
+</header>
+<main class="container">
+<!-- HERO -->
+<section class="hero" id="about">
+<div>
+<img alt="Foto profesional de Daniel Juan de Dios Aguiñaga Gómez" class="hero-photo" decoding="async" loading="lazy" src="daga.png"/>
+<h1 class="hero-title"><span>Daniel Juan de Dios Aguiñaga Gómez</span></h1>
+<strong>Data Scientist / Data Analyst</strong>
+<div class="hero-role">focused on visualization, exploratory analysis, and communicating insights with Python, SQL, and Tableau.</div>
+<p class="hero-subtitle">With a strong focus in <strong>exploratory analysis </strong>and <strong>insight communication</strong>,
+  using <strong>Python, SQL, and Tableau </strong>to support decision-making.</p>
+<p class="hero-subtitle">In this portfolio you will find projects where I apply these skills to answer real questions and turn data into actionable insights.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="CV_Daniel_Aguinaga_DA_ENG_2026.pdf" rel="noopener noreferrer" target="_blank">Download my CV</a>
+</div>
+</div>
+<div class="hero-right">
+<!-- Stack principal -->
+<div class="hero-card">
+<h4 style="font-size:.9rem;color:var(--text-muted);margin:0;">Main tech stack</h4>
+<div class="stack-chips">
+<span class="chip">
+<i class="devicon-python-plain colored"></i>
+<span>Python (Pandas, NumPy, Matplotlib, SciPy, Scikit-learn)</span>
+</span>
+<span class="chip">
+<i class="devicon-mysql-plain colored"></i>
+<span>SQL</span>
+</span>
+<span class="chip">
+<i class="devicon-javascript-plain colored"></i>
+<span>JavaScript</span>
+</span>
+<span class="chip">
+<i class="devicon-html5-plain colored"></i>
+<span>HTML</span>
+</span>
+</div>
+</div>
+<!-- Herramientas -->
+<div class="hero-card">
+<h4 style="font-size:.9rem;color:var(--text-muted);margin:0;">Tools</h4>
+<div class="stack-chips">
+<span class="chip">
+<i class="devicon-vscode-plain colored"></i>
+<span>VS Code</span>
+</span>
+<span class="chip">
+<i class="devicon-jupyter-plain colored"></i>
+<span>Jupyter Notebook</span>
+</span>
+<span class="chip">
+<i class="devicon-google-plain colored"></i>
+<span>Google Sheets</span>
+</span>
+<span class="chip">
+<i class="devicon-excel-plain colored"></i>
+<span>Excel</span>
+</span>
+<span class="chip">
+<i class="devicon-git-plain colored"></i>
+<span>Git</span>
+</span>
+<span class="chip">
+<i class="devicon-github-original colored"></i>
+<span>GitHub</span>
+</span>
+<span class="chip">
+<i class="devicon-tableau-plain colored"></i>
+<span>Tableau</span>
+</span>
+</div>
+</div>
+<!--Technical skills-->
+<div class="hero-card">
+<h4 style="font-size:.9rem;color:var(--text-muted);margin:0;">Technical skills</h4>
+<div class="skills-grid">
+<span class="skill-pill">Exploratory Data Analysis (EDA)</span>
+<span class="skill-pill">Data cleaning and preparation</span>
+<span class="skill-pill">Data visualization</span>
+<span class="skill-pill">Hypothesis testing</span>
+<span class="skill-pill">Machine learning</span>
+<span class="skill-pill">Natural Language Processing</span>
+</div>
+</div>
+</div>
+</section>
+<!-- PROJECTS -->
+<section id="projects">
+<!--FEATURED PROJECTS-->
+<div class="section-header">
+<h2 class="section-title">Featured projects</h2>
+<p class="section-subtitle">Let me start with a <strong>A/B experimentation </strong>focused on business decision-making backed by statistical evidence, followed by two high-impact analytical projects: an <strong>end-to-end </strong>project that covers the entire workflow from data exploration to actionable recommendations and a <strong>customer churn prediction and customer segmentation </strong>that integrates modeling, clustering, and retention-focused analysis. Then I present an <strong>interactive dashboard in tableau </strong>focused on visual communication of insights, and an <strong>automated football match report </strong>as an example of pipeline creation, applied analysis, and advanced visualization. Finally, I include projects focused on specific skills such as <strong>NLP</strong>, <strong>exploratory analysis (EDA)</strong>, <strong>statistics</strong> y <strong>machine learning</strong>.
+</p>
+</div>
+<!--FEATURED PROJECTS GRID-->
+<div class="projects-grid">
+<!--NEW FEATURED PROJECT: A/B EXPERIMENT-->
+<article class="project-card project-card--featured">
+<span class="featured-label">Experimentation · A/B Testing</span>
+<h3 class="project-title">Evaluating the Impact of New Traffic Sources through A/B Experimentation</h3>
+<div class="project-tags">
+<span class="tag">Statistics</span>
+<span class="tag">A/B Testing</span>
+<span class="tag">Experimentation</span>
+<span class="tag">Producto</span>
+<span class="tag">Negocio</span>
+</div>
+<div class="featured-content">
+<!-- TEXTO -->
+<div class="featured-text">
+<p><strong>Problem:</strong><br/>A digital product needs to evaluate whether adding <strong>new traffic sources </strong>improves conversion-funnel performance and, in particular, the key payment event. The goal is to make an informed decision on whether to scale these sources without compromising profitability or user experience.</p>
+<p><strong>What do I do in this project?</strong><br/>
+      – <span class="code-link-ab" data-target="Estudiar-el-embudo-de-eventos">Build and analyze the <strong>event funnel</strong></span><br/>
+      – <span class="code-link-ab" data-target="Tests-A-A-validación-de-grupos">Validate the experimental design using <strong>A/A</strong></span><br/>
+      – <span class="code-link-ab" data-target="Tests-A-B-nuevas-fuentes-grupo-248">Run <strong>A/B </strong>across multiple funnel events</span><br/>
+      – <span class="code-link-ab" data-target="TESTS-A-B-MAINSCREENAPPEAR">Rigorous statistical evaluation (including <strong>multiple comparisons</strong>)</span><br/>
+      – <span class="code-link-ab" data-target="Conclusiones-Finales-del-Experimento">Interpret findings and <strong>final recommendation</strong></span>
+</p>
+<p><strong>Value added:</strong><br/>I don’t just report metrics: I translate statistical results into actionable decisions (when to scale an initiative, when to stop it, and what additional changes could create more impact). This reduces the risk of investing resources without proven benefit and strengthens evidence-based decision-making.</p>
+<p><strong>Key metrics:</strong></p>
+<ul class="project-metrics">
+<li>Evaluation of over <strong>4,900 users</strong> distributed in three experimental groups.</li>
+<li>Behavior analysis across <strong>5 key events </strong>conversion funnel events.</li>
+<li>Observed differences were not statistically significant at <strong>α = 0.05</strong> nor under the multiple-testing adjusted level.</li>
+</ul>
+<div class="project-actions">
+<a class="btn btn-ghost btn-xs" href="notebooks/Proyecto_sprint_12_Daniel_Aguinaga.html" rel="noopener" target="_blank">View Notebook in a New Tab</a>
+<a class="btn btn-primary btn-xs" href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/main?labpath=notebooks/Proyecto_sprint_12_Daniel_Aguinaga.ipynb" rel="noopener" target="_blank">Run on Binder</a>
+</div>
+</div>
+<!-- NOTEBOOK -->
+<div class="featured-notebook">
+<iframe class="notebook-iframe" id="iframe-abtest" loading="lazy" src="notebooks/Proyecto_sprint_12_Daniel_Aguinaga.html"></iframe>
+</div>
+</div>
+</article>
+<!--1. FEATURED END-TO-END PROJECT-->
+<article class="project-card project-card--featured">
+<span class="featured-label">End-to-end project</span>
+<h3 class="project-title">Analytical project: exploration, modeling, and actionable insights</h3>
+<div class="project-tags">
+<span class="tag">End-to-end</span>
+<span class="tag">EDA</span>
+<span class="tag">Retention</span>
+<span class="tag">LTV</span>
+</div>
+<div class="featured-content">
+<div class="featured-text">
+<p><strong>Problem:</strong><br/>A digital service needs to better understand user behavior to optimize marketing campaigns, improve retention, and estimate lifetime value (LTV) by cohort and acquisition channel.</p>
+<p><strong>What do I do in this project?</strong><br/>
+      – <span class="code-link" data-target="sec-limpieza">Clean and prepare data so it is consistent and ready for analysis.</span><br/>
+      – <span class="code-link" data-target="sec-eda">Exploratory analysis (EDA) to understand usage, retention, and cohort behavior patterns.</span><br/>
+      – <span class="code-link" data-target="sec-modelo">Build metrics and simple models to estimate LTV and compare acquisition channels.</span><br/>
+      – <span class="code-link" data-target="sec-conclusiones">Synthesize findings and write recommendations in business-friendly language.</span>
+</p>
+<p><strong>Value added:</strong><br/>I don’t just calculate metrics; I connect them to concrete decisions: which channels appear more profitable, how cohorts evolve over time, and what type of investment may yield better returns. The result is a set of insights that help prioritize marketing actions based on data.</p>
+<p><strong>Key metrics:</strong></p>
+<ul class="project-metrics">
+<li>Analysis of <strong>207,051 users </strong>with an approximate retention of <strong>22.5% </strong>at 30 days.</li>
+<li>Estimated projected average LTV of around <strong>$6.90 USD</strong> per user.</li>
+<li>Identified that the <strong>top 3 acquisition sources</strong> concentrate <strong>75.8% of the traffic</strong> analyzed.</li>
+</ul>
+<div class="project-actions">
+<a class="btn btn-ghost btn-xs" href="notebooks/Proyecto_sprint_9_Daniel_Aguinaga.html" rel="noopener" target="_blank">View notebook in a New Tab</a>
+<a class="btn btn-primary btn-xs" href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_sprint_9_Daniel_Aguinaga.ipynb" rel="noopener" target="_blank">Run on Binder</a>
+</div>
+</div>
+<div class="featured-notebook">
+<iframe class="notebook-iframe" id="iframe-sprint9" loading="lazy" src="notebooks/Proyecto_sprint_9_Daniel_Aguinaga.html"></iframe>
+</div>
+</div>
+</article>
+<!--Churn Prediction and Customer Segmentation-->
+<article class="project-card project-card--featured">
+<span class="featured-label">Prediction &amp; Segmentation</span>
+<h3 class="project-title">Churn Prediction and Customer Segmentation</h3>
+<div class="project-tags">
+<span class="tag">EDA</span>
+<span class="tag">Machine Learning</span>
+<span class="tag">Clustering</span>
+<span class="tag">business</span>
+</div>
+<div class="featured-content">
+<div class="featured-text">
+<p><strong>Problem:</strong><br/>Understand the drivers of user churn and design retention strategies based on segmentation and prediction.</p>
+<p><strong>What do I do in this project?</strong><br/>
+<span class="code-link-churn" data-target="eda">– Perform exploratory data analysis (EDA) to identify relevant patterns.</span><br/>
+<span class="code-link-churn" data-target="modelo-churn">– Build a machine learning model to predict user churn probability (churn model).</span><br/>
+<span class="code-link-churn" data-target="clustering">– Segment users using clustering techniques to identify behavioral profiles (clustering).</span><br/>
+<span class="code-link-churn" data-target="conclusiones">– Integrate results into decision-oriented conclusions (conclusions).</span></p>
+<p><strong>Value added:</strong><br/>This project helps anticipate customer churn, understand different behavioral profiles, and prioritize evidence-based retention actions.</p>
+<p><strong>Key metrics:</strong><br/>– Model performance (Logistic Regression): <strong>accuracy = 0.925</strong>, <strong>precision ≈ 0.88</strong>, <strong>recall ≈ 0.83</strong>, <strong>AUC-ROC = 0.977</strong>.<br/>– Segmentation: <strong>5 clusters </strong>with differentiated profiles and contrasting churn rates.<br/>– Churn range by segment: from <strong>≈ 1.4 %</strong> (clientes premium/ideales) to <strong>≈ 58.8 %</strong>(high-risk segment).</p>
+<div class="project-actions">
+<a class="btn btn-ghost btn-xs" href="notebooks/Proyecto_sprint_14_Daniel_Aguinaga.html" rel="noopener" target="_blank">View Notebook in a New Tab</a>
+<a class="btn btn-primary btn-xs" href="https://mybinder.org/v2/gh/dagadover/Portafolio_Analisis_de_Datos/HEAD?filepath=notebooks/Proyecto_sprint_14_Daniel_Aguinaga.ipynb" rel="noopener" target="_blank">Run on Binder</a>
+</div>
+</div>
+<div class="featured-notebook">
+<iframe class="notebook-iframe" id="iframe-churn" loading="lazy" src="notebooks/Proyecto_sprint_14_Daniel_Aguinaga.html"></iframe>
+</div>
+</div>
+</article>
+<!-- 1. DASHBOARD TABLEAU (DESTACADO) -->
+<article class="project-card project-card--featured">
+<div class="featured-label">Dashboard interactivo (Tableau)</div>
+<h3 class="project-title">Accident Analysis — Interactive Exploration in Tableau</h3>
+<div class="project-tags">
+<span class="tag">Tableau</span>
+<span class="tag">Dashboard</span>
+<span class="tag">Data visualization</span>
+<span class="tag">Exploration</span>
+</div>
+<!--Note: in this project we use a stacked layout (text on top + dashboard below) to use the full width.-->
+<div class="featured-content featured-content--stack">
+<div class="featured-text">
+<p><strong>Problem:</strong><br/>Analyze accident patterns and trends to identify high-incidence areas and periods, and support decision-making through interactive visualizations.</p>
+<p><strong>What can the user explore?</strong><br/>– Accident distribution and comparisons across key dimensions.<br/>– Interactive filters to drill down into specific segments.<br/>– Views to detect outliers, time peaks, and clusters.</p>
+<p><strong>Observaciones principales</strong><br/>– The average age of people involved in accidents shows meaningful variation across Mexican states.<br/>– The national monthly accident count shows clear seasonality, with months of higher incidence.<br/>– The predominant cause of accidents is attributed to the driver, highlighting the human factor.<br/>– Approximately 4% of accidents are related to alcohol consumption—smaller in volume, but significant in impact.</p>
+<div class="project-actions">
+<a class="btn btn-primary btn-xs" href="https://public.tableau.com/app/profile/daniel.aguinaga/viz/EntregaFinalAguiaga/DASH_ANLISISACCIDENTES" rel="noopener" target="_blank">Open in Tableau Public</a>
+</div>
+</div>
+<div class="tableau-wrapper">
+<div class="tableauPlaceholder" id="viz_accidentes" style="position: relative;">
+<noscript>
+<a href="#">
+<img alt="Dashboard Tableau" src="https://public.tableau.com/static/images/En/EntregaFinalAguiaga/DASH_ANLISISACCIDENTES/1.png" style="border:none;"/>
+</a>
+</noscript>
+<object class="tableauViz" style="width:100%; height:900px;">
+<param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"/>
+<param name="embed_code_version" value="3"/>
+<param name="site_root" value=""/>
+<param name="name" value="EntregaFinalAguiaga/DASH_ANLISISACCIDENTES"/>
+<param name="tabs" value="no"/>
+<param name="toolbar" value="yes"/>
+<param name="static_image" value="https://public.tableau.com/static/images/En/EntregaFinalAguiaga/DASH_ANLISISACCIDENTES/1.png"/>
+<param name="animate_transition" value="yes"/>
+<param name="display_static_image" value="yes"/>
+<param name="display_spinner" value="yes"/>
+<param name="display_overlay" value="yes"/>
+<param name="display_count" value="yes"/>
+<param name="language" value="en-US"/>
+</object>
+</div>
+<script type="text/javascript">
+            (function () {
+              var divElement = document.getElementById("viz_accidentes");
+              if (!divElement) return;
+              var vizElement = divElement.getElementsByTagName("object")[0];
+
+              // Cargar Tableau JS una sola vez
+              if (!document.querySelector('script[src="https://public.tableau.com/javascripts/api/viz_v1.js"]')) {
+                var scriptElement = document.createElement("script");
+                scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+              } else {
+                // Si ya existe, solo mostramos el object
+                vizElement.style.display = "block";
+              }
+            })();
+          </script>
+</div>
+</div>
+</article>
+<!--0. AUTOMATED MATCH REPORT (FOOTBALL)-->
+<article class="project-card project-card--featured">
+<span class="featured-label">Automated match report · Football</span>
+<h3 class="project-title">Match analysis — Professional Match Report (StatsBomb)</h3>
+<div class="project-tags">
+<span class="tag">Python</span>
+<span class="tag">StatsBomb</span>
+<span class="tag">Pipelines</span>
+<span class="tag">Soccer</span>
+<span class="tag">Automation</span>
+</div>
+<div class="featured-content" style="grid-template-columns: 1fr 1fr;">
+<!-- TEXTO -->
+<div class="featured-text">
+<p><strong>Project description:</strong><br/>Development of a <strong>profesional fully automated match report </strong>using data from <em>StatsBomb Open Data</em>, generated using a Jupyter Notebook. The pipeline integrates data extraction via API, cleaning, transformation, advanced visualization, and final presentation in a professional match report format.</p>
+<p><strong>What does this project do?</strong><br/>– Automatically downloads match events, lineups, and actions.<br/>– Generates multiple tactical and analytical visualizations.<br/>– Final composition into a <strong>professional report-style dashboard</strong>.<br/>– Automatic export of the report in <strong>PNG and PDF</strong>, ready to share.</p>
+<p><strong>Included visualizations:</strong><br/>– Shot map (xG and goals).<br/>
+        – Cumulative xG per minute.<br/>– Passing networks (home vs away).<br/>
+        – Progressive passes comparison.<br/>– Pressure heatmaps.</p>
+<p><strong>Key insights that can be obtained:</strong></p>
+<ul class="project-metrics">
+<li>Compare the <strong>quality of chances</strong> generated by each team.</li>
+<li>Identify <strong>possession structures</strong> and key roles.</li>
+<li>Detect <strong>progression patterns</strong> of the game.</li>
+<li>Analyze the <strong>defensive intensity</strong> and pressing zones.</li>
+</ul>
+<p><strong>Analytical value:</strong><br/>
+        Reporte comparable a los utilizados por
+        <strong>professional analysis departments</strong>, turning raw data into clear tactical insights for sports decision-making.</p>
+<!--✅ BUTTONS ADDED-->
+<div class="project-actions">
+<a class="btn btn-primary btn-xs" href="match_report_real_madrid_vs_barcelona_compna_seasonna_match3773497.pdf" rel="noopener" target="_blank">View report (PDF)</a>
+<a class="btn btn-ghost btn-xs" href="notebooks/StatsBomb_OpenData_Menu_code.html" rel="noopener" target="_blank">View code</a>
+</div>
+</div>
+<!-- IMAGEN -->
+<div class="featured-notebook" style="padding:0; height:auto; align-self:flex-start;">
+<img alt="Match report automatizado Real Madrid vs Barcelona" loading="lazy" src="match_report_real_madrid_vs_barcelona_compna_seasonna_match3773497.png" style="width:100%; height:auto; display:block;"/>
+</div>
+</div>
+</article>
+<!--2. NLP: AMAZON CLASSIFICATION-->
+<article class="project-card project-card--featured">
+<span class="featured-label">NLP and text classification</span>
+<h3 class="project-title">Amazon review classification</h3>
+<div class="project-tags">
+<span class="tag">NLP</span>
+<span class="tag">Classification</span>
+<span class="tag">Machine learning</span>
+</div>
+<div class="featured-content">
+<div class="featured-text">
+<p><strong>Problem:</strong><br/>A large volume of Amazon product reviews makes it difficult to prioritize which feedback to review manually. The goal is to train a model that automatically classifies reviews into categories to speed up customer-sentiment understanding and detect potential issues.</p>
+<p><strong>What do I do in this project?</strong><br/>
+      – <span class="code-link-amazon" data-target="sec-amazon-flujo">Text cleaning and normalization, tokenization, TF-IDF vectorization, and training of multiclass classification models.</span><br/>
+      – <span class="code-link-amazon" data-target="sec-amazon-conclusiones">Performance evaluation using metrics such as accuracy and F1, and interpretation of results to understand the model’s strengths and limitations.</span>
+</p>
+<p><strong>Value added:</strong><br/>The model makes it easier to prioritize reviews and understand the overall tone of customer feedback without reading each text manually. It can be integrated into a product quality monitoring or customer support workflow, helping respond faster to recurring issues and detect dissatisfaction patterns.</p>
+<p><strong>Key metrics:</strong></p>
+<ul class="project-metrics">
+<li>Model training with <strong>103,460 reviews </strong>and a vocabulary of <strong>51,932 terms </strong>distintos.</li>
+<li>Best model (LinearSVC) with<strong>89.2% accuracy</strong>on the test set.</li>
+<li><strong>Weighted F1-score: 0.88</strong>, showing a good balance between precision and coverage across classes.</li>
+</ul>
+<div class="project-actions">
+<a class="btn btn-ghost btn-xs" href="notebooks/Amazon_Reviews_Multiclase.html" rel="noopener" target="_blank">View Notebook in a new tab</a>
+<a class="btn btn-primary btn-xs" href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Amazon_Reviews_Multiclase.ipynb" rel="noopener" target="_blank">Run on Binder</a>
+</div>
+</div>
+<div class="featured-notebook">
+<iframe class="notebook-iframe" id="iframe-amazon" loading="lazy" src="notebooks/Amazon_Reviews_Multiclase.html"></iframe>
+</div>
+</div>
+</article>
+<!--3. EDA / CUSTOMER SEGMENTATION-->
+<article class="project-card project-card--featured">
+<span class="featured-label">EDA and customer behavior</span>
+<h3 class="project-title">Exploratory analysis and customer behavior segmentation</h3>
+<div class="project-tags">
+<span class="tag">EDA</span>
+<span class="tag">Segmentation</span>
+<span class="tag">Purchase behavior</span>
+</div>
+<div class="featured-content">
+<div class="featured-text">
+<p><strong>Problem:</strong><br/>An online retailer needs to better understand how, when, and what customers buy in order to optimize assortment, promotions, and logistics. The goal is to explore orders and products data to detect demand patterns and behavioral segments.</p>
+<p><strong>What do I do in this project?</strong><br/>
+      – <span class="code-link-instacart" data-target="sec-instacart-descripcion">Explore and describe user, order, and product data.</span><br/>
+      – <span class="code-link-instacart" data-target="sec-instacart-prepro">Preprocessing, duplicate removal, and creation of frequency, recency, and monetary metrics.</span><br/>
+      – <span class="code-link-instacart" data-target="sec-instacart-conclusiones">Identify purchase patterns and customer segments based on the generated metrics and visualizations.</span>
+</p>
+<p><strong>Value added:</strong><br/>The analysis helps answer questions such as how loyal customers are, what times they buy the most, and which demand patterns repeat. It can be used to design segmented campaigns, adjust inventory, and prioritize improvements in the shopping experience.</p>
+<p><strong>Key analysis metrics:</strong></p>
+<ul class="project-metrics">
+<li>Customers place an average of <strong>3.4 orders per month</strong>, with a recurring segment that exceeds <strong>6 orders per month</strong>.</li>
+<li><strong>35% of orders occur between 10:00 and 15:00</strong>, identifying the most relevant operational window for demand.</li>
+<li>RFM segmentation shows that only <strong>18% of users generate 42%</strong>of all purchases, highlighting a high-value segment.</li>
+</ul>
+<div class="project-actions">
+<a class="btn btn-ghost btn-xs" href="notebooks/Proyecto_Sprint_4_Daniel_Aguinaga.html" rel="noopener" target="_blank">View Notebook in a New Tab</a>
+<a class="btn btn-primary btn-xs" href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_Sprint_4_Daniel_Aguinaga.ipynb" rel="noopener" target="_blank">Run on Binder</a>
+</div>
+</div>
+<div class="featured-notebook">
+<iframe class="notebook-iframe" id="iframe-instacart" loading="lazy" src="notebooks/Proyecto_Sprint_4_Daniel_Aguinaga.html"></iframe>
+</div>
+</div>
+</article>
+</div> <!--/featured projects grid-->
+<!-- ============================== -->
+<!--NEW SUBSECTION: OTHER PROJECTS-->
+<!-- ============================== -->
+<div class="section-header" style="margin-top: 3rem;">
+<h2 class="section-title">Other projects</h2>
+<p class="section-subtitle">Complementary projects where I apply EDA, descriptive statistics, KPIs, hypothesis testing, and visualization in different contexts.</p>
+</div>
+<!--OTHER PROJECTS GRID-->
+<div class="projects-grid">
+<!--4. COMPARATIVE SERVICES ANALYSIS-->
+<article class="project-card">
+<h3 class="project-title">Comparative services analysis and profitability evaluation</h3>
+<p class="project-description">Comparative statistical analysis where I evaluate the performance of different products using key metrics such as average revenue and profitability. I demonstrate skills in EDA, KPI calculation, and business-oriented conclusions.</p>
+<div class="project-tags">
+<span class="tag">Statistics</span>
+<span class="tag">Economic analysis</span>
+</div>
+<div class="project-actions">
+<a class="btn btn-ghost btn-xs" href="notebooks/Proyecto_Sprint_5_Daniel_Aguinaga.html" rel="noopener" target="_blank">View Notebook</a>
+<a class="btn btn-primary btn-xs" href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_Sprint_5_Daniel_Aguinaga.ipynb" rel="noopener" target="_blank">Run on Binder</a>
+</div>
+</article>
+<!-- 5. FACTORES PREDICTIVOS / PRODUCTOS -->
+<article class="project-card">
+<h3 class="project-title">Product performance evaluation and predictive success factors</h3>
+<p class="project-description">Product data analysis to identify which factors explain success. I practice EDA, correlations, statistical tests, and extracting actionable insights.</p>
+<div class="project-tags">
+<span class="tag">Statistics</span>
+<span class="tag">Hypothesis testing</span>
+</div>
+<div class="project-actions">
+<a class="btn btn-ghost btn-xs" href="notebooks/Proyecto_Sprint_6_Daniel_Aguinaga.html" rel="noopener" target="_blank">View Notebook</a>
+<a class="btn btn-primary btn-xs" href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_Sprint_6_Daniel_Aguinaga.ipynb" rel="noopener" target="_blank">Run on Binder</a>
+</div>
+</article>
+<!-- 6. EFICIENCIA OPERATIVA -->
+<article class="project-card">
+<h3 class="project-title">Operational efficiency and demand behavior analysis</h3>
+<p class="project-description">Comparative analysis of multiple companies’ performance using operational metrics, visualizations, and demand patterns. I practice EDA, KPIs, and performance-oriented analysis.</p>
+<div class="project-tags">
+<span class="tag">Machine learning</span>
+<span class="tag">Supervised modeling</span>
+</div>
+<div class="project-actions">
+<a class="btn btn-ghost btn-xs" href="notebooks/Proyecto_Sprint_8_Daniel_Aguinaga.html" rel="noopener" target="_blank">View Notebook</a>
+<a class="btn btn-primary btn-xs" href="https://mybinder.org/v2/gh/Dagadover/Portafolio_Analisis_de_Datos/HEAD?labpath=notebooks/Proyecto_Sprint_8_Daniel_Aguinaga.ipynb" rel="noopener" target="_blank">Run on Binder</a>
+</div>
+</article>
+</div> <!--/other projects grid-->
+</section>
+<!-- CONTACT -->
+<section id="contact">
+<div class="section-header">
+<h2 class="section-title">Contact</h2>
+</div>
+<div class="contact-grid">
+<div class="about-text">
+<p>I’m seeking junior or entry-level opportunities as a data analyst / data scientist. I’m interested in strengthening my technical skills, working with real data, and delivering value through clear, well-communicated analysis.</p>
+<p>Location: Mexico. Open to remote or hybrid roles.</p>
+<p>If you have feedback, a collaboration idea, or an open role, I’d be happy to connect.</p>
+</div>
+<div class="contact-card">
+<div class="contact-row">
+<span class="contact-icon">
+<!--Email icon-->
+<svg aria-hidden="true" fill="none" height="14" viewbox="0 0 24 24" width="14">
+<path d="M4 6h16v12H4V6Z" stroke="#2563eb" stroke-linejoin="round" stroke-width="1.6"></path>
+<path d="m4 7 8 6 8-6" stroke="#2563eb" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path>
+</svg>
+</span>
+<a class="contact-link" href="mailto:danielgg670@gmail.com">danielgg670@gmail.com</a>
+</div>
+<div class="contact-row">
+<span class="contact-icon">
+<!--GitHub icon-->
+<svg aria-hidden="true" fill="none" height="14" viewbox="0 0 24 24" width="14">
+<path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.5 2.87 8.31 6.84 9.66.5.1.68-.22.68-.48 0-.24-.01-1.04-.01-1.89-2.48.55-3.01-1.08-3.01-1.08-.46-1.19-1.12-1.5-1.12-1.5-.92-.64.07-.63.07-.63 1.02.07 1.56 1.07 1.56 1.07.9 1.57 2.36 1.12 2.94.86.09-.67.35-1.12.63-1.38-1.98-.23-4.07-1.03-4.07-4.6 0-1.02.35-1.85.93-2.5-.09-.23-.4-1.17.09-2.44 0 0 .75-.24 2.46.95A8.21 8.21 0 0 1 12 7.1c.76 0 1.52.1 2.23.3 1.71-1.2 2.46-.95 2.46-.95.49 1.27.18 2.21.09 2.44.58.65.93 1.48.93 2.5 0 3.58-2.1 4.37-4.1 4.6.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.8 0 .26.18.59.69.48A10.04 10.04 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z" fill="#2563eb"></path>
+</svg>
+</span>
+<a class="contact-link" href="https://github.com/Dagadover" rel="noopener" target="_blank">github.com/Dagadover</a>
+</div>
+<div class="contact-row">
+<span class="contact-icon">
+<!--LinkedIn icon-->
+<svg aria-hidden="true" fill="none" height="14" viewbox="0 0 24 24" width="14">
+<path d="M6.5 7.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" fill="#2563eb"></path>
+<path d="M5 9h3v10H5V9Zm6 0h2.8v1.5h.04C14.3 9.6 15.5 8.8 17.2 8.8 21 8.8 21 11.3 21 14.2V19h-3v-4.1c0-1 0-2.3-1.4-2.3-1.4 0-1.7 1.1-1.7 2.2V19h-3V9Z" fill="#2563eb"></path>
+</svg>
+</span>
+<a class="contact-link" href="https://www.linkedin.com/in/daniel-juan-de-dios-agui%C3%B1aga-g%C3%B3mez-3404a4119/" rel="noopener" target="_blank">
+            danielaguinaga
+          </a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+  © <span id="year"></span>Daniel Aguiñaga. All rights reserved.</footer>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<script>
+  function setupNotebookLinks(linksSelector, iframeId) {
+    const iframe = document.getElementById(iframeId);
+    if (!iframe) return;
+
+    iframe.addEventListener('load', () => {
+      const links = document.querySelectorAll(linksSelector);
+      links.forEach(link => {
+        link.addEventListener('click', (e) => {
+          if (e && typeof e.preventDefault === 'function') e.preventDefault();
+          const targetId = link.dataset.target;
+          if (!targetId) return;
+
+          const doc = iframe.contentDocument || iframe.contentWindow?.document;
+          if (!doc) return;
+
+          const target = doc.getElementById(targetId);
+          if (target && typeof target.scrollIntoView === 'function') {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    });
+  }
+
+  // Proyecto end-to-end
+  setupNotebookLinks('.code-link', 'iframe-sprint9');
+
+  // Proyecto Amazon (NLP)
+  setupNotebookLinks('.code-link-amazon', 'iframe-amazon');
+
+  // Proyecto Instacart / comportamiento de clientes
+  setupNotebookLinks('.code-link-instacart', 'iframe-instacart');
+
+  // Proyecto A/B Testing
+  setupNotebookLinks('.code-link-ab', 'iframe-abtest');
+
+  // Proyecto Churn (EDA / modelo / clustering / conclusiones)
+  setupNotebookLinks('.code-link-churn', 'iframe-churn');</script>
+</body>
+</html>
